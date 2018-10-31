@@ -1,0 +1,6 @@
+framework module AudiomackSwiftLibrary {
+  umbrella header "AudiomackSwiftLibrary-umbrella.h"
+
+  export *
+  module * { export * }
+}

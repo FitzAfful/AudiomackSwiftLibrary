@@ -1,0 +1,16 @@
+PODS:
+  - AudiomackSwiftLibrary (0.1.0)
+
+DEPENDENCIES:
+  - AudiomackSwiftLibrary (from `../`)
+
+EXTERNAL SOURCES:
+  AudiomackSwiftLibrary:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AudiomackSwiftLibrary: 94f98cc9cd13df59066ea735e6bfaa100e8124fe
+
+PODFILE CHECKSUM: ab9b02915e4a9a3a96166122089be748fef2c31c
+
+COCOAPODS: 1.5.3

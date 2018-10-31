@@ -1,0 +1,22 @@
+{
+  "name": "AudiomackSwiftLibrary",
+  "version": "0.1.0",
+  "summary": "A short description of AudiomackSwiftLibrary.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Fitzafful/AudiomackSwiftLibrary",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Fitzafful": "fitzafful@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Fitzafful/AudiomackSwiftLibrary.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "AudiomackSwiftLibrary/Classes/**/*"
+}
