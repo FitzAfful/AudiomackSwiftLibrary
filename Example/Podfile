@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'AudiomackSwiftLibrary_Example' do
+  pod 'AudiomackSwiftLibrary', :path => '../'
+
+  target 'AudiomackSwiftLibrary_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
