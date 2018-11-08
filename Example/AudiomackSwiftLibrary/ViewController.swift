@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		let client = AudiomackClient(consumerKey: "live-919fm", consumerSecret: "99b372ca87246c2d33249fcab58db071", oauthToken: "", oauthTokenSecret: "", oauthTokenVerifier: "")
+		let client = AudiomackClient(consumerKey: "", consumerSecret: "", oauthToken: "", oauthTokenSecret: "", oauthTokenVerifier: "")
 		
 		/*client.getArtistDetails(slug: "officiallive919fm") { (result) in
 			switch result{
