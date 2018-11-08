@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RegisterResponse: InitializableWithData, InitializableWithJson {
+public struct RegisterResponse: InitializableWithData, InitializableWithJson {
 	var oauth_token: String
 	var oauth_token_secret: String
 	var registered_user: AudiomackRegisteredUser
@@ -36,6 +36,23 @@ struct RegisterResponse: InitializableWithData, InitializableWithJson {
 		
 		self.oauth_token = oauth_token
 		self.oauth_token_secret = oauth_token_secret
+	}
+}
+
+public struct ForgotPasswordResponse: InitializableWithData, InitializableWithJson {
+	
+	init(data: Data?) throws {
+		guard let data = data,
+			let jsonObject = try? JSONSerialization.jsonObject(with: data),
+			let json = jsonObject as? [String: Any] else {
+				throw NSError.createParseError()
+		}
+		try self.init(json: json)
+		
+	}
+	
+	init(json: [String : Any]) throws {
+		
 	}
 }
 

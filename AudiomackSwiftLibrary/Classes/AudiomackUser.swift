@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AudiomackUser: InitializableWithData, InitializableWithJson {
+public struct AudiomackUser: InitializableWithData, InitializableWithJson {
 	var id: String
 	var name: String
 	var url_slug: String
@@ -42,6 +42,26 @@ struct AudiomackUser: InitializableWithData, InitializableWithJson {
 	}
 	
 	init(json: [String : Any]) throws {
+		var fav_playlists:[String] = []
+		if let fav = json["favorite_playlists"] {
+			fav_playlists = fav as! [String]
+		}
+		
+		var fav_music:[String] = []
+		if let fav = json["favorite_music"] {
+			fav_music = fav as! [String]
+		}
+		
+		var playlists_:[String] = []
+		if let fav = json["playlists"] {
+			playlists_ = fav as! [String]
+		}
+		
+		var following_:[String] = []
+		if let fav = json["following"] {
+			following_ = fav as! [String]
+		}
+		
 		guard let id =  json["id"] as? String,
 			let name = json["name"] as? String,
 			let url_slug = json["url_slug"] as? String,
@@ -59,11 +79,7 @@ struct AudiomackUser: InitializableWithData, InitializableWithJson {
 			let created = json["created"] as? String,
 			let status = json["status"] as? String,
 			let video_ads = json["video_ads"] as? String,
-			let follow_download = json["follow_download"] as? String,
-			let favorite_music = json["favorite_music"] as? [String],
-			let favorite_playlists = json["favorite_playlists"] as? [String],
-			let playlists = json["playlists"] as? [String],
-			let following = json["following"] as? [String] else {
+			let follow_download = json["follow_download"] as? String else {
 				
 				throw NSError.createParseError()
 		}
@@ -87,10 +103,34 @@ struct AudiomackUser: InitializableWithData, InitializableWithJson {
 		self.status = status
 		self.video_ads = video_ads
 		self.follow_download = follow_download
-		self.favorite_music = favorite_music
-		self.favorite_playlists = favorite_playlists
-		self.playlists = playlists
-		self.following = following
+		self.favorite_music = fav_music
+		self.favorite_playlists = fav_playlists
+		self.playlists = playlists_
+		self.following = following_
+	}
+}
+
+
+public struct AudiomackUserResponse: InitializableWithData, InitializableWithJson {
+	var result: AudiomackUser
+	
+	init(data: Data?) throws {
+		guard let data = data,
+			let jsonObject = try? JSONSerialization.jsonObject(with: data),
+			let json = jsonObject as? [String: Any] else {
+				throw NSError.createParseError()
+		}
+		try self.init(json: json)
+		
+	}
+	
+	init(json: [String : Any]) throws {
+		if let result_ = json["results"] as? [String: Any]{
+			result = try! AudiomackUser(json: result_)
+		}else {
+			throw NSError.createParseError()
+		}
+		
 	}
 }
 

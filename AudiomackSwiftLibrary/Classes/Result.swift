@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CoreError: Error {
+public struct CoreError: Error {
 	var localizedDescription: String {
 		return message
 	}
@@ -17,7 +17,7 @@ struct CoreError: Error {
 }
 
 
-enum Result<T> {
+public enum Result<T> {
 	case success(T)
 	case failure(Error)
 	
@@ -31,7 +31,7 @@ enum Result<T> {
 	}
 }
 
-enum FetchError: Error{
+public enum FetchError: Error{
 	case NetworkFailed()
 	case DeserialisingFailed()
 	case ApiError(message:String)
