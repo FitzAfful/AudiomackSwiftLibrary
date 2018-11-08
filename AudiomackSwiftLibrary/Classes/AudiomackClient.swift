@@ -30,5 +30,47 @@ public class AudiomackClient {
 		}
 	}
 	
+	public func getArtistUploads(slug: String, completionHandler: @escaping GetArtistUploadsCompletionHandler) {
+		artistClient.getArtistUploads(parameter: ArtistParameter(slug: slug)) { (result) in
+			completionHandler(result)
+		}
+		
+	}
+	
+	func getArtistFavorites(slug: String, filter: AudioFilter?, completionHandler: @escaping GetArtistFavoritesCompletionHandler){
+		artistClient.getArtistFavorites(parameter: ArtistParameter(slug:slug), filter: filter) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func getArtistPlaylists(slug: String, genre: String?, completionHandler: @escaping GetArtistPlaylistsCompletionHandler){
+		artistClient.getArtistPlaylists(parameter: ArtistParameter(slug:slug), genre: genre) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func searchArtistFavorites(slug: String, searchText: String, completionHandler: @escaping GetArtistFavoritesCompletionHandler){
+		artistClient.searchArtistFavorites(parameter: ArtistParameter(slug:slug), searchText: searchText) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func getArtistFollowing(slug: String, completionHandler: @escaping GetArtistFollowingCompletionHandler){
+		artistClient.getArtistFollowing(parameter: ArtistParameter(slug:slug)) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func getArtistFollowers(slug: String, completionHandler: @escaping GetArtistFollowersCompletionHandler){
+		artistClient.getArtistFollowers(parameter: ArtistParameter(slug:slug)) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func getArtistFeed(slug: String, completionHandler: @escaping GetArtistFeedCompletionHandler){
+		artistClient.getArtistFeed(parameter: ArtistParameter(slug:slug)) { (result) in
+			completionHandler(result)
+		}
+	}
 	
 }

@@ -16,7 +16,17 @@ class ViewController: UIViewController {
 		
 		let client = AudiomackClient(consumerKey: "live-919fm", consumerSecret: "99b372ca87246c2d33249fcab58db071", oauthToken: "", oauthTokenSecret: "", oauthTokenVerifier: "")
 		
-		client.getArtistDetails(slug: "officiallive919fm") { (result) in
+		/*client.getArtistDetails(slug: "officiallive919fm") { (result) in
+			switch result{
+			case let .success(response):
+				print("Success")
+				print(response)
+			case let .failure(error):
+				print("error \(error)")
+			}
+		}*/
+		
+		client.getArtistUploads(slug: "officiallive919fm") { (result) in
 			switch result{
 			case let .success(response):
 				print("Success")

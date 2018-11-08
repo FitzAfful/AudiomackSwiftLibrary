@@ -11,34 +11,36 @@
 		2E6B1F63AFAD979F9B5FFE9ECB617B99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		3E2450D367C5506CC18C23686D9FB3B0 /* Pods-AudiomackSwiftLibrary_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B386B58B814D29681A45A687CADC64C4 /* Pods-AudiomackSwiftLibrary_Tests-dummy.m */; };
 		82F99787F249759CFEC0AFE798AAD5E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		840B59EA2191B3F100D5C97B /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B59DF2191B3F000D5C97B /* HMAC.swift */; };
-		840B59EB2191B3F100D5C97B /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B59E02191B3F000D5C97B /* SHA1.swift */; };
-		840B59EC2191B3F100D5C97B /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840B59E12191B3F100D5C97B /* Credential.swift */; };
-		842A04F42193585A004B8E29 /* OAuth2Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04DB21935858004B8E29 /* OAuth2Swift.swift */; };
+		8425CD7B2193C37200CF4239 /* AudiomackMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD7A2193C37200CF4239 /* AudiomackMusic.swift */; };
+		8425CD7D2193CE6A00CF4239 /* AudiomackStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD7C2193CE6A00CF4239 /* AudiomackStat.swift */; };
+		8425CD982193D4E900CF4239 /* UIApplication+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD7F2193D4E900CF4239 /* UIApplication+OAuthSwift.swift */; };
+		8425CD992193D4E900CF4239 /* OAuthSwiftMultipartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD802193D4E900CF4239 /* OAuthSwiftMultipartData.swift */; };
+		8425CD9A2193D4E900CF4239 /* OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD812193D4E900CF4239 /* OAuthSwift.swift */; };
+		8425CD9B2193D4E900CF4239 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD822193D4E900CF4239 /* HMAC.swift */; };
+		8425CD9C2193D4E900CF4239 /* Objc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD832193D4E900CF4239 /* Objc.swift */; };
+		8425CD9D2193D4E900CF4239 /* OAuth2Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD842193D4E900CF4239 /* OAuth2Swift.swift */; };
+		8425CD9E2193D4E900CF4239 /* Int+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD852193D4E900CF4239 /* Int+OAuthSwift.swift */; };
+		8425CD9F2193D4E900CF4239 /* OAuthSwiftURLHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD862193D4E900CF4239 /* OAuthSwiftURLHandlerType.swift */; };
+		8425CDA02193D4E900CF4239 /* String+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD872193D4E900CF4239 /* String+OAuthSwift.swift */; };
+		8425CDA12193D4E900CF4239 /* NSError+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD882193D4E900CF4239 /* NSError+OAuthSwift.swift */; };
+		8425CDA22193D4E900CF4239 /* OAuthSwiftCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD892193D4E900CF4239 /* OAuthSwiftCredential.swift */; };
+		8425CDA32193D4E900CF4239 /* OAuthSwiftResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD8A2193D4E900CF4239 /* OAuthSwiftResponse.swift */; };
+		8425CDA42193D4E900CF4239 /* OAuthSwiftError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD8B2193D4E900CF4239 /* OAuthSwiftError.swift */; };
+		8425CDA52193D4E900CF4239 /* NotificationCenter+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD8C2193D4E900CF4239 /* NotificationCenter+OAuthSwift.swift */; };
+		8425CDA62193D4E900CF4239 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD8D2193D4E900CF4239 /* SHA1.swift */; };
+		8425CDA72193D4E900CF4239 /* Dictionary+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD8E2193D4E900CF4239 /* Dictionary+OAuthSwift.swift */; };
+		8425CDA82193D4E900CF4239 /* URL+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD8F2193D4E900CF4239 /* URL+OAuthSwift.swift */; };
+		8425CDA92193D4E900CF4239 /* OAuth1Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD902193D4E900CF4239 /* OAuth1Swift.swift */; };
+		8425CDAA2193D4E900CF4239 /* Data+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD912193D4E900CF4239 /* Data+OAuthSwift.swift */; };
+		8425CDAB2193D4E900CF4239 /* Collection+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD922193D4E900CF4239 /* Collection+OAuthSwift.swift */; };
+		8425CDAC2193D4E900CF4239 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD932193D4E900CF4239 /* Credential.swift */; };
+		8425CDAD2193D4E900CF4239 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD942193D4E900CF4239 /* Utils.swift */; };
+		8425CDAE2193D4E900CF4239 /* OAuthSwiftHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD952193D4E900CF4239 /* OAuthSwiftHTTPRequest.swift */; };
+		8425CDAF2193D4E900CF4239 /* OAuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD962193D4E900CF4239 /* OAuthWebViewController.swift */; };
+		8425CDB02193D4E900CF4239 /* OAuthSwiftClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD972193D4E900CF4239 /* OAuthSwiftClient.swift */; };
 		842A04F52193585A004B8E29 /* AudiomackArtistClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04DC21935859004B8E29 /* AudiomackArtistClient.swift */; };
-		842A04F62193585A004B8E29 /* OAuthSwiftError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04DD21935859004B8E29 /* OAuthSwiftError.swift */; };
-		842A04F72193585A004B8E29 /* OAuthSwiftCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04DE21935859004B8E29 /* OAuthSwiftCredential.swift */; };
-		842A04F82193585A004B8E29 /* Data+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04DF21935859004B8E29 /* Data+OAuthSwift.swift */; };
-		842A04F92193585A004B8E29 /* OAuthSwiftResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04E021935859004B8E29 /* OAuthSwiftResponse.swift */; };
-		842A04FA2193585A004B8E29 /* Int+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04E121935859004B8E29 /* Int+OAuthSwift.swift */; };
-		842A04FB2193585A004B8E29 /* OAuthSwiftURLHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04E221935859004B8E29 /* OAuthSwiftURLHandlerType.swift */; };
-		842A04FC2193585A004B8E29 /* String+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04E321935859004B8E29 /* String+OAuthSwift.swift */; };
-		842A04FD2193585A004B8E29 /* OAuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04E421935859004B8E29 /* OAuthWebViewController.swift */; };
-		842A04FE2193585A004B8E29 /* UIApplication+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04E521935859004B8E29 /* UIApplication+OAuthSwift.swift */; };
-		842A04FF2193585A004B8E29 /* Objc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04E621935859004B8E29 /* Objc.swift */; };
-		842A05002193585A004B8E29 /* Dictionary+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04E721935859004B8E29 /* Dictionary+OAuthSwift.swift */; };
-		842A05012193585A004B8E29 /* OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04E82193585A004B8E29 /* OAuthSwift.swift */; };
 		842A05022193585A004B8E29 /* ArtistRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04E92193585A004B8E29 /* ArtistRequests.swift */; };
-		842A05032193585A004B8E29 /* NSError+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04EA2193585A004B8E29 /* NSError+OAuthSwift.swift */; };
 		842A05042193585A004B8E29 /* AudiomackRegisteredUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04EB2193585A004B8E29 /* AudiomackRegisteredUser.swift */; };
-		842A05052193585A004B8E29 /* OAuthSwiftMultipartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04EC2193585A004B8E29 /* OAuthSwiftMultipartData.swift */; };
-		842A05062193585A004B8E29 /* OAuthSwiftClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04ED2193585A004B8E29 /* OAuthSwiftClient.swift */; };
-		842A05072193585A004B8E29 /* OAuthSwiftHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04EE2193585A004B8E29 /* OAuthSwiftHTTPRequest.swift */; };
-		842A05082193585A004B8E29 /* NotificationCenter+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04EF2193585A004B8E29 /* NotificationCenter+OAuthSwift.swift */; };
-		842A05092193585A004B8E29 /* OAuth1Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04F02193585A004B8E29 /* OAuth1Swift.swift */; };
-		842A050A2193585A004B8E29 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04F12193585A004B8E29 /* Utils.swift */; };
-		842A050B2193585A004B8E29 /* Collection+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04F22193585A004B8E29 /* Collection+OAuthSwift.swift */; };
-		842A050C2193585A004B8E29 /* URL+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A04F32193585A004B8E29 /* URL+OAuthSwift.swift */; };
 		842A5B122189B02700E3EE79 /* AudiomackClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A5B112189B02700E3EE79 /* AudiomackClient.swift */; };
 		842A5B142189B0E300E3EE79 /* AudiomackUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A5B132189B0E300E3EE79 /* AudiomackUser.swift */; };
 		842A5B182189B44C00E3EE79 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A5B152189B44C00E3EE79 /* ApiClient.swift */; };
@@ -93,34 +95,36 @@
 		7EA5A555BB10D684C4BFCA930E10746F /* AudiomackSwiftLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AudiomackSwiftLibrary-dummy.m"; sourceTree = "<group>"; };
 		7F015EE2A21C57F39A5A064FDBA92A1F /* Pods-AudiomackSwiftLibrary_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AudiomackSwiftLibrary_Example-resources.sh"; sourceTree = "<group>"; };
 		82A230F54363280F70D89636D86A3074 /* Pods-AudiomackSwiftLibrary_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AudiomackSwiftLibrary_Tests.modulemap"; sourceTree = "<group>"; };
-		840B59DF2191B3F000D5C97B /* HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
-		840B59E02191B3F000D5C97B /* SHA1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
-		840B59E12191B3F100D5C97B /* Credential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
-		842A04DB21935858004B8E29 /* OAuth2Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Swift.swift; sourceTree = "<group>"; };
+		8425CD7A2193C37200CF4239 /* AudiomackMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AudiomackMusic.swift; path = AudiomackSwiftLibrary/Classes/AudiomackMusic.swift; sourceTree = "<group>"; };
+		8425CD7C2193CE6A00CF4239 /* AudiomackStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AudiomackStat.swift; path = AudiomackSwiftLibrary/Classes/AudiomackStat.swift; sourceTree = "<group>"; };
+		8425CD7F2193D4E900CF4239 /* UIApplication+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+OAuthSwift.swift"; sourceTree = "<group>"; };
+		8425CD802193D4E900CF4239 /* OAuthSwiftMultipartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftMultipartData.swift; sourceTree = "<group>"; };
+		8425CD812193D4E900CF4239 /* OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwift.swift; sourceTree = "<group>"; };
+		8425CD822193D4E900CF4239 /* HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
+		8425CD832193D4E900CF4239 /* Objc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objc.swift; sourceTree = "<group>"; };
+		8425CD842193D4E900CF4239 /* OAuth2Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Swift.swift; sourceTree = "<group>"; };
+		8425CD852193D4E900CF4239 /* Int+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+OAuthSwift.swift"; sourceTree = "<group>"; };
+		8425CD862193D4E900CF4239 /* OAuthSwiftURLHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftURLHandlerType.swift; sourceTree = "<group>"; };
+		8425CD872193D4E900CF4239 /* String+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+OAuthSwift.swift"; sourceTree = "<group>"; };
+		8425CD882193D4E900CF4239 /* NSError+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+OAuthSwift.swift"; sourceTree = "<group>"; };
+		8425CD892193D4E900CF4239 /* OAuthSwiftCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftCredential.swift; sourceTree = "<group>"; };
+		8425CD8A2193D4E900CF4239 /* OAuthSwiftResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftResponse.swift; sourceTree = "<group>"; };
+		8425CD8B2193D4E900CF4239 /* OAuthSwiftError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftError.swift; sourceTree = "<group>"; };
+		8425CD8C2193D4E900CF4239 /* NotificationCenter+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+OAuthSwift.swift"; sourceTree = "<group>"; };
+		8425CD8D2193D4E900CF4239 /* SHA1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
+		8425CD8E2193D4E900CF4239 /* Dictionary+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+OAuthSwift.swift"; sourceTree = "<group>"; };
+		8425CD8F2193D4E900CF4239 /* URL+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+OAuthSwift.swift"; sourceTree = "<group>"; };
+		8425CD902193D4E900CF4239 /* OAuth1Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth1Swift.swift; sourceTree = "<group>"; };
+		8425CD912193D4E900CF4239 /* Data+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+OAuthSwift.swift"; sourceTree = "<group>"; };
+		8425CD922193D4E900CF4239 /* Collection+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+OAuthSwift.swift"; sourceTree = "<group>"; };
+		8425CD932193D4E900CF4239 /* Credential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		8425CD942193D4E900CF4239 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		8425CD952193D4E900CF4239 /* OAuthSwiftHTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftHTTPRequest.swift; sourceTree = "<group>"; };
+		8425CD962193D4E900CF4239 /* OAuthWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthWebViewController.swift; sourceTree = "<group>"; };
+		8425CD972193D4E900CF4239 /* OAuthSwiftClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftClient.swift; sourceTree = "<group>"; };
 		842A04DC21935859004B8E29 /* AudiomackArtistClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudiomackArtistClient.swift; path = AudiomackSwiftLibrary/Classes/AudiomackArtistClient.swift; sourceTree = "<group>"; };
-		842A04DD21935859004B8E29 /* OAuthSwiftError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftError.swift; sourceTree = "<group>"; };
-		842A04DE21935859004B8E29 /* OAuthSwiftCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftCredential.swift; sourceTree = "<group>"; };
-		842A04DF21935859004B8E29 /* Data+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+OAuthSwift.swift"; sourceTree = "<group>"; };
-		842A04E021935859004B8E29 /* OAuthSwiftResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftResponse.swift; sourceTree = "<group>"; };
-		842A04E121935859004B8E29 /* Int+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+OAuthSwift.swift"; sourceTree = "<group>"; };
-		842A04E221935859004B8E29 /* OAuthSwiftURLHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftURLHandlerType.swift; sourceTree = "<group>"; };
-		842A04E321935859004B8E29 /* String+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+OAuthSwift.swift"; sourceTree = "<group>"; };
-		842A04E421935859004B8E29 /* OAuthWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthWebViewController.swift; sourceTree = "<group>"; };
-		842A04E521935859004B8E29 /* UIApplication+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+OAuthSwift.swift"; sourceTree = "<group>"; };
-		842A04E621935859004B8E29 /* Objc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objc.swift; sourceTree = "<group>"; };
-		842A04E721935859004B8E29 /* Dictionary+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+OAuthSwift.swift"; sourceTree = "<group>"; };
-		842A04E82193585A004B8E29 /* OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwift.swift; sourceTree = "<group>"; };
 		842A04E92193585A004B8E29 /* ArtistRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArtistRequests.swift; path = AudiomackSwiftLibrary/Classes/ArtistRequests.swift; sourceTree = "<group>"; };
-		842A04EA2193585A004B8E29 /* NSError+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+OAuthSwift.swift"; sourceTree = "<group>"; };
 		842A04EB2193585A004B8E29 /* AudiomackRegisteredUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudiomackRegisteredUser.swift; path = AudiomackSwiftLibrary/Classes/AudiomackRegisteredUser.swift; sourceTree = "<group>"; };
-		842A04EC2193585A004B8E29 /* OAuthSwiftMultipartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftMultipartData.swift; sourceTree = "<group>"; };
-		842A04ED2193585A004B8E29 /* OAuthSwiftClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftClient.swift; sourceTree = "<group>"; };
-		842A04EE2193585A004B8E29 /* OAuthSwiftHTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftHTTPRequest.swift; sourceTree = "<group>"; };
-		842A04EF2193585A004B8E29 /* NotificationCenter+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+OAuthSwift.swift"; sourceTree = "<group>"; };
-		842A04F02193585A004B8E29 /* OAuth1Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth1Swift.swift; sourceTree = "<group>"; };
-		842A04F12193585A004B8E29 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		842A04F22193585A004B8E29 /* Collection+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+OAuthSwift.swift"; sourceTree = "<group>"; };
-		842A04F32193585A004B8E29 /* URL+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+OAuthSwift.swift"; sourceTree = "<group>"; };
 		842A5B112189B02700E3EE79 /* AudiomackClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AudiomackClient.swift; path = AudiomackSwiftLibrary/Classes/AudiomackClient.swift; sourceTree = "<group>"; };
 		842A5B132189B0E300E3EE79 /* AudiomackUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AudiomackUser.swift; path = AudiomackSwiftLibrary/Classes/AudiomackUser.swift; sourceTree = "<group>"; };
 		842A5B152189B44C00E3EE79 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApiClient.swift; path = AudiomackSwiftLibrary/Classes/ApiClient.swift; sourceTree = "<group>"; };
@@ -209,12 +213,12 @@
 		76FAC9F8A201BA0B2A81353E2EDBAFB6 /* AudiomackSwiftLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				8425CD7E2193D4E900CF4239 /* Oauth */,
 				842A04E92193585A004B8E29 /* ArtistRequests.swift */,
 				842A04DC21935859004B8E29 /* AudiomackArtistClient.swift */,
 				842A5B212189C26300E3EE79 /* AudiomackAuthClient.swift */,
 				842A5B242189C4AA00E3EE79 /* AuthenticationRequests.swift */,
 				842A04EB2193585A004B8E29 /* AudiomackRegisteredUser.swift */,
-				8425CD792193C1AF00CF4239 /* Oauth */,
 				842A5B152189B44C00E3EE79 /* ApiClient.swift */,
 				842A5B162189B44C00E3EE79 /* ApiResponse.swift */,
 				842A5B112189B02700E3EE79 /* AudiomackClient.swift */,
@@ -224,6 +228,8 @@
 				842A5B1B2189B48000E3EE79 /* Result.swift */,
 				E988BAAA5A68D4F1D0E96CBA83F234BB /* Pod */,
 				096EEE8D45598F38FCB155CCAD99970C /* Support Files */,
+				8425CD7A2193C37200CF4239 /* AudiomackMusic.swift */,
+				8425CD7C2193CE6A00CF4239 /* AudiomackStat.swift */,
 			);
 			name = AudiomackSwiftLibrary;
 			path = ../..;
@@ -248,36 +254,37 @@
 			);
 			sourceTree = "<group>";
 		};
-		8425CD792193C1AF00CF4239 /* Oauth */ = {
+		8425CD7E2193D4E900CF4239 /* Oauth */ = {
 			isa = PBXGroup;
 			children = (
-				842A04F22193585A004B8E29 /* Collection+OAuthSwift.swift */,
-				842A04DF21935859004B8E29 /* Data+OAuthSwift.swift */,
-				842A04E721935859004B8E29 /* Dictionary+OAuthSwift.swift */,
-				842A04E121935859004B8E29 /* Int+OAuthSwift.swift */,
-				842A04EF2193585A004B8E29 /* NotificationCenter+OAuthSwift.swift */,
-				842A04EA2193585A004B8E29 /* NSError+OAuthSwift.swift */,
-				842A04F02193585A004B8E29 /* OAuth1Swift.swift */,
-				842A04DB21935858004B8E29 /* OAuth2Swift.swift */,
-				842A04E82193585A004B8E29 /* OAuthSwift.swift */,
-				842A04ED2193585A004B8E29 /* OAuthSwiftClient.swift */,
-				842A04DE21935859004B8E29 /* OAuthSwiftCredential.swift */,
-				842A04DD21935859004B8E29 /* OAuthSwiftError.swift */,
-				842A04EE2193585A004B8E29 /* OAuthSwiftHTTPRequest.swift */,
-				842A04EC2193585A004B8E29 /* OAuthSwiftMultipartData.swift */,
-				842A04E021935859004B8E29 /* OAuthSwiftResponse.swift */,
-				842A04E221935859004B8E29 /* OAuthSwiftURLHandlerType.swift */,
-				842A04E421935859004B8E29 /* OAuthWebViewController.swift */,
-				842A04E621935859004B8E29 /* Objc.swift */,
-				842A04E321935859004B8E29 /* String+OAuthSwift.swift */,
-				842A04E521935859004B8E29 /* UIApplication+OAuthSwift.swift */,
-				842A04F32193585A004B8E29 /* URL+OAuthSwift.swift */,
-				842A04F12193585A004B8E29 /* Utils.swift */,
-				840B59E12191B3F100D5C97B /* Credential.swift */,
-				840B59DF2191B3F000D5C97B /* HMAC.swift */,
-				840B59E02191B3F000D5C97B /* SHA1.swift */,
+				8425CD7F2193D4E900CF4239 /* UIApplication+OAuthSwift.swift */,
+				8425CD802193D4E900CF4239 /* OAuthSwiftMultipartData.swift */,
+				8425CD812193D4E900CF4239 /* OAuthSwift.swift */,
+				8425CD822193D4E900CF4239 /* HMAC.swift */,
+				8425CD832193D4E900CF4239 /* Objc.swift */,
+				8425CD842193D4E900CF4239 /* OAuth2Swift.swift */,
+				8425CD852193D4E900CF4239 /* Int+OAuthSwift.swift */,
+				8425CD862193D4E900CF4239 /* OAuthSwiftURLHandlerType.swift */,
+				8425CD872193D4E900CF4239 /* String+OAuthSwift.swift */,
+				8425CD882193D4E900CF4239 /* NSError+OAuthSwift.swift */,
+				8425CD892193D4E900CF4239 /* OAuthSwiftCredential.swift */,
+				8425CD8A2193D4E900CF4239 /* OAuthSwiftResponse.swift */,
+				8425CD8B2193D4E900CF4239 /* OAuthSwiftError.swift */,
+				8425CD8C2193D4E900CF4239 /* NotificationCenter+OAuthSwift.swift */,
+				8425CD8D2193D4E900CF4239 /* SHA1.swift */,
+				8425CD8E2193D4E900CF4239 /* Dictionary+OAuthSwift.swift */,
+				8425CD8F2193D4E900CF4239 /* URL+OAuthSwift.swift */,
+				8425CD902193D4E900CF4239 /* OAuth1Swift.swift */,
+				8425CD912193D4E900CF4239 /* Data+OAuthSwift.swift */,
+				8425CD922193D4E900CF4239 /* Collection+OAuthSwift.swift */,
+				8425CD932193D4E900CF4239 /* Credential.swift */,
+				8425CD942193D4E900CF4239 /* Utils.swift */,
+				8425CD952193D4E900CF4239 /* OAuthSwiftHTTPRequest.swift */,
+				8425CD962193D4E900CF4239 /* OAuthWebViewController.swift */,
+				8425CD972193D4E900CF4239 /* OAuthSwiftClient.swift */,
 			);
-			path = Oauth;
+			name = Oauth;
+			path = AudiomackSwiftLibrary/Classes/Oauth;
 			sourceTree = "<group>";
 		};
 		89AF0A59669739DA382C5C5D04B79696 /* Pods-AudiomackSwiftLibrary_Tests */ = {
@@ -459,43 +466,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				842A04FB2193585A004B8E29 /* OAuthSwiftURLHandlerType.swift in Sources */,
 				FFA94F61F1A2EB98E75162E37781513A /* AudiomackSwiftLibrary-dummy.m in Sources */,
-				842A04FD2193585A004B8E29 /* OAuthWebViewController.swift in Sources */,
-				842A04FC2193585A004B8E29 /* String+OAuthSwift.swift in Sources */,
-				840B59EC2191B3F100D5C97B /* Credential.swift in Sources */,
-				842A05032193585A004B8E29 /* NSError+OAuthSwift.swift in Sources */,
+				8425CD9E2193D4E900CF4239 /* Int+OAuthSwift.swift in Sources */,
+				8425CDA12193D4E900CF4239 /* NSError+OAuthSwift.swift in Sources */,
+				8425CDA32193D4E900CF4239 /* OAuthSwiftResponse.swift in Sources */,
+				8425CDAB2193D4E900CF4239 /* Collection+OAuthSwift.swift in Sources */,
+				8425CDA02193D4E900CF4239 /* String+OAuthSwift.swift in Sources */,
 				842A5B122189B02700E3EE79 /* AudiomackClient.swift in Sources */,
-				842A05082193585A004B8E29 /* NotificationCenter+OAuthSwift.swift in Sources */,
-				842A04F72193585A004B8E29 /* OAuthSwiftCredential.swift in Sources */,
-				840B59EB2191B3F100D5C97B /* SHA1.swift in Sources */,
+				8425CD7D2193CE6A00CF4239 /* AudiomackStat.swift in Sources */,
+				8425CDAF2193D4E900CF4239 /* OAuthWebViewController.swift in Sources */,
+				8425CDA92193D4E900CF4239 /* OAuth1Swift.swift in Sources */,
+				8425CD9C2193D4E900CF4239 /* Objc.swift in Sources */,
+				8425CDAC2193D4E900CF4239 /* Credential.swift in Sources */,
 				842A5B1C2189B48000E3EE79 /* Result.swift in Sources */,
-				842A05072193585A004B8E29 /* OAuthSwiftHTTPRequest.swift in Sources */,
-				842A050A2193585A004B8E29 /* Utils.swift in Sources */,
+				8425CD982193D4E900CF4239 /* UIApplication+OAuthSwift.swift in Sources */,
+				8425CDB02193D4E900CF4239 /* OAuthSwiftClient.swift in Sources */,
+				8425CDAD2193D4E900CF4239 /* Utils.swift in Sources */,
+				8425CDAA2193D4E900CF4239 /* Data+OAuthSwift.swift in Sources */,
 				842A5B142189B0E300E3EE79 /* AudiomackUser.swift in Sources */,
-				842A05002193585A004B8E29 /* Dictionary+OAuthSwift.swift in Sources */,
 				842A5B1A2189B44C00E3EE79 /* JSON.swift in Sources */,
-				842A05062193585A004B8E29 /* OAuthSwiftClient.swift in Sources */,
-				842A04F92193585A004B8E29 /* OAuthSwiftResponse.swift in Sources */,
-				842A05092193585A004B8E29 /* OAuth1Swift.swift in Sources */,
-				842A050C2193585A004B8E29 /* URL+OAuthSwift.swift in Sources */,
 				842A5B1E2189BA6800E3EE79 /* RegisterResponse.swift in Sources */,
 				842A5B252189C4AA00E3EE79 /* AuthenticationRequests.swift in Sources */,
+				8425CD9F2193D4E900CF4239 /* OAuthSwiftURLHandlerType.swift in Sources */,
+				8425CDA22193D4E900CF4239 /* OAuthSwiftCredential.swift in Sources */,
 				842A5B222189C26300E3EE79 /* AudiomackAuthClient.swift in Sources */,
 				842A05022193585A004B8E29 /* ArtistRequests.swift in Sources */,
 				842A5B192189B44C00E3EE79 /* ApiResponse.swift in Sources */,
+				8425CD9B2193D4E900CF4239 /* HMAC.swift in Sources */,
+				8425CDA62193D4E900CF4239 /* SHA1.swift in Sources */,
+				8425CDA42193D4E900CF4239 /* OAuthSwiftError.swift in Sources */,
+				8425CD9D2193D4E900CF4239 /* OAuth2Swift.swift in Sources */,
 				842A05042193585A004B8E29 /* AudiomackRegisteredUser.swift in Sources */,
-				840B59EA2191B3F100D5C97B /* HMAC.swift in Sources */,
-				842A04F42193585A004B8E29 /* OAuth2Swift.swift in Sources */,
-				842A04FE2193585A004B8E29 /* UIApplication+OAuthSwift.swift in Sources */,
-				842A05052193585A004B8E29 /* OAuthSwiftMultipartData.swift in Sources */,
-				842A04F82193585A004B8E29 /* Data+OAuthSwift.swift in Sources */,
+				8425CD9A2193D4E900CF4239 /* OAuthSwift.swift in Sources */,
+				8425CD992193D4E900CF4239 /* OAuthSwiftMultipartData.swift in Sources */,
+				8425CDA72193D4E900CF4239 /* Dictionary+OAuthSwift.swift in Sources */,
+				8425CDA82193D4E900CF4239 /* URL+OAuthSwift.swift in Sources */,
 				842A04F52193585A004B8E29 /* AudiomackArtistClient.swift in Sources */,
-				842A04FA2193585A004B8E29 /* Int+OAuthSwift.swift in Sources */,
-				842A050B2193585A004B8E29 /* Collection+OAuthSwift.swift in Sources */,
-				842A04F62193585A004B8E29 /* OAuthSwiftError.swift in Sources */,
-				842A04FF2193585A004B8E29 /* Objc.swift in Sources */,
-				842A05012193585A004B8E29 /* OAuthSwift.swift in Sources */,
+				8425CDA52193D4E900CF4239 /* NotificationCenter+OAuthSwift.swift in Sources */,
+				8425CDAE2193D4E900CF4239 /* OAuthSwiftHTTPRequest.swift in Sources */,
+				8425CD7B2193C37200CF4239 /* AudiomackMusic.swift in Sources */,
 				842A5B182189B44C00E3EE79 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

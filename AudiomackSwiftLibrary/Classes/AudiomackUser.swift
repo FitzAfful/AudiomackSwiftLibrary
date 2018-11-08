@@ -134,3 +134,30 @@ public struct AudiomackUserResponse: InitializableWithData, InitializableWithJso
 	}
 }
 
+public struct AudiomackUsersResponse: InitializableWithData, InitializableWithJson {
+	var results: [AudiomackUser] = []
+	
+	init(data: Data?) throws {
+		guard let data = data,
+			let jsonObject = try? JSONSerialization.jsonObject(with: data),
+			let json = jsonObject as? [String: Any] else {
+				throw NSError.createParseError()
+		}
+		try self.init(json: json)
+		
+	}
+	
+	init(json: [String : Any]) throws {
+		if let results_ = json["results"] as? NSArray{
+			for item in results_ {
+				let user = item as? [String : Any]
+				let audiomackUser = try AudiomackUser(json: user!)
+				results.append(audiomackUser)
+			}
+		}else {
+			throw NSError.createParseError()
+		}
+		
+	}
+}
+
