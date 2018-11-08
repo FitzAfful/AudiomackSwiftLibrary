@@ -11,10 +11,12 @@ public class AudiomackClient {
 	
 	private let authClient: AuthenticationClientImplementation
 	private let artistClient: ArtistClientImplementation
+	private let chartClient: ChartClientImplementation
 	
 	public init(consumerKey: String, consumerSecret: String, oauthToken: String, oauthTokenSecret: String, oauthTokenVerifier: String?) {
 		authClient = AuthenticationClientImplementation(apiClient: ApiClientImplementation(urlSessionConfiguration: URLSessionConfiguration.default,completionHandlerQueue: OperationQueue.main), oauthSignatureGenerator: OAuth1Swift(consumerKey: consumerKey, consumerSecret: consumerSecret))
 		artistClient = ArtistClientImplementation(authClient: authClient)
+		chartClient = ChartClientImplementation(authClient: authClient)
 	}
 	
 	public func registerUser(email: String, name: String, password: String, password2: String, completionHandler: @escaping RegisterUserCompletionHandler) {
@@ -73,4 +75,16 @@ public class AudiomackClient {
 		}
 	}
 	
+	//CHARTS
+	func getChart(musicType: MusicType, chartType: ChartType, completionHandler: @escaping GetChartCompletionHandler) {
+		chartClient.getChart(musicType: musicType, chartType: chartType) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func getGenreChart(genre: String, musicType: MusicType, chartType: ChartType, completionHandler: @escaping GetGenreChartCompletionHandler) {
+		chartClient.getGenreChart(genre: genre, musicType: musicType, chartType: chartType) { (result) in
+			completionHandler(result)
+		}
+	}
 }
