@@ -12,11 +12,13 @@ public class AudiomackClient {
 	private let authClient: AuthenticationClientImplementation
 	private let artistClient: ArtistClientImplementation
 	private let chartClient: ChartClientImplementation
+	private let searchClient: SearchClientImplementation
 	
 	public init(consumerKey: String, consumerSecret: String, oauthToken: String, oauthTokenSecret: String, oauthTokenVerifier: String?) {
 		authClient = AuthenticationClientImplementation(apiClient: ApiClientImplementation(urlSessionConfiguration: URLSessionConfiguration.default,completionHandlerQueue: OperationQueue.main), oauthSignatureGenerator: OAuth1Swift(consumerKey: consumerKey, consumerSecret: consumerSecret))
 		artistClient = ArtistClientImplementation(authClient: authClient)
 		chartClient = ChartClientImplementation(authClient: authClient)
+		searchClient = SearchClientImplementation(authClient: authClient)
 	}
 	
 	public func registerUser(email: String, name: String, password: String, password2: String, completionHandler: @escaping RegisterUserCompletionHandler) {
@@ -84,6 +86,19 @@ public class AudiomackClient {
 	
 	func getGenreChart(genre: String, musicType: MusicType, chartType: ChartType, completionHandler: @escaping GetGenreChartCompletionHandler) {
 		chartClient.getGenreChart(genre: genre, musicType: musicType, chartType: chartType) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	//SEARCH
+	func search(searchText: String, resultType: SearchMusicType?, sortBy: SortType?, genre: String?, verified: Bool?, page: Int?, limit: Int?, completionHandler: @escaping SearchCompletionHandler){
+		searchClient.search(searchText: searchText, resultType: resultType, sortBy: sortBy, genre: genre, verified: verified, page: page, limit: limit) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func searchAutosuggest(searchText: String, completionHandler: @escaping SearchAutoSuggestCompletionHandler){
+		searchClient.searchAutosuggest(searchText: searchText) { (result) in
 			completionHandler(result)
 		}
 	}
