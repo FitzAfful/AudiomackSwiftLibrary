@@ -56,3 +56,19 @@ public struct ForgotPasswordResponse: InitializableWithData, InitializableWithJs
 	}
 }
 
+public struct EmptyResponse: InitializableWithData, InitializableWithJson {
+	
+	init(data: Data?) throws {
+		guard let data = data,
+			let jsonObject = try? JSONSerialization.jsonObject(with: data),
+			let json = jsonObject as? [String: Any] else {
+				throw NSError.createParseError()
+		}
+		try self.init(json: json)
+		
+	}
+	
+	init(json: [String : Any]) throws {
+		
+	}
+}

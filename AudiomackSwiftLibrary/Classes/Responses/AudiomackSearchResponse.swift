@@ -68,3 +68,34 @@ public struct AudiomackSearchResponse: InitializableWithData, InitializableWithJ
 		
 	}
 }
+
+public struct AudiomackSearchAutoSuggestResponse: InitializableWithData, InitializableWithJson {
+	var results: [String] = []
+	
+	init(data: Data?) throws {
+		guard let data = data,
+			let jsonObject = try? JSONSerialization.jsonObject(with: data),
+			let json = jsonObject as? [String: Any] else {
+				throw NSError.createParseError()
+		}
+		try self.init(json: json)
+		
+	}
+	
+	
+	
+	init(json: [String : Any]) throws {
+		
+		
+		if let results_: NSArray = json["results"] as? NSArray{
+			for item in results_ {
+				let searchItem = item as! String
+				results.append(searchItem)
+			}
+		}else {
+			print("results error")
+			throw NSError.createParseError()
+		}
+		
+	}
+}

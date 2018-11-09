@@ -13,12 +13,14 @@ public class AudiomackClient {
 	private let artistClient: ArtistClientImplementation
 	private let chartClient: ChartClientImplementation
 	private let searchClient: SearchClientImplementation
+	private let musicClient: MusicClientImplementation
 	
 	public init(consumerKey: String, consumerSecret: String, oauthToken: String, oauthTokenSecret: String, oauthTokenVerifier: String?) {
 		authClient = AuthenticationClientImplementation(apiClient: ApiClientImplementation(urlSessionConfiguration: URLSessionConfiguration.default,completionHandlerQueue: OperationQueue.main), oauthSignatureGenerator: OAuth1Swift(consumerKey: consumerKey, consumerSecret: consumerSecret))
 		artistClient = ArtistClientImplementation(authClient: authClient)
 		chartClient = ChartClientImplementation(authClient: authClient)
 		searchClient = SearchClientImplementation(authClient: authClient)
+		musicClient = MusicClientImplementation(authClient: authClient)
 	}
 	
 	public func registerUser(email: String, name: String, password: String, password2: String, completionHandler: @escaping RegisterUserCompletionHandler) {
@@ -97,9 +99,15 @@ public class AudiomackClient {
 		}
 	}
 	
-	/*public func searchAutosuggest(searchText: String, completionHandler: @escaping SearchAutoSuggestCompletionHandler){
+	public func searchAutosuggest(searchText: String, completionHandler: @escaping SearchAutoSuggestCompletionHandler){
 		searchClient.searchAutosuggest(searchText: searchText) { (result) in
 			completionHandler(result)
 		}
-	}*/
+	}
+	
+	func getMusic(id: String, key:String? = nil, completionHandler: @escaping GetMusicCompletionHandler){
+		musicClient.getMusic(id: id) { (result) in
+			
+		}
+	}
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 public typealias SearchCompletionHandler = (_ response: Result<AudiomackSearchResponse>) -> Void
-public typealias SearchAutoSuggestCompletionHandler = (_ response: Result<AudiomackSearchResponse>) -> Void
+public typealias SearchAutoSuggestCompletionHandler = (_ response: Result<[String]>) -> Void
 
 public enum SearchMusicType : String {
 	case songs = "songs"
@@ -21,6 +21,7 @@ public enum SortType : String {
 	case recent = "recent"
 	case popular = "popular"
 }
+
 
 protocol SearchClientProtocol {
 	func search(searchText: String, resultType: SearchMusicType?, sortBy: SortType?, genre: String?, verified: Bool?, page: Int?, limit: Int?, completionHandler: @escaping SearchCompletionHandler)
@@ -65,8 +66,8 @@ class SearchClientImplementation: SearchClientProtocol {
 	
 	func searchAutosuggest(searchText: String, completionHandler: @escaping SearchAutoSuggestCompletionHandler) {
 		_ = authClient.oauthGenerator.client.get(BASE_URL + "/search_autosuggest?q=\(searchText)", success: { (response) in
-			let result_ = try! AudiomackSearchResponse(data: response.data)
-			completionHandler(.success(result_))
+			let result_ = try! AudiomackSearchAutoSuggestResponse(data: response.data)
+			completionHandler(.success(result_.results))
 		}) { (error) in
 			completionHandler(.failure(error))
 		}
