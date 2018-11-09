@@ -8,28 +8,28 @@
 import Foundation
 
 public struct AudiomackUser: InitializableWithData, InitializableWithJson {
-	var id: String
-	var name: String
-	var url_slug: String
-	var image: String
-	var hometown: String
-	var bio: String
-	var twitter: String
-	var facebook: String
-	var instagram: String
-	var label: String
-	var url: String
-	var genre: String
-	var verified: String
-	var updated: String
-	var created: String
-	var status: String
-	var video_ads: String
-	var follow_download: String
-	var favorite_music: [String]
-	var favorite_playlists: [String]
-	var playlists: [String]
-	var following: [String]
+	var id: String = ""
+	var name: String = ""
+	var url_slug: String = ""
+	var image: String = ""
+	var hometown: String = ""
+	var bio: String = ""
+	var twitter: String = ""
+	var facebook: String = ""
+	var instagram: String = ""
+	var label: String = ""
+	var url: String = ""
+	var genre: String = ""
+	var verified: String = ""
+	var updated: String = ""
+	var created: String = ""
+	var status: String = ""
+	var video_ads: String = ""
+	var follow_download: String = ""
+	var favorite_music: [String] = []
+	var favorite_playlists: [String] = []
+	var playlists: [String] = []
+	var following: [String] = []
 	
 	init(data: Data?) throws {
 		guard let data = data,
@@ -42,71 +42,100 @@ public struct AudiomackUser: InitializableWithData, InitializableWithJson {
 	}
 	
 	init(json: [String : Any]) throws {
-		var fav_playlists:[String] = []
+		
+		if (!(json["id"] != nil)) {
+			throw NSError.createParseError()
+		}
+		
+		self.id = String.init(describing: json["id"]!)
+		
 		if let fav = json["favorite_playlists"] {
-			fav_playlists = fav as! [String]
+			self.favorite_playlists = fav as! [String]
 		}
 		
-		var fav_music:[String] = []
 		if let fav = json["favorite_music"] {
-			fav_music = fav as! [String]
+			self.favorite_music = fav as! [String]
 		}
 		
-		var playlists_:[String] = []
 		if let fav = json["playlists"] {
-			playlists_ = fav as! [String]
+			self.playlists = fav as! [String]
 		}
 		
-		var following_:[String] = []
 		if let fav = json["following"] {
-			following_ = fav as! [String]
+			self.following = fav as! [String]
 		}
 		
-		guard let id =  json["id"] as? String,
-			let name = json["name"] as? String,
-			let url_slug = json["url_slug"] as? String,
-			let image = json["image"] as? String,
-			let hometown = json["hometown"] as? String,
-			let bio = json["bio"] as? String,
-			let twitter = json["twitter"] as? String,
-			let facebook = json["facebook"] as? String,
-			let instagram = json["instagram"] as? String,
-			let label = json["label"] as? String,
-			let url = json["url"] as? String,
-			let genre = json["genre"] as? String,
-			let verified = json["verified"] as? String,
-			let updated = json["updated"] as? String,
-			let created = json["created"] as? String,
-			let status = json["status"] as? String,
-			let video_ads = json["video_ads"] as? String,
-			let follow_download = json["follow_download"] as? String else {
-				
-				throw NSError.createParseError()
+		self.status = ""
+		if let status_ = json["status"] as? String {
+			self.status = status_
 		}
 		
 		
-		self.id = id
-		self.name = name
-		self.url_slug = url_slug
-		self.image = image
-		self.hometown = hometown
-		self.bio = bio
-		self.twitter = twitter
-		self.facebook = facebook
-		self.instagram = instagram
-		self.label = label
-		self.url = url
-		self.genre = genre
-		self.verified = verified
-		self.updated = updated
-		self.created = created
-		self.status = status
-		self.video_ads = video_ads
-		self.follow_download = follow_download
-		self.favorite_music = fav_music
-		self.favorite_playlists = fav_playlists
-		self.playlists = playlists_
-		self.following = following_
+		self.video_ads = ""
+		if let video_ads_ = json["video_ads"] as? String {
+			self.video_ads = video_ads_
+		}
+		
+		if let follow_download_ = json["follow_download"] as? String {
+			self.follow_download = follow_download_
+		}
+		
+		if let name_ = json["name"] as? String {
+			self.name = name_
+		}
+		
+		if let image_ = json["image"] as? String {
+			self.image = image_
+		}
+		
+		if let image_ = json["image"] as? String {
+			self.image = image_
+		}
+		
+		if let hometown_ = json["hometown"] as? String {
+			self.hometown = hometown_
+		}
+		
+		if let bio_ = json["bio"] as? String {
+			self.bio = bio_
+		}
+		
+		if let twitter_ = json["twitter"] as? String {
+			self.twitter = twitter_
+		}
+		
+		if let facebook_ = json["facebook"] as? String {
+			self.facebook = facebook_
+		}
+		
+		if let instagram_ = json["instagram"] as? String {
+			self.instagram = instagram_
+		}
+		
+		if let label_ = json["label"] as? String {
+			self.label = label_
+		}
+		
+		if let url_ = json["url"] as? String {
+			self.url = url_
+		}
+		
+		if let genre_ = json["genre"] as? String {
+			self.genre = genre_
+		}
+		
+		if let verified_ = json["verified"] as? String {
+			self.verified = verified_
+		}
+		
+		if let updated_ = json["updated"] as? String {
+			self.updated = updated_
+		}
+		
+		if let created = json["created"] as? String {
+			self.created = created
+		}
+		
 	}
 }
 

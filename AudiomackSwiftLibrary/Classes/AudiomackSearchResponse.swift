@@ -15,11 +15,6 @@ public struct AudiomackSearchResponse: InitializableWithData, InitializableWithJ
 	var playlists: [AudiomackMusic] = []
 	var verified_artists: [AudiomackUser] = []
 	
-	var song_count: String
-	var album_count: String
-	var artist_count: String
-	var playlist_count: String
-	
 	init(data: Data?) throws {
 		guard let data = data,
 			let jsonObject = try? JSONSerialization.jsonObject(with: data),
@@ -33,14 +28,6 @@ public struct AudiomackSearchResponse: InitializableWithData, InitializableWithJ
 	
 	
 	init(json: [String : Any]) throws {
-		
-		guard let song_count = json["song_count"] as? String,
-			let album_count = json["album_count"] as? String,
-			let artist_count = json["artist_count"] as? String,
-			let playlist_count = json["playlist_count"] as? String else {
-				throw NSError.createParseError()
-		}
-		
 		if let verified = json["verified_artist"] as? [String:Any]{
 			let artist = try AudiomackUser(json: verified)
 			verified_artists.append(artist)
@@ -75,12 +62,9 @@ public struct AudiomackSearchResponse: InitializableWithData, InitializableWithJ
 				}
 			}
 		}else {
+			print("results error")
 			throw NSError.createParseError()
 		}
 		
-		self.song_count = song_count
-		self.album_count = album_count
-		self.artist_count = artist_count
-		self.playlist_count = playlist_count
 	}
 }

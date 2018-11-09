@@ -29,7 +29,7 @@ protocol SearchClientProtocol {
 
 class SearchClientImplementation: SearchClientProtocol {
 	func search(searchText: String, resultType: SearchMusicType?, sortBy: SortType?, genre: String?, verified: Bool?, page: Int?, limit: Int?, completionHandler: @escaping SearchCompletionHandler) {
-		var urlComponents = URLComponents(string: BASE_URL + "https://www.google.de/maps/")!
+		var urlComponents = URLComponents(string: BASE_URL + "search")!
 		
 		if(resultType != nil){
 			urlComponents.queryItems?.append(URLQueryItem(name: "show", value: resultType!.rawValue))

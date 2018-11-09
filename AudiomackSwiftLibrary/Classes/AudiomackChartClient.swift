@@ -41,7 +41,7 @@ class ChartClientImplementation: ChartClientProtocol {
 	}
 	
 	func getGenreChart(genre: String, musicType: MusicType, chartType: ChartType, completionHandler: @escaping GetGenreChartCompletionHandler) {
-		_ = authClient.oauthGenerator.client.get(BASE_URL + "\(genre.trimmingCharacters(in: .whitespaces))/chart/\(musicType)/\(chartType)", success: { (response) in
+		_ = authClient.oauthGenerator.client.get(BASE_URL + "/\(genre.trimmingCharacters(in: .whitespaces))/chart/\(musicType)/\(chartType)", success: { (response) in
 			let result_ = try! AudiomackMusicResponse(data: response.data)
 			completionHandler(.success(result_.results))
 		}) { (error) in
