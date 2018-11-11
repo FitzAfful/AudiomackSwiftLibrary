@@ -20,6 +20,43 @@ Access the full [API documentation](https://www.audiomack.com/data-api/docs/) he
 
 ## Features
 
+### Errors
+- [] Get Song / Album Details
+
+### Unauthenticated Requests
+#### Music
+- [X] Get Music Details
+- [X] Get Most Recent Music
+- [X] Get Genre-specific Most Recent Music
+- [X] Get Trending Music
+- [X] Get Genre-specific Trending Music
+- [X] Flag Unplayable Track
+- [X] Play Track
+
+#### Artists
+- [X] Get Artist Details
+- [X] Get Artist Uploads
+- [X] Get Artist Favorites
+- [X] Search Artist Favorites
+- [X] Get Artist Playlists
+- [X] Get Artist Following / Followers
+- [X] Get Artist Feed
+
+#### Playlists
+- [X] Get Playlist Details
+- [X] Get Trending Playlists
+- [X] Get Genre-specific Trending Playlists
+
+#### Charts
+- [X] Track an Ad
+- [X] Track an Ad
+
+#### Search
+- [X] Search Song / Artist / Playlist / Album
+- [X] Search Autosuggest
+
+
+### Authenticated Requests
 - [] Chainable Request / Response Methods
 - [] URL / JSON / plist Parameter Encoding
 - [] Upload File / Data / Stream / MultipartFormData
@@ -29,9 +66,6 @@ Access the full [API documentation](https://www.audiomack.com/data-api/docs/) he
 - [] Upload and Download Progress Closures with Progress
 - [] cURL Command Output
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
 
@@ -58,6 +92,9 @@ Then, run the following command:
 ```bash
 $ pod install
 ```
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Author
 
