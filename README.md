@@ -11,18 +11,17 @@ Access the full [API documentation](https://www.audiomack.com/data-api/docs/) he
 
 ## Getting Started as on [Getting Started](https://www.audiomack.com/data-api/docs#getting-started)
 
-- Getting started with the Audiomack API
-- Request an API key on our Contact Us page
+- Request an API key on the Contact Us page
 - The API key and associated secret will be used to identify your application when making requests to the API
 - All requests must be signed using the oAuth standard
-- Create your application
 - Send any API support questions to support@audiomack.com
+- Check out ##Usage
 
 ## Features
 
-### Errors
-- [] Get Song / Album Details
-
+### Initialization / Authorization
+- [ ] Initializing / Authorizing Requests
+- [ ] Error Handling
 ### Unauthenticated Requests
 #### Music
 - [X] Get Music Details
@@ -32,7 +31,6 @@ Access the full [API documentation](https://www.audiomack.com/data-api/docs/) he
 - [X] Get Genre-specific Trending Music
 - [X] Flag Unplayable Track
 - [X] Play Track
-
 #### Artists
 - [X] Get Artist Details
 - [X] Get Artist Uploads
@@ -41,31 +39,39 @@ Access the full [API documentation](https://www.audiomack.com/data-api/docs/) he
 - [X] Get Artist Playlists
 - [X] Get Artist Following / Followers
 - [X] Get Artist Feed
-
 #### Playlists
 - [X] Get Playlist Details
 - [X] Get Trending Playlists
 - [X] Get Genre-specific Trending Playlists
-
 #### Charts
-- [X] Track an Ad
-- [X] Track an Ad
-
+- [X] Get Chart Tracks
+- [X] Get Gender Specific Chart Tracks
 #### Search
 - [X] Search Song / Artist / Playlist / Album
 - [X] Search Autosuggest
 
 
 ### Authenticated Requests
-- [] Chainable Request / Response Methods
-- [] URL / JSON / plist Parameter Encoding
-- [] Upload File / Data / Stream / MultipartFormData
-- [] Download File using Request or Resume Data
-- [] Authentication with URLCredential
-- [] HTTP Response Validation
-- [] Upload and Download Progress Closures with Progress
-- [] cURL Command Output
-
+#### Music
+- [ ] Favorite / Unfavorite a song / album
+- [ ] Repost / Unrepost a song / album
+#### Artists
+- [ ] Follow / Unfollow an artist
+#### Playlists
+- [ ] Create playlist
+- [ ] Edit playlist
+- [ ] Delete playlist
+- [ ] Add song(s) to playlist
+- [ ] Remove song from playlist
+- [ ] Favorite / Unfavorite playlist
+#### User
+- [ ] Register user
+- [ ] Get User Details
+- [ ] Forgot Password
+- [ ] Get User Playlists
+- [ ] Get User Uploads
+- [ ] Get User Favorites
+- [ ] Get User Notifications
 
 ## Requirements
 
@@ -92,9 +98,17 @@ Then, run the following command:
 ```bash
 $ pod install
 ```
+## Usage
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+### Not Supported calls in AudiomackSwiftLibrary
+- Getting Artist Pinned Content
+- Marking User Notifications as Seen
+- Getting Aggregations Lists for Notifications
+- Getting list of activities for an Aggregation
 
 ## Author
 
