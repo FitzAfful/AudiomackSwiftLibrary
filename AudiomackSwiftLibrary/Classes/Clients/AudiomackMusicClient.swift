@@ -180,7 +180,7 @@ class MusicClientImplementation: MusicClientProtocol {
 	}
 	
 	func getGenreTrendingMusic(genre: String, completionHandler: @escaping GetMusicArrayCompletionHandler) {
-		let url = BASE_URL + "music/\(genre)/recent"
+		let url = BASE_URL + "music/\(genre)/trending"
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
 			let result_ = try! AudiomackMusicResponse(data: response.data)
 			completionHandler(.success(result_.results))

@@ -9,63 +9,59 @@ import Foundation
 
 
 public typealias GetPlaylistDetailsCompletionHandler = (_ response: Result<AudiomackMusic>) -> Void
-public typealias GetPlaylistInfoCompletionHandler = (_ response: Result<[AudiomackMusic]>) -> Void
+public typealias GetPlaylistArrayCompletionHandler = (_ response: Result<[AudiomackMusic]>) -> Void
 
 
 protocol PlaylistClientProtocol {
-	func getPlaylistInfo(id: String, key:String?, completionHandler: @escaping GetMusicCompletionHandler)
-	func getPlaylistDetails(musicSlug: String, musicType: GetMusicType, artistSlug: String, key:String?, completionHandler: @escaping GetMusicCompletionHandler)
-	func getMostRecentMusic(completionHandler: @escaping GetMusicArrayCompletionHandler)
-	func getGenreMostRecentMusic(genre: String, completionHandler: @escaping GetMusicArrayCompletionHandler)
-	func getTrendingMusic(completionHandler: @escaping GetMusicArrayCompletionHandler)
-	func getGenreTrendingMusic(genre: String, completionHandler: @escaping GetMusicArrayCompletionHandler)
-	func playMusic(parameter: PlayMusicParameter, completionHandler: @escaping MusicStreamCompletionHandler)
-	func flagUnplayableMusic(musicSlug: String, musicType: GetMusicType, artistSlug: String, status:String, completionHandler: @escaping FlagMusicCompletionHandler)
-	func trackAd(parameter: TrackAdParameter, completionHandler: @escaping TrackAdCompletionHandler)
+	func getPlaylistInfo(id: String, fields: [String], completionHandler: @escaping GetPlaylistDetailsCompletionHandler)
+	func getPlaylistInfo(playlistSlug: String, artistSlug: String, fields: [String], completionHandler: @escaping GetPlaylistDetailsCompletionHandler)
+	func getTrendingPlaylists(completionHandler: @escaping GetPlaylistArrayCompletionHandler)
+	func getGenreTrendingPlaylists(genre: String, completionHandler: @escaping GetPlaylistArrayCompletionHandler)
 }
 
-class PlaylistClientImplementation: MusicClientProtocol {
-	func playMusic(parameter: PlayMusicParameter, completionHandler: @escaping MusicStreamCompletionHandler) {
-		var parameters : [String:Any] = [:]
-		for item in parameter.items(){
-			if(item.value != nil){
-				parameters[item.key] = item.value!
+class PlaylistClientImplementation: PlaylistClientProtocol {
+	
+	func getPlaylistInfo(id: String, fields: [String], completionHandler: @escaping GetPlaylistDetailsCompletionHandler) {
+		var url = BASE_URL + "/playlist/\(id)"
+		var fieldString = "?fields="
+		for item in fields {
+			if(fields.last! == item){
+				fieldString.append("\(item)")
+				url.append(fieldString)
+			}else{
+				fieldString.append("\(item),")
 			}
 		}
-		_ = authClient.oauthGenerator.client.post(BASE_URL + "/music/\(parameter.id)/play", parameters: parameters, headers: nil, body: nil, success: { (response) in
-			let result = String(decoding: response.data, as: UTF8.self)
-			completionHandler(.success(result))
-		}, failure: { (error) in
+		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
+			let result_ = try! AudiomackMusic(data: response.data)
+			completionHandler(.success(result_))
+		}) { (error) in
 			completionHandler(.failure(error))
-		})
-	}
-	
-	func flagUnplayableMusic(musicSlug: String, musicType: GetMusicType, artistSlug: String, status: String = "unplayable", completionHandler: @escaping FlagMusicCompletionHandler) {
-		let url = BASE_URL + "/\(musicType.rawValue.trimmingCharacters(in: CharacterSet.whitespaces))/\(artistSlug.trimmingCharacters(in: CharacterSet.whitespaces))/\(musicSlug.trimmingCharacters(in: CharacterSet.whitespaces))"
-		let parameters: [String: Any] = ["status":status]
-		_ = authClient.oauthGenerator.client.patch(url, parameters: parameters, headers: nil, success: { (response) in
-			let result = try! EmptyResponse(data: response.data)
-			completionHandler(.success(result))
-		}, failure: { (error) in
-			completionHandler(.failure(error))
-		})
-	}
-	
-	func trackAd(parameter: TrackAdParameter, completionHandler: @escaping TrackAdCompletionHandler) {
-		var parameters : [String:Any] = [:]
-		for item in parameter.items(){
-			parameters[item.key] = item.value
 		}
-		_ = authClient.oauthGenerator.client.post(BASE_URL + "/music/\(parameter.id)/ads", parameters: parameters, headers: nil, body: nil, success: { (response) in
-			let result = try! EmptyResponse(data: response.data)
-			completionHandler(.success(result))
-		}, failure: { (error) in
-			completionHandler(.failure(error))
-		})
 	}
 	
-	func getMostRecentMusic(completionHandler: @escaping GetMusicArrayCompletionHandler) {
-		let url = BASE_URL + "/music/recent"
+	func getPlaylistInfo(playlistSlug: String, artistSlug: String, fields: [String],  completionHandler: @escaping GetPlaylistDetailsCompletionHandler) {
+		var url = BASE_URL + "/playlist/\(artistSlug.trimmingCharacters(in: CharacterSet.whitespaces))/\(playlistSlug.trimmingCharacters(in: CharacterSet.whitespaces))"
+
+		var fieldString = "?fields="
+		for item in fields {
+			if(fields.last! == item){
+				fieldString.append("\(item)")
+				url.append(fieldString)
+			}else{
+				fieldString.append("\(item),")
+			}
+		}
+		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
+			let result_ = try! AudiomackMusic(data: response.data)
+			completionHandler(.success(result_))
+		}) { (error) in
+			completionHandler(.failure(error))
+		}
+	}
+	
+	func getTrendingPlaylists(completionHandler: @escaping GetPlaylistArrayCompletionHandler) {
+		let url = BASE_URL + "playlist/trending"
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
 			let result_ = try! AudiomackMusicResponse(data: response.data)
 			completionHandler(.success(result_.results))
@@ -74,57 +70,11 @@ class PlaylistClientImplementation: MusicClientProtocol {
 		}
 	}
 	
-	func getGenreMostRecentMusic(genre: String, completionHandler: @escaping GetMusicArrayCompletionHandler) {
-		let url = BASE_URL + "music/\(genre)/recent"
+	func getGenreTrendingPlaylists(genre: String, completionHandler: @escaping GetPlaylistArrayCompletionHandler) {
+		let url = BASE_URL + "playlist/\(genre)/trending"
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
 			let result_ = try! AudiomackMusicResponse(data: response.data)
 			completionHandler(.success(result_.results))
-		}) { (error) in
-			completionHandler(.failure(error))
-		}
-	}
-	
-	func getTrendingMusic(completionHandler: @escaping GetMusicArrayCompletionHandler) {
-		let url = BASE_URL + "music/trending"
-		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
-			let result_ = try! AudiomackMusicResponse(data: response.data)
-			completionHandler(.success(result_.results))
-		}) { (error) in
-			completionHandler(.failure(error))
-		}
-	}
-	
-	func getGenreTrendingMusic(genre: String, completionHandler: @escaping GetMusicArrayCompletionHandler) {
-		let url = BASE_URL + "music/\(genre)/recent"
-		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
-			let result_ = try! AudiomackMusicResponse(data: response.data)
-			completionHandler(.success(result_.results))
-		}) { (error) in
-			completionHandler(.failure(error))
-		}
-	}
-	
-	func getMusic(id: String, key:String? = nil, completionHandler: @escaping GetMusicCompletionHandler) {
-		var url = BASE_URL + "/music/\(id)"
-		if key != nil {
-			url.append("?key=\(key!)")
-		}
-		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
-			let result_ = try! AudiomackMusicResponse(data: response.data)
-			completionHandler(.success(result_.results.first!))
-		}) { (error) in
-			completionHandler(.failure(error))
-		}
-	}
-	
-	func getMusic(musicSlug: String, musicType: GetMusicType, artistSlug: String, key: String?,  completionHandler: @escaping GetMusicCompletionHandler) {
-		var url = BASE_URL + "/\(musicType.rawValue.trimmingCharacters(in: CharacterSet.whitespaces))/\(artistSlug.trimmingCharacters(in: CharacterSet.whitespaces))/\(musicSlug.trimmingCharacters(in: CharacterSet.whitespaces))"
-		if key != nil {
-			url.append("?key=\(key!)")
-		}
-		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
-			let result_ = try! AudiomackMusicResponse(data: response.data)
-			completionHandler(.success(result_.results.first!))
 		}) { (error) in
 			completionHandler(.failure(error))
 		}
