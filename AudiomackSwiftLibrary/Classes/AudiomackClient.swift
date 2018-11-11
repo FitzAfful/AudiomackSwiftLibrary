@@ -15,7 +15,7 @@ public class AudiomackClient {
 	private let searchClient: SearchClientImplementation
 	private let musicClient: MusicClientImplementation
 	
-	public init(consumerKey: String, consumerSecret: String, oauthToken: String, oauthTokenSecret: String, oauthTokenVerifier: String?) {
+	public init(consumerKey: String, consumerSecret: String) {
 		authClient = AuthenticationClientImplementation(apiClient: ApiClientImplementation(urlSessionConfiguration: URLSessionConfiguration.default,completionHandlerQueue: OperationQueue.main), oauthSignatureGenerator: OAuth1Swift(consumerKey: consumerKey, consumerSecret: consumerSecret))
 		artistClient = ArtistClientImplementation(authClient: authClient)
 		chartClient = ChartClientImplementation(authClient: authClient)

@@ -15,7 +15,57 @@ Access the full [API documentation](https://www.audiomack.com/data-api/docs/) he
 - The API key and associated secret will be used to identify your application when making requests to the API
 - All requests must be signed using the oAuth standard
 - Send any API support questions to support@audiomack.com
-- Check out ##Usage
+
+
+## Requirements
+
+- iOS 8.0+ 
+- Xcode 10+
+- Swift 4.0+
+
+## Installation
+
+AudiomackSwiftLibrary is available through [CocoaPods](https://cocoapods.org). To integrate AudiomackSwiftLibrary into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '10.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+pod 'AudiomackSwiftLibrary', '~> 4.7'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
+## Basic Usage
+Audiomack only supports Oauth 1.0. To initialize and use AudiomackSwiftLibrary,
+
+```swift
+import AudiomackSwiftLibrary
+
+let client = AudiomackClient(consumerKey: "YOUR_CONSUMER_KEY", consumerSecret: "YOUR_CONSUMER_SECRET")
+
+client.getArtistDetails(slug: "eminem") { (result) in
+	switch result{
+	case let .success(response):
+		print(response)
+		//response - AudiomackUser Object
+	case let .failure(error):
+		print("error \(error)")
+		//error - AudiomackError Object
+	}
+}
+
+```
+
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Features
 
@@ -73,36 +123,6 @@ Access the full [API documentation](https://www.audiomack.com/data-api/docs/) he
 - [ ] Get User Favorites
 - [ ] Get User Notifications
 
-## Requirements
-
-- iOS 8.0+ 
-- Xcode 10+
-- Swift 4.0+
-
-## Installation
-
-AudiomackSwiftLibrary is available through [CocoaPods](https://cocoapods.org). To integrate AudiomackSwiftLibrary into your Xcode project using CocoaPods, specify it in your `Podfile`:
-
-```ruby
-source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '10.0'
-use_frameworks!
-
-target '<Your Target Name>' do
-pod 'AudiomackSwiftLibrary', '~> 4.7'
-end
-```
-
-Then, run the following command:
-
-```bash
-$ pod install
-```
-## Usage
-
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ### Not Supported calls in AudiomackSwiftLibrary
 - Getting Artist Pinned Content
