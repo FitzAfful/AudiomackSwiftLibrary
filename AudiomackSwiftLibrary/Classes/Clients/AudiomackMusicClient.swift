@@ -195,7 +195,6 @@ class MusicClientImplementation: MusicClientProtocol {
 	
 	
 	*/
-	
 	func flagUnplayableMusic(musicSlug: String, musicType: GetMusicType, artistSlug: String, status: String = "unplayable", completionHandler: @escaping FlagMusicCompletionHandler) {
 		let url = BASE_URL + "/\(musicType.rawValue.trimmingCharacters(in: CharacterSet.whitespaces))/\(artistSlug.trimmingCharacters(in: CharacterSet.whitespaces))/\(musicSlug.trimmingCharacters(in: CharacterSet.whitespaces))"
 		let parameters: [String: Any] = ["status":status]
@@ -245,7 +244,6 @@ class MusicClientImplementation: MusicClientProtocol {
 	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
 	
 	- Returns: If successful, returns an array of AudiomackMusic objects
-	
 	*/
 	func getMostRecentMusic(completionHandler: @escaping GetMusicArrayCompletionHandler) {
 		let url = BASE_URL + "/music/recent"
@@ -270,8 +268,6 @@ class MusicClientImplementation: MusicClientProtocol {
 	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
 	
 	- Returns: If successful, returns an array of AudiomackMusic objects
-	
-	
 	*/
 	func getGenreMostRecentMusic(genre: String, completionHandler: @escaping GetMusicArrayCompletionHandler) {
 		let url = BASE_URL + "music/\(genre)/recent"
@@ -295,8 +291,6 @@ class MusicClientImplementation: MusicClientProtocol {
 	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
 	
 	- Returns: If successful, returns an array of AudiomackMusic objects
-	
-	
 	*/
 	func getTrendingMusic(completionHandler: @escaping GetMusicArrayCompletionHandler) {
 		let url = BASE_URL + "music/trending"
@@ -321,8 +315,6 @@ class MusicClientImplementation: MusicClientProtocol {
 	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
 	
 	- Returns: If successful, returns an array of AudiomackMusic objects
-	
-	
 	*/
 	func getGenreTrendingMusic(genre: String, completionHandler: @escaping GetMusicArrayCompletionHandler) {
 		let url = BASE_URL + "music/\(genre)/trending"
@@ -379,8 +371,6 @@ class MusicClientImplementation: MusicClientProtocol {
 	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
 	
 	- Returns: If successful, returns AudiomackMusic object
-	
-	
 	*/
 	func getMusic(musicSlug: String, musicType: GetMusicType, artistSlug: String, key: String?,  completionHandler: @escaping GetMusicCompletionHandler) {
 		var url = BASE_URL + "/\(musicType.rawValue.trimmingCharacters(in: CharacterSet.whitespaces))/\(artistSlug.trimmingCharacters(in: CharacterSet.whitespaces))/\(musicSlug.trimmingCharacters(in: CharacterSet.whitespaces))"

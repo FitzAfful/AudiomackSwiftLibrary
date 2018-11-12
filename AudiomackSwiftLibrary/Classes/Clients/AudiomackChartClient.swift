@@ -64,10 +64,6 @@ class ChartClientImplementation: ChartClientProtocol {
 	-  genre: String - rap, electronic
 	-  musicType: MusicType - songs, albums, playlists
 	-  chartType: ChartType - total, daily, weekly, monthly, yearly
-	-  genre: String -  eg. rap, electronic (optional)
-	-  verified: Bool -  verified results only? (optional)
-	-  page: Int -  for pagination only (optional)
-	-  limit: Int -  by default, only 20 results are returned. Adjust to suit your use (optional)
 	-  completionHandler: The completion handler to call when the load request is complete.
 	`response` - A response object, or `nil` if the request failed.
 	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
