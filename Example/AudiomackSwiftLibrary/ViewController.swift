@@ -10,20 +10,24 @@ import UIKit
 import AudiomackSwiftLibrary
 
 class ViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		
 		let client = AudiomackClient(consumerKey: "", consumerSecret: "")
 		
-		/*client.getArtistDetails(slug: "officiallive919fm") { (result) in
-		switch result{
-		case let .success(response):
-		print(response)
-		case let .failure(error):
-		print("error \(error)")
+		client.getArtistDetails(slug: "officiallive919fm") { (result) in
+			switch result{
+			case let .success(response):
+				print(response)
+			case let .failure(error):
+				print("error \(error)")
+				if (error.audiomackError != nil) {
+					let audioError = error as! AudiomackError
+					print(audioError)
+				}
+			}
 		}
-		}*/
 		
 		/*client.getArtistUploads(slug: "officiallive919fm") { (result) in
 		switch result{
@@ -124,6 +128,6 @@ class ViewController: UIViewController {
 		print("error \(error)")
 		}
 		}*/
-    }
+	}
 }
 

@@ -35,6 +35,7 @@ public struct AudiomackMusic: InitializableWithData, InitializableWithJson {
 	var album: String = ""
 	var uploader: AudiomackUser
 	var stats: AudiomackStat?
+	var tracks: [AudiomackMusic]?
 	
 	
 	init(data: Data?) throws {
@@ -155,6 +156,12 @@ public struct AudiomackMusic: InitializableWithData, InitializableWithJson {
 			self.stats = try! AudiomackStat(json: stat_)
 		}
 		
+		if let tracks_ = json["tracks"] as? NSArray {
+			var myTracks: [AudiomackMusic] = []
+			for item in tracks_ {
+				myTracks.append(try! AudiomackMusic(json: item as! [String : Any]))
+			}
+		}
 	}
 }
 

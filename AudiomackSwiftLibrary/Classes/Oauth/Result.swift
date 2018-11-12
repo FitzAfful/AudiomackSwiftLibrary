@@ -31,9 +31,19 @@ public enum Result<T> {
 	}
 }
 
+public extension Error {
+	var audiomackError: AudiomackError? {
+		let apiError = self as! ApiError
+		if let resultError = try? AudiomackError(data: apiError.data, response: apiError.httpUrlResponse) {
+			return resultError
+		} else{
+			return nil
+		}
+	}
+}
+
 public enum FetchError: Error{
 	case NetworkFailed()
-	case DeserialisingFailed()
-	case ApiError(message:String)
+	case AudiomackError(code:Int, message:String)
 }
 

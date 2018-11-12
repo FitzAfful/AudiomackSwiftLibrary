@@ -14,6 +14,7 @@ public class AudiomackClient {
 	private let chartClient: ChartClientImplementation
 	private let searchClient: SearchClientImplementation
 	private let musicClient: MusicClientImplementation
+	private let playlistClient: PlaylistClientImplementation
 	
 	public init(consumerKey: String, consumerSecret: String) {
 		authClient = AuthenticationClientImplementation(apiClient: ApiClientImplementation(urlSessionConfiguration: URLSessionConfiguration.default,completionHandlerQueue: OperationQueue.main), oauthSignatureGenerator: OAuth1Swift(consumerKey: consumerKey, consumerSecret: consumerSecret))
@@ -21,6 +22,7 @@ public class AudiomackClient {
 		chartClient = ChartClientImplementation(authClient: authClient)
 		searchClient = SearchClientImplementation(authClient: authClient)
 		musicClient = MusicClientImplementation(authClient: authClient)
+		playlistClient = PlaylistClientImplementation(authClient: authClient)
 	}
 	
 	public func registerUser(email: String, name: String, password: String, password2: String, completionHandler: @escaping RegisterUserCompletionHandler) {
@@ -105,9 +107,94 @@ public class AudiomackClient {
 		}
 	}
 	
-	func getMusic(id: String, key:String? = nil, completionHandler: @escaping GetMusicCompletionHandler){
+	func getMusic(id: String, completionHandler: @escaping GetMusicCompletionHandler){
 		musicClient.getMusic(id: id) { (result) in
-			
+			completionHandler(result)
 		}
 	}
+	
+	
+	//MUSIC
+	
+	func getMusic(id: String, key:String?, completionHandler: @escaping GetMusicCompletionHandler){
+		musicClient.getMusic(id: id, key: key) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func getMusic(musicSlug: String, musicType: GetMusicType, artistSlug: String, key:String?, completionHandler: @escaping GetMusicCompletionHandler){
+		musicClient.getMusic(musicSlug: musicSlug, musicType: musicType, artistSlug: artistSlug, key: key) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func getMostRecentMusic(completionHandler: @escaping GetMusicArrayCompletionHandler){
+		self.musicClient.getMostRecentMusic { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func getGenreMostRecentMusic(genre: String, completionHandler: @escaping GetMusicArrayCompletionHandler){
+		self.musicClient.getGenreMostRecentMusic(genre: genre) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func getTrendingMusic(completionHandler: @escaping GetMusicArrayCompletionHandler){
+		self.musicClient.getTrendingMusic { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func getGenreTrendingMusic(genre: String, completionHandler: @escaping GetMusicArrayCompletionHandler){
+		self.musicClient.getGenreTrendingMusic(genre: genre) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func playMusic(parameter: PlayMusicParameter, completionHandler: @escaping MusicStreamCompletionHandler){
+		self.musicClient.playMusic(parameter: parameter) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func flagUnplayableMusic(musicSlug: String, musicType: GetMusicType, artistSlug: String,  completionHandler: @escaping FlagMusicCompletionHandler){
+		self.musicClient.flagUnplayableMusic(musicSlug: musicSlug, musicType: musicType, artistSlug: artistSlug) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func trackAd(parameter: TrackAdParameter, completionHandler: @escaping TrackAdCompletionHandler){
+		self.musicClient.trackAd(parameter: parameter) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	
+	// PLAYLISTS
+	
+	func getPlaylistInfo(id: String, fields: [String], completionHandler: @escaping GetPlaylistDetailsCompletionHandler){
+		self.playlistClient.getPlaylistInfo(id: id, fields: fields) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func getPlaylistInfo(playlistSlug: String, artistSlug: String, fields: [String], completionHandler: @escaping GetPlaylistDetailsCompletionHandler){
+		self.playlistClient.getPlaylistInfo(playlistSlug: playlistSlug, artistSlug: artistSlug, fields: fields) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func getTrendingPlaylists(completionHandler: @escaping GetPlaylistArrayCompletionHandler){
+		self.playlistClient.getTrendingPlaylists { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	func getGenreTrendingPlaylists(genre: String, completionHandler: @escaping GetPlaylistArrayCompletionHandler){
+		self.playlistClient.getGenreTrendingPlaylists(genre: genre) { (result) in
+			completionHandler(result)
+		}
+	}
+	
 }

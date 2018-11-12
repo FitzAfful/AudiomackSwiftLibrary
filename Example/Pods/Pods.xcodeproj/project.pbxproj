@@ -54,6 +54,7 @@
 		846C03102195B80600AF82F3 /* AudiomackMusicClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C03032195B80600AF82F3 /* AudiomackMusicClient.swift */; };
 		846C03112195B80600AF82F3 /* AuthenticationRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C03052195B80600AF82F3 /* AuthenticationRequests.swift */; };
 		846C03132195C7B100AF82F3 /* AudiomackPlaylistClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C03122195C7B100AF82F3 /* AudiomackPlaylistClient.swift */; };
+		8472CAE02197C03200986286 /* AudiomackError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472CADF2197C03200986286 /* AudiomackError.swift */; };
 		A5BFEBCCE1674D389F9588DD75383C9B /* Pods-AudiomackSwiftLibrary_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31254F0CBF8D23424A84E817B03E0750 /* Pods-AudiomackSwiftLibrary_Example-dummy.m */; };
 		BA722DB6A67C41F08461AAD42D4D5679 /* AudiomackSwiftLibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4073A7A671E353BE437FA7C10FA95FAD /* AudiomackSwiftLibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3A0B1B4027D7124B44F093CA1E8B022 /* Pods-AudiomackSwiftLibrary_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0366DB2A1F5913E5BF57858D991DC6E /* Pods-AudiomackSwiftLibrary_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -142,6 +143,7 @@
 		846C03032195B80600AF82F3 /* AudiomackMusicClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudiomackMusicClient.swift; sourceTree = "<group>"; };
 		846C03052195B80600AF82F3 /* AuthenticationRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRequests.swift; sourceTree = "<group>"; };
 		846C03122195C7B100AF82F3 /* AudiomackPlaylistClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudiomackPlaylistClient.swift; sourceTree = "<group>"; };
+		8472CADF2197C03200986286 /* AudiomackError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudiomackError.swift; sourceTree = "<group>"; };
 		860DF7022257D6AF371281897B88F6EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		882F1BC766F72C79705F9771E1FBE97E /* Pods_AudiomackSwiftLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudiomackSwiftLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C07E1503BFB203744D3CEB9107ECF21 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 				846C02F82195B80500AF82F3 /* AudiomackStat.swift */,
 				846C02F92195B80500AF82F3 /* AudiomackRegisteredUser.swift */,
 				846C02FA2195B80500AF82F3 /* AudiomackUser.swift */,
+				8472CADF2197C03200986286 /* AudiomackError.swift */,
 			);
 			name = Entities;
 			path = AudiomackSwiftLibrary/Classes/Entities;
@@ -522,6 +525,7 @@
 				8425CDAB2193D4E900CF4239 /* Collection+OAuthSwift.swift in Sources */,
 				846C03072195B80600AF82F3 /* AudiomackStat.swift in Sources */,
 				8425CDA02193D4E900CF4239 /* String+OAuthSwift.swift in Sources */,
+				8472CAE02197C03200986286 /* AudiomackError.swift in Sources */,
 				842A5B122189B02700E3EE79 /* AudiomackClient.swift in Sources */,
 				8425CDAF2193D4E900CF4239 /* OAuthWebViewController.swift in Sources */,
 				8425CDA92193D4E900CF4239 /* OAuth1Swift.swift in Sources */,

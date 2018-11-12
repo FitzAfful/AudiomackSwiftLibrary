@@ -10,10 +10,10 @@ import Foundation
 public typealias GetMusicCompletionHandler = (_ response: Result<AudiomackMusic>) -> Void
 public typealias GetMusicArrayCompletionHandler = (_ response: Result<[AudiomackMusic]>) -> Void
 public typealias MusicStreamCompletionHandler = (_ response: Result<String>) -> Void
-public typealias FlagMusicCompletionHandler = (_ response: Result<EmptyResponse>) -> Void
-public typealias TrackAdCompletionHandler = (_ response: Result<EmptyResponse>) -> Void
-public typealias FavoriteMusicCompletionHandler = (_ response: Result<EmptyResponse>) -> Void
-public typealias RepostMusicCompletionHandler = (_ response: Result<EmptyResponse>) -> Void
+public typealias FlagMusicCompletionHandler = (_ response: Result<VoidResponse>) -> Void
+public typealias TrackAdCompletionHandler = (_ response: Result<VoidResponse>) -> Void
+public typealias FavoriteMusicCompletionHandler = (_ response: Result<VoidResponse>) -> Void
+public typealias RepostMusicCompletionHandler = (_ response: Result<VoidResponse>) -> Void
 
 public enum GetMusicType : String {
 	case song = "song"
@@ -129,7 +129,7 @@ class MusicClientImplementation: MusicClientProtocol {
 		let url = BASE_URL + "/\(musicType.rawValue.trimmingCharacters(in: CharacterSet.whitespaces))/\(artistSlug.trimmingCharacters(in: CharacterSet.whitespaces))/\(musicSlug.trimmingCharacters(in: CharacterSet.whitespaces))"
 		let parameters: [String: Any] = ["status":status]
 		_ = authClient.oauthGenerator.client.patch(url, parameters: parameters, headers: nil, success: { (response) in
-			let result = try! EmptyResponse(data: response.data)
+			let result = try! VoidResponse(data: response.data)
 			completionHandler(.success(result))
 		}, failure: { (error) in
 			completionHandler(.failure(error))
@@ -142,7 +142,7 @@ class MusicClientImplementation: MusicClientProtocol {
 			parameters[item.key] = item.value
 		}
 		_ = authClient.oauthGenerator.client.post(BASE_URL + "/music/\(parameter.id)/ads", parameters: parameters, headers: nil, body: nil, success: { (response) in
-			let result = try! EmptyResponse(data: response.data)
+			let result = try! VoidResponse(data: response.data)
 			completionHandler(.success(result))
 		}, failure: { (error) in
 			completionHandler(.failure(error))

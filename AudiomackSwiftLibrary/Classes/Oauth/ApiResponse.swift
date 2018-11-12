@@ -32,6 +32,15 @@ protocol InitializableWithData {
 	init(data: Data?) throws
 }
 
+protocol InitializableWithDataAndResponse {
+	init(data: Data?, response: HTTPURLResponse) throws
+}
+
+protocol InitializableWithJsonAndResponse {
+	init(json: [String: Any], response: HTTPURLResponse) throws
+}
+
+
 // Optionally, if you use JSON you can implement InitializableWithJson protocol
 protocol InitializableWithJson {
 	init(json: [String: Any]) throws
@@ -85,7 +94,7 @@ struct ApiResponse<T: InitializableWithData> {
 
 // Some endpoints might return a 204 No Content
 // We can't have Void implement InitializableWithData so we've created a "Void" response
-struct VoidResponse: InitializableWithData {
+public struct VoidResponse: InitializableWithData {
 	init(data: Data?) throws {
 		
 	}

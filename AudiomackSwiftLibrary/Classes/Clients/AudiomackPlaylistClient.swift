@@ -21,6 +21,15 @@ protocol PlaylistClientProtocol {
 
 class PlaylistClientImplementation: PlaylistClientProtocol {
 	
+	// MARK: - Get Playlist Info
+
+	/// Gets details of a playlist.
+	///
+	/// - parameter id:    The id of playlist.
+	/// - parameter fields:     Fields you want in the response. eg url_slug
+	///
+	/// - returns: A result of AudiomackMusic.
+	
 	func getPlaylistInfo(id: String, fields: [String], completionHandler: @escaping GetPlaylistDetailsCompletionHandler) {
 		var url = BASE_URL + "/playlist/\(id)"
 		var fieldString = "?fields="
@@ -39,6 +48,19 @@ class PlaylistClientImplementation: PlaylistClientProtocol {
 			completionHandler(.failure(error))
 		}
 	}
+	
+	
+	
+	
+	// MARK: - Get Playlist Info
+	
+	/// Gets details of a playlist.
+	///
+	/// - parameter playlistSlug:    The url slug of playlist.
+	/// - parameter artistSlug:    The url slug of artist who own's the playlist.
+	/// - parameter fields:     Fields you want in the response. eg url_slug
+	///
+	/// - returns: A result of AudiomackMusic.
 	
 	func getPlaylistInfo(playlistSlug: String, artistSlug: String, fields: [String],  completionHandler: @escaping GetPlaylistDetailsCompletionHandler) {
 		var url = BASE_URL + "/playlist/\(artistSlug.trimmingCharacters(in: CharacterSet.whitespaces))/\(playlistSlug.trimmingCharacters(in: CharacterSet.whitespaces))"
@@ -60,6 +82,15 @@ class PlaylistClientImplementation: PlaylistClientProtocol {
 		}
 	}
 	
+	
+	
+	
+	// MARK: - Get Trending Playlists
+	
+	/// Gets trending playlists.
+	///
+	/// - returns: A result of an array of AudiomackMusic object.
+	
 	func getTrendingPlaylists(completionHandler: @escaping GetPlaylistArrayCompletionHandler) {
 		let url = BASE_URL + "playlist/trending"
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
@@ -70,6 +101,17 @@ class PlaylistClientImplementation: PlaylistClientProtocol {
 		}
 	}
 	
+	
+	
+	
+	// MARK: - Get Genre Trending Playlists
+	
+	/// Gets trending playlists by genre
+	///
+	/// - parameter genre:    Particular genre you want the trending playlists from.
+	///
+	/// - returns: A result of an array of AudiomackMusic object.
+	
 	func getGenreTrendingPlaylists(genre: String, completionHandler: @escaping GetPlaylistArrayCompletionHandler) {
 		let url = BASE_URL + "playlist/\(genre)/trending"
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
@@ -79,6 +121,8 @@ class PlaylistClientImplementation: PlaylistClientProtocol {
 			completionHandler(.failure(error))
 		}
 	}
+	
+	
 	
 	private let authClient: AuthenticationClientImplementation
 	

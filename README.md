@@ -50,6 +50,7 @@ import AudiomackSwiftLibrary
 
 let client = AudiomackClient(consumerKey: "YOUR_CONSUMER_KEY", consumerSecret: "YOUR_CONSUMER_SECRET")
 
+//TO GET ARTIST DETAILS
 client.getArtistDetails(slug: "eminem") { (result) in
 	switch result{
 	case let .success(response):
@@ -69,9 +70,6 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Features
 
-### Initialization / Authorization
-- [ ] Initializing / Authorizing Requests
-- [ ] Error Handling
 ### Unauthenticated Requests
 #### Music
 - [X] Get Music Details

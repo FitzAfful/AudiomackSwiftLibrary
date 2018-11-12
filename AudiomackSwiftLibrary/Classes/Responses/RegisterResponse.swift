@@ -23,7 +23,7 @@ public struct RegisterResponse: InitializableWithData, InitializableWithJson {
 	}
 	
 	init(json: [String : Any]) throws {
-		guard let oauth_token =  json["oath_token"] as? String,
+		guard let oauth_token =  json["oauth_token"] as? String,
 			let oauth_token_secret = json["oauth_token_secret"] as? String else {
 				throw NSError.createParseError()
 		}
@@ -56,19 +56,3 @@ public struct ForgotPasswordResponse: InitializableWithData, InitializableWithJs
 	}
 }
 
-public struct EmptyResponse: InitializableWithData, InitializableWithJson {
-	
-	init(data: Data?) throws {
-		guard let data = data,
-			let jsonObject = try? JSONSerialization.jsonObject(with: data),
-			let json = jsonObject as? [String: Any] else {
-				throw NSError.createParseError()
-		}
-		try self.init(json: json)
-		
-	}
-	
-	init(json: [String : Any]) throws {
-		
-	}
-}
