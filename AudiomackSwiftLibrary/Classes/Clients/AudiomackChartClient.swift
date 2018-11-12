@@ -31,6 +31,22 @@ protocol ChartClientProtocol {
 }
 
 class ChartClientImplementation: ChartClientProtocol {
+	
+	/** Get songs on chart
+	
+	For more info,  https://www.audiomack.com/data-api/docs#chart-tracks
+	
+	- Parameters:
+	-  musicType: MusicType - songs, albums, playlists
+	-  chartType: ChartType - total, daily, weekly, monthly, yearly
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
+	
+	- Returns: If successful, returns an array of AudiomackMusic objects
+	
+	
+	*/
 	func getChart(musicType: MusicType, chartType: ChartType, completionHandler: @escaping GetChartCompletionHandler) {
 		_ = authClient.oauthGenerator.client.get(BASE_URL + "/chart/\(musicType)/\(chartType)", success: { (response) in
 			let result_ = try! AudiomackMusicResponse(data: response.data)
@@ -40,6 +56,24 @@ class ChartClientImplementation: ChartClientProtocol {
 		}
 	}
 	
+	/** Get songs on chart by genre
+	
+	For more info,  https://www.audiomack.com/data-api/docs#charts-genre-specific
+	
+	- Parameters:
+	-  genre: String - rap, electronic
+	-  musicType: MusicType - songs, albums, playlists
+	-  chartType: ChartType - total, daily, weekly, monthly, yearly
+	-  genre: String -  eg. rap, electronic (optional)
+	-  verified: Bool -  verified results only? (optional)
+	-  page: Int -  for pagination only (optional)
+	-  limit: Int -  by default, only 20 results are returned. Adjust to suit your use (optional)
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
+	
+	- Returns: If successful, returns an array of AudiomackMusic objects
+	*/
 	func getGenreChart(genre: String, musicType: MusicType, chartType: ChartType, completionHandler: @escaping GetGenreChartCompletionHandler) {
 		_ = authClient.oauthGenerator.client.get(BASE_URL + "/\(genre.trimmingCharacters(in: .whitespaces))/chart/\(musicType)/\(chartType)", success: { (response) in
 			let result_ = try! AudiomackMusicResponse(data: response.data)

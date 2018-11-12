@@ -14,6 +14,7 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		self.accessibilityActivate()
 		let client = AudiomackClient(consumerKey: "", consumerSecret: "")
 		
 		client.getArtistDetails(slug: "officiallive919fm") { (result) in
@@ -21,7 +22,7 @@ class ViewController: UIViewController {
 			case let .success(response):
 				print(response)
 			case let .failure(error):
-				print("error \(error)")
+				print("error \(error.localizedDescription)")
 				if (error.audiomackError != nil) {
 					let audioError = error as! AudiomackError
 					print(audioError)

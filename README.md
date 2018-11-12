@@ -57,8 +57,10 @@ client.getArtistDetails(slug: "eminem") { (result) in
 		print(response)
 		//response - AudiomackUser Object
 	case let .failure(error):
-		print("error \(error)")
-		//error - AudiomackError Object
+		print("error \(error.localizedDescription)")
+		if (error.audiomackError != nil) {
+			print(error.audiomackError)
+		}
 	}
 }
 

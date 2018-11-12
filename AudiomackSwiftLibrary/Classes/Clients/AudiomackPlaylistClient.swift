@@ -21,15 +21,21 @@ protocol PlaylistClientProtocol {
 
 class PlaylistClientImplementation: PlaylistClientProtocol {
 	
-	// MARK: - Get Playlist Info
-
-	/// Gets details of a playlist.
-	///
-	/// - parameter id:    The id of playlist.
-	/// - parameter fields:     Fields you want in the response. eg url_slug
-	///
-	/// - returns: A result of AudiomackMusic.
 	
+	
+	/** Get Playlist Info
+	
+	
+	- Parameters:
+	-  id: The id of playlist
+	-  fields: Fields you want in the response. eg url_slug
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
+	
+	- Returns: If successful, returns AudiomackMusic
+	*/
+
 	func getPlaylistInfo(id: String, fields: [String], completionHandler: @escaping GetPlaylistDetailsCompletionHandler) {
 		var url = BASE_URL + "/playlist/\(id)"
 		var fieldString = "?fields="
@@ -51,16 +57,21 @@ class PlaylistClientImplementation: PlaylistClientProtocol {
 	
 	
 	
+	/** Get Playlist Info
 	
-	// MARK: - Get Playlist Info
+	Get details of a playlist
 	
-	/// Gets details of a playlist.
-	///
-	/// - parameter playlistSlug:    The url slug of playlist.
-	/// - parameter artistSlug:    The url slug of artist who own's the playlist.
-	/// - parameter fields:     Fields you want in the response. eg url_slug
-	///
-	/// - returns: A result of AudiomackMusic.
+	- Parameters:
+	-  playlistSlug:    The url slug of playlist.
+	-  artistSlug:    The url slug of artist who own's the playlist.
+	-  fields:     Fields you want in the response. eg url_slug
+	-  fields: Fields you want in the response. eg url_slug
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
+	
+	- Returns: If successful, returns AudiomackMusic
+	*/
 	
 	func getPlaylistInfo(playlistSlug: String, artistSlug: String, fields: [String],  completionHandler: @escaping GetPlaylistDetailsCompletionHandler) {
 		var url = BASE_URL + "/playlist/\(artistSlug.trimmingCharacters(in: CharacterSet.whitespaces))/\(playlistSlug.trimmingCharacters(in: CharacterSet.whitespaces))"
@@ -83,13 +94,16 @@ class PlaylistClientImplementation: PlaylistClientProtocol {
 	}
 	
 	
+	/** Get trending playlists
 	
 	
-	// MARK: - Get Trending Playlists
+	- Parameters:
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
 	
-	/// Gets trending playlists.
-	///
-	/// - returns: A result of an array of AudiomackMusic object.
+	- Returns: If successful, returns array of AudiomackMusic object
+	*/
 	
 	func getTrendingPlaylists(completionHandler: @escaping GetPlaylistArrayCompletionHandler) {
 		let url = BASE_URL + "playlist/trending"
@@ -102,16 +116,17 @@ class PlaylistClientImplementation: PlaylistClientProtocol {
 	}
 	
 	
+	/** Get trending playlists by genre
 	
 	
-	// MARK: - Get Genre Trending Playlists
+	- Parameters:
+	-  genre: Particular genre you want the trending playlists from
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
 	
-	/// Gets trending playlists by genre
-	///
-	/// - parameter genre:    Particular genre you want the trending playlists from.
-	///
-	/// - returns: A result of an array of AudiomackMusic object.
-	
+	- Returns: If successful, an array of AudiomackMusic object
+	*/
 	func getGenreTrendingPlaylists(genre: String, completionHandler: @escaping GetPlaylistArrayCompletionHandler) {
 		let url = BASE_URL + "playlist/\(genre)/trending"
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in

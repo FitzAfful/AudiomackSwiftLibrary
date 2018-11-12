@@ -96,6 +96,7 @@ public class AudiomackClient {
 	
 	//SEARCH
 	public func search(searchText: String, resultType: SearchMusicType?, sortBy: SortType?, genre: String?, verified: Bool?, page: Int?, limit: Int?, completionHandler: @escaping SearchCompletionHandler){
+		
 		searchClient.search(searchText: searchText, resultType: resultType, sortBy: sortBy, genre: genre, verified: verified, page: page, limit: limit) { (result) in
 			completionHandler(result)
 		}

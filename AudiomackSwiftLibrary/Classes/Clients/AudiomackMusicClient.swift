@@ -15,10 +15,33 @@ public typealias TrackAdCompletionHandler = (_ response: Result<VoidResponse>) -
 public typealias FavoriteMusicCompletionHandler = (_ response: Result<VoidResponse>) -> Void
 public typealias RepostMusicCompletionHandler = (_ response: Result<VoidResponse>) -> Void
 
+
+
+
+/**
+`GetMusicType.song`
+Returns only song results.
+
+`GetMusicType.album`
+Returns only Album results
+*/
 public enum GetMusicType : String {
 	case song = "song"
 	case album = "album"
 }
+
+/**
+`PlayMusicParameter` - Parameter Object for API request that plays music.
+Only required value is ID.
+
+session - (optional) unique user session identifier
+album_id - (optional) album that the track belongs to
+playlist_id - (optional) playlists that the track belongs to
+hq - (optional) retrieve the highest quality streaming source
+key (optional) promotional key for private tracks
+
+For more Info: https://www.audiomack.com/data-api/docs#endpoint-play-track
+*/
 
 struct PlayMusicParameter {
 	var id : String
@@ -76,6 +99,14 @@ struct PlayMusicParameter {
 	}
 }
 
+/**
+`TrackAdParameter` - Parameter Object for API request that tracks ad.
+id - id of music
+status - (required) one of the following: requested, loaded, started, skipped, completed, error - (AS SHOWN IN TrackAdStatus)
+
+For more Info: https://www.audiomack.com/data-api/docs#endpoint-track-ad
+*/
+
 struct TrackAdParameter {
 	var id : String
 	var status : TrackAdStatus
@@ -88,6 +119,11 @@ struct TrackAdParameter {
 	}
 }
 
+/**
+Status required for TrackAdParameter - Should be one of the following: requested, loaded, started, skipped, completed, error -
+
+For more Info: https://www.audiomack.com/data-api/docs#endpoint-track-ad
+*/
 public enum TrackAdStatus : String {
 	case requested = "requested"
 	case loaded = "loaded"
@@ -110,6 +146,22 @@ protocol MusicClientProtocol {
 }
 
 class MusicClientImplementation: MusicClientProtocol {
+	
+	
+	/** Play Music / Get Streaming URL for music
+	
+	For more info,
+	https://www.audiomack.com/data-api/docs#endpoint-play-track
+	
+	- Parameters:
+	-  parameter: PlayMusicParameter object containing ID, session, album_id, playlist_id, hq, key
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
+	
+	- Returns: If successful, returns A url to stream for Music item.
+	*/
+	
 	func playMusic(parameter: PlayMusicParameter, completionHandler: @escaping MusicStreamCompletionHandler) {
 		var parameters : [String:Any] = [:]
 		for item in parameter.items(){
@@ -125,6 +177,25 @@ class MusicClientImplementation: MusicClientProtocol {
 		})
 	}
 	
+	
+	/** Flag Music as unplayable
+	
+	For more info,
+	https://www.audiomack.com/data-api/docs#endpoint-flagging
+	
+	- Parameters:
+	-  musicSlug: Url slug of music
+	-  musicType: Music Type - song, album
+	-  artistSlug: URL slug of artist (owner of music)
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
+	
+	- Returns: A void response with 204 http code.
+	
+	
+	*/
+	
 	func flagUnplayableMusic(musicSlug: String, musicType: GetMusicType, artistSlug: String, status: String = "unplayable", completionHandler: @escaping FlagMusicCompletionHandler) {
 		let url = BASE_URL + "/\(musicType.rawValue.trimmingCharacters(in: CharacterSet.whitespaces))/\(artistSlug.trimmingCharacters(in: CharacterSet.whitespaces))/\(musicSlug.trimmingCharacters(in: CharacterSet.whitespaces))"
 		let parameters: [String: Any] = ["status":status]
@@ -136,6 +207,19 @@ class MusicClientImplementation: MusicClientProtocol {
 		})
 	}
 	
+	
+	/** Track Ad
+	
+	For more info,  https://www.audiomack.com/data-api/docs#endpoint-track-ad
+	
+	- Parameters:
+	-  parameter: TrackAdParameter containing id and status
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
+	
+	- Returns: If successful, A void response with 204 http code
+	*/
 	func trackAd(parameter: TrackAdParameter, completionHandler: @escaping TrackAdCompletionHandler) {
 		var parameters : [String:Any] = [:]
 		for item in parameter.items(){
@@ -149,6 +233,20 @@ class MusicClientImplementation: MusicClientProtocol {
 		})
 	}
 	
+	
+	/** Get most recent Music
+	
+	For more info,
+	https://www.audiomack.com/data-api/docs#endpoint-most-recent
+	
+	- Parameters:
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
+	
+	- Returns: If successful, returns an array of AudiomackMusic objects
+	
+	*/
 	func getMostRecentMusic(completionHandler: @escaping GetMusicArrayCompletionHandler) {
 		let url = BASE_URL + "/music/recent"
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
@@ -159,6 +257,22 @@ class MusicClientImplementation: MusicClientProtocol {
 		}
 	}
 	
+	
+	/** Get most recent music by Genre
+	
+	For more info,
+	https://www.audiomack.com/data-api/docs#endpoint-genre-most-recent
+	
+	- Parameters:
+	-  genre: Music Genre ( eg. rap, electronic)
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
+	
+	- Returns: If successful, returns an array of AudiomackMusic objects
+	
+	
+	*/
 	func getGenreMostRecentMusic(genre: String, completionHandler: @escaping GetMusicArrayCompletionHandler) {
 		let url = BASE_URL + "music/\(genre)/recent"
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
@@ -169,6 +283,21 @@ class MusicClientImplementation: MusicClientProtocol {
 		}
 	}
 	
+	
+	/** Get trending music
+	
+	For more info,
+	https://www.audiomack.com/data-api/docs#endpoint-trending
+	
+	- Parameters:
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
+	
+	- Returns: If successful, returns an array of AudiomackMusic objects
+	
+	
+	*/
 	func getTrendingMusic(completionHandler: @escaping GetMusicArrayCompletionHandler) {
 		let url = BASE_URL + "music/trending"
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
@@ -179,6 +308,22 @@ class MusicClientImplementation: MusicClientProtocol {
 		}
 	}
 	
+	
+	/** Get trending music by Genre
+	
+	For more info,
+	https://www.audiomack.com/data-api/docs#endpoint-genre-trending
+	
+	- Parameters:
+	-  genre: genre of music
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
+	
+	- Returns: If successful, returns an array of AudiomackMusic objects
+	
+	
+	*/
 	func getGenreTrendingMusic(genre: String, completionHandler: @escaping GetMusicArrayCompletionHandler) {
 		let url = BASE_URL + "music/\(genre)/trending"
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
@@ -189,6 +334,23 @@ class MusicClientImplementation: MusicClientProtocol {
 		}
 	}
 	
+	
+	/** Get Music Information
+	
+	For more info,
+	https://www.audiomack.com/data-api/docs#endpoint-song-album-info
+	
+	- Parameters:
+	-  id: Music Id
+	-  key: (optional) promotional key for private tracks
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
+	
+	- Returns: If successful, returns AudiomackMusic object
+	
+	
+	*/
 	func getMusic(id: String, key:String? = nil, completionHandler: @escaping GetMusicCompletionHandler) {
 		var url = BASE_URL + "/music/\(id)"
 		if key != nil {
@@ -202,6 +364,24 @@ class MusicClientImplementation: MusicClientProtocol {
 		}
 	}
 	
+	
+	/** Search Audiomack for music, artists
+	
+	For more info,
+	https://www.audiomack.com/data-api/docs#endpoint-song-album-info
+	
+	- Parameters:
+	-  musicSlug: Url slug of music
+	-  musicType: Music Type - song, album
+	-  artistSlug: URL slug of artist (owner of music)
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
+	
+	- Returns: If successful, returns AudiomackMusic object
+	
+	
+	*/
 	func getMusic(musicSlug: String, musicType: GetMusicType, artistSlug: String, key: String?,  completionHandler: @escaping GetMusicCompletionHandler) {
 		var url = BASE_URL + "/\(musicType.rawValue.trimmingCharacters(in: CharacterSet.whitespaces))/\(artistSlug.trimmingCharacters(in: CharacterSet.whitespaces))/\(musicSlug.trimmingCharacters(in: CharacterSet.whitespaces))"
 		if key != nil {
