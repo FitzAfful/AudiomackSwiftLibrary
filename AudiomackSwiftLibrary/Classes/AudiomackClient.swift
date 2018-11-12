@@ -16,6 +16,17 @@ public class AudiomackClient {
 	private let musicClient: MusicClientImplementation
 	private let playlistClient: PlaylistClientImplementation
 	
+	/** Initialize client.
+	
+	To be called before a call can be made
+	
+	- Parameters:
+	-  consumerKey: String - Key given to you buy Audiomack
+	-  consumerSecret: String - Secret given to you by Audiomack.
+	
+	- Returns: If successful, a authorized AudiomackClient object
+	*/
+	
 	public init(consumerKey: String, consumerSecret: String) {
 		authClient = AuthenticationClientImplementation(apiClient: ApiClientImplementation(urlSessionConfiguration: URLSessionConfiguration.default,completionHandlerQueue: OperationQueue.main), oauthSignatureGenerator: OAuth1Swift(consumerKey: consumerKey, consumerSecret: consumerSecret))
 		artistClient = ArtistClientImplementation(authClient: authClient)
@@ -31,7 +42,10 @@ public class AudiomackClient {
 	https://www.audiomack.com/data-api/docs#user-registration
 	
 	- Parameters:
-	-  parameter: RegisterUserParameter ( email, artist_name, password, password2)
+	-  email: Email Address of user
+	-  name: Name of user
+	-  password: Password
+	-  password: Reentered password to confirm
 	-  completionHandler: The completion handler to call when the load request is complete.
 	`response` - A response object, or `nil` if the request failed.
 	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
@@ -54,7 +68,7 @@ public class AudiomackClient {
 	https://www.audiomack.com/data-api/docs#artist-information
 	
 	- Parameters:
-	-  parameter: ArtistParameter (slug)
+	-  slug: Artist's slug (can be found in artist object / url)
 	-  completionHandler: The completion handler to call when the load request is complete.
 	`response` - A response object, or `nil` if the request failed.
 	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
@@ -73,7 +87,7 @@ public class AudiomackClient {
 	https://www.audiomack.com/data-api/docs#artist-uploads
 	
 	- Parameters:
-	-  parameter: ArtistParameter (slug)
+	-  slug: Artist's slug (can be found in artist object / url)
 	-  completionHandler: The completion handler to call when the load request is complete.
 	`response` - A response object, or `nil` if the request failed.
 	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
@@ -93,7 +107,8 @@ public class AudiomackClient {
 	https://www.audiomack.com/data-api/docs#artist-favs
 	
 	- Parameters:
-	-  parameter: ArtistParameter (slug)
+	-  slug: Artist's slug (can be found in artist object / url)
+	-  filter: AudioFilter (optional) (.song, .all, .music, .playlist)
 	-  completionHandler: The completion handler to call when the load request is complete.
 	`response` - A response object, or `nil` if the request failed.
 	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
@@ -112,7 +127,8 @@ public class AudiomackClient {
 	For more info,  https://www.audiomack.com/data-api/docs#artist-playlists
 	
 	- Parameters:
-	-  parameter: ArtistParameter (slug)
+	-  slug: Artist's slug (can be found in artist object / url)
+	-  genre: Genre eg. rap / electronic
 	-  completionHandler: The completion handler to call when the load request is complete.
 	`response` - A response object, or `nil` if the request failed.
 	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
@@ -131,7 +147,8 @@ public class AudiomackClient {
 	https://www.audiomack.com/data-api/docs#artist-fav-search
 	
 	- Parameters:
-	-  parameter: ArtistParameter (slug)
+	-  slug: Artist's slug (can be found in artist object / url)
+	-  searchText: text to be searched
 	-  completionHandler: The completion handler to call when the load request is complete.
 	`response` - A response object, or `nil` if the request failed.
 	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
@@ -149,7 +166,7 @@ public class AudiomackClient {
 	For more info,  https://www.audiomack.com/data-api/docs#artist-following
 	
 	- Parameters:
-	-  parameter: ArtistParameter (slug)
+	-  slug: Artist's slug (can be found in artist object / url)
 	-  completionHandler: The completion handler to call when the load request is complete.
 	`response` - A response object, or `nil` if the request failed.
 	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
@@ -167,7 +184,7 @@ public class AudiomackClient {
 	For more info,  https://www.audiomack.com/data-api/docs#artist-followers
 	
 	- Parameters:
-	-  parameter: ArtistParameter (slug)
+	-  slug: Artist's slug (can be found in artist object / url)
 	-  completionHandler: The completion handler to call when the load request is complete.
 	`response` - A response object, or `nil` if the request failed.
 	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
@@ -185,7 +202,7 @@ public class AudiomackClient {
 	For more info,  https://www.audiomack.com/data-api/docs#artist-feed
 	
 	- Parameters:
-	-  parameter: ArtistParameter (slug)
+	-  slug: Artist's slug (can be found in artist object / url)
 	-  completionHandler: The completion handler to call when the load request is complete.
 	`response` - A response object, or `nil` if the request failed.
 	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
