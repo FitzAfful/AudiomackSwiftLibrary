@@ -1,16 +1,29 @@
 PODS:
   - AudiomackSwiftLibrary (0.1.0)
+  - FTIndicator (1.2.9):
+    - FTIndicator/FTNotificationIndicator (= 1.2.9)
+    - FTIndicator/FTProgressIndicator (= 1.2.9)
+    - FTIndicator/FTToastIndicator (= 1.2.9)
+  - FTIndicator/FTNotificationIndicator (1.2.9)
+  - FTIndicator/FTProgressIndicator (1.2.9)
+  - FTIndicator/FTToastIndicator (1.2.9)
 
 DEPENDENCIES:
   - AudiomackSwiftLibrary (from `../`)
+  - FTIndicator
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FTIndicator
 
 EXTERNAL SOURCES:
   AudiomackSwiftLibrary:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AudiomackSwiftLibrary: 94f98cc9cd13df59066ea735e6bfaa100e8124fe
+  AudiomackSwiftLibrary: 4a9af26b61368394191aa12177e2a517a44f41f9
+  FTIndicator: f7f071fd159e5befa1d040a9ef2e3ab53fa9322c
 
-PODFILE CHECKSUM: ab9b02915e4a9a3a96166122089be748fef2c31c
+PODFILE CHECKSUM: ed53e4ffe8396b4835c12306f766726f3063a99c
 
 COCOAPODS: 1.5.3

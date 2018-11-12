@@ -1,8 +1,8 @@
 {
   "name": "AudiomackSwiftLibrary",
   "version": "0.1.0",
-  "summary": "A short description of AudiomackSwiftLibrary.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "A wrapper library for Audiomacks API on iOS built in Swift",
+  "description": "A wrapper library for Audiomack`s API on iOS built in Swift.",
   "homepage": "https://github.com/Fitzafful/AudiomackSwiftLibrary",
   "license": {
     "type": "MIT",
@@ -15,8 +15,9 @@
     "git": "https://github.com/Fitzafful/AudiomackSwiftLibrary.git",
     "tag": "0.1.0"
   },
+  "swift_version": "4.0",
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.3"
   },
   "source_files": "AudiomackSwiftLibrary/Classes/**/*"
 }

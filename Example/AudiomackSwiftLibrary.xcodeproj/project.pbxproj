@@ -269,10 +269,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AudiomackSwiftLibrary_Example/Pods-AudiomackSwiftLibrary_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AudiomackSwiftLibrary/AudiomackSwiftLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/FTIndicator/FTIndicator.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudiomackSwiftLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FTIndicator.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

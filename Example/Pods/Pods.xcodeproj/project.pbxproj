@@ -7,165 +7,216 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00C984C716688B0DE77A86175AEF7067 /* Pods-AudiomackSwiftLibrary_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 40992CA1535676881A0508A2B667F664 /* Pods-AudiomackSwiftLibrary_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E6B1F63AFAD979F9B5FFE9ECB617B99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		0177DB5EB36D24D6029F0738AD18B6CE /* OAuthSwiftCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EB2B780E7D6FE52ECA462A6976CC11 /* OAuthSwiftCredential.swift */; };
+		017A344033D4E1C4CF0DF9575978A496 /* FTIndicator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5294994854AA0BA2C51125321B8E5C08 /* FTIndicator-dummy.m */; };
+		14E5AF78E73022A64ACB2F3692F87A07 /* Dictionary+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A622A550F66FB8BC6C5F7ACDA0BAF4E /* Dictionary+OAuthSwift.swift */; };
+		19BA57C0A78A4EA88EB0DE0214757FA1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C346E535A61FFD1B7B6E01670AC8A010 /* Utils.swift */; };
+		2BB5BBD74191B932F6243471B40EFA8D /* AudiomackClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D274389B55DA2C28C0880AF1AF9BE13 /* AudiomackClient.swift */; };
+		2CD5BD9767AAA0B31D28CEE9B362CAC7 /* FTNotificationIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = BB9C24BE3B1E56AA02933080E18D6A9E /* FTNotificationIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2CEE3A86C7685AABD392DB2F17254E14 /* OAuthSwiftResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A197F841462EB066441B2F60B4480F9 /* OAuthSwiftResponse.swift */; };
+		2DB800E3FDAB4CE924936DDE0F7815B6 /* OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72F7CC80578FDC1B3A4A6B44F5D1AA8 /* OAuthSwift.swift */; };
+		352D17AA8C02D199885E2398B56C3A10 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		3B6B6DB083A7EE6F63733D22622D6FDB /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 782F528FB4AC215FF2CF2D876C4FF625 /* JSON.swift */; };
 		3E2450D367C5506CC18C23686D9FB3B0 /* Pods-AudiomackSwiftLibrary_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B386B58B814D29681A45A687CADC64C4 /* Pods-AudiomackSwiftLibrary_Tests-dummy.m */; };
-		82F99787F249759CFEC0AFE798AAD5E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		8425CD982193D4E900CF4239 /* UIApplication+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD7F2193D4E900CF4239 /* UIApplication+OAuthSwift.swift */; };
-		8425CD992193D4E900CF4239 /* OAuthSwiftMultipartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD802193D4E900CF4239 /* OAuthSwiftMultipartData.swift */; };
-		8425CD9A2193D4E900CF4239 /* OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD812193D4E900CF4239 /* OAuthSwift.swift */; };
-		8425CD9B2193D4E900CF4239 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD822193D4E900CF4239 /* HMAC.swift */; };
-		8425CD9C2193D4E900CF4239 /* Objc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD832193D4E900CF4239 /* Objc.swift */; };
-		8425CD9D2193D4E900CF4239 /* OAuth2Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD842193D4E900CF4239 /* OAuth2Swift.swift */; };
-		8425CD9E2193D4E900CF4239 /* Int+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD852193D4E900CF4239 /* Int+OAuthSwift.swift */; };
-		8425CD9F2193D4E900CF4239 /* OAuthSwiftURLHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD862193D4E900CF4239 /* OAuthSwiftURLHandlerType.swift */; };
-		8425CDA02193D4E900CF4239 /* String+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD872193D4E900CF4239 /* String+OAuthSwift.swift */; };
-		8425CDA12193D4E900CF4239 /* NSError+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD882193D4E900CF4239 /* NSError+OAuthSwift.swift */; };
-		8425CDA22193D4E900CF4239 /* OAuthSwiftCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD892193D4E900CF4239 /* OAuthSwiftCredential.swift */; };
-		8425CDA32193D4E900CF4239 /* OAuthSwiftResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD8A2193D4E900CF4239 /* OAuthSwiftResponse.swift */; };
-		8425CDA42193D4E900CF4239 /* OAuthSwiftError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD8B2193D4E900CF4239 /* OAuthSwiftError.swift */; };
-		8425CDA52193D4E900CF4239 /* NotificationCenter+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD8C2193D4E900CF4239 /* NotificationCenter+OAuthSwift.swift */; };
-		8425CDA62193D4E900CF4239 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD8D2193D4E900CF4239 /* SHA1.swift */; };
-		8425CDA72193D4E900CF4239 /* Dictionary+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD8E2193D4E900CF4239 /* Dictionary+OAuthSwift.swift */; };
-		8425CDA82193D4E900CF4239 /* URL+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD8F2193D4E900CF4239 /* URL+OAuthSwift.swift */; };
-		8425CDA92193D4E900CF4239 /* OAuth1Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD902193D4E900CF4239 /* OAuth1Swift.swift */; };
-		8425CDAA2193D4E900CF4239 /* Data+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD912193D4E900CF4239 /* Data+OAuthSwift.swift */; };
-		8425CDAB2193D4E900CF4239 /* Collection+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD922193D4E900CF4239 /* Collection+OAuthSwift.swift */; };
-		8425CDAC2193D4E900CF4239 /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD932193D4E900CF4239 /* Credential.swift */; };
-		8425CDAD2193D4E900CF4239 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD942193D4E900CF4239 /* Utils.swift */; };
-		8425CDAE2193D4E900CF4239 /* OAuthSwiftHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD952193D4E900CF4239 /* OAuthSwiftHTTPRequest.swift */; };
-		8425CDAF2193D4E900CF4239 /* OAuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD962193D4E900CF4239 /* OAuthWebViewController.swift */; };
-		8425CDB02193D4E900CF4239 /* OAuthSwiftClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8425CD972193D4E900CF4239 /* OAuthSwiftClient.swift */; };
-		842A5B122189B02700E3EE79 /* AudiomackClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A5B112189B02700E3EE79 /* AudiomackClient.swift */; };
-		842A5B182189B44C00E3EE79 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A5B152189B44C00E3EE79 /* ApiClient.swift */; };
-		842A5B192189B44C00E3EE79 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A5B162189B44C00E3EE79 /* ApiResponse.swift */; };
-		842A5B1A2189B44C00E3EE79 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A5B172189B44C00E3EE79 /* JSON.swift */; };
-		842A5B1C2189B48000E3EE79 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A5B1B2189B48000E3EE79 /* Result.swift */; };
-		846C03062195B80600AF82F3 /* AudiomackMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C02F72195B80500AF82F3 /* AudiomackMusic.swift */; };
-		846C03072195B80600AF82F3 /* AudiomackStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C02F82195B80500AF82F3 /* AudiomackStat.swift */; };
-		846C03082195B80600AF82F3 /* AudiomackRegisteredUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C02F92195B80500AF82F3 /* AudiomackRegisteredUser.swift */; };
-		846C03092195B80600AF82F3 /* AudiomackUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C02FA2195B80500AF82F3 /* AudiomackUser.swift */; };
-		846C030A2195B80600AF82F3 /* AudiomackSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C02FC2195B80600AF82F3 /* AudiomackSearchResponse.swift */; };
-		846C030B2195B80600AF82F3 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C02FD2195B80600AF82F3 /* RegisterResponse.swift */; };
-		846C030C2195B80600AF82F3 /* AudiomackSearchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C02FF2195B80600AF82F3 /* AudiomackSearchClient.swift */; };
-		846C030D2195B80600AF82F3 /* AudiomackChartClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C03002195B80600AF82F3 /* AudiomackChartClient.swift */; };
-		846C030E2195B80600AF82F3 /* AudiomackArtistClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C03012195B80600AF82F3 /* AudiomackArtistClient.swift */; };
-		846C030F2195B80600AF82F3 /* AudiomackAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C03022195B80600AF82F3 /* AudiomackAuthClient.swift */; };
-		846C03102195B80600AF82F3 /* AudiomackMusicClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C03032195B80600AF82F3 /* AudiomackMusicClient.swift */; };
-		846C03112195B80600AF82F3 /* AuthenticationRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C03052195B80600AF82F3 /* AuthenticationRequests.swift */; };
-		846C03132195C7B100AF82F3 /* AudiomackPlaylistClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C03122195C7B100AF82F3 /* AudiomackPlaylistClient.swift */; };
-		8472CAE02197C03200986286 /* AudiomackError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8472CADF2197C03200986286 /* AudiomackError.swift */; };
-		A5BFEBCCE1674D389F9588DD75383C9B /* Pods-AudiomackSwiftLibrary_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31254F0CBF8D23424A84E817B03E0750 /* Pods-AudiomackSwiftLibrary_Example-dummy.m */; };
-		BA722DB6A67C41F08461AAD42D4D5679 /* AudiomackSwiftLibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4073A7A671E353BE437FA7C10FA95FAD /* AudiomackSwiftLibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		439B7239E74621FF100840D50B15375F /* Pods-AudiomackSwiftLibrary_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 40992CA1535676881A0508A2B667F664 /* Pods-AudiomackSwiftLibrary_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4509BFF8D25FA9B1D98AB660642FE2F8 /* RegisterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E9BAF7DABE88286BBF4C3718F28484 /* RegisterResponse.swift */; };
+		4D472CA6F2D69A175CA36DC8782923D8 /* FTProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 29F4343D57054EAD2DEE149E11848BC7 /* FTProgressIndicator.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -DOS_OBJECT_USE_OBJC=0"; }; };
+		5033511AFAC0F0F554A57929EAD0F199 /* FTToastIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = D68816A386AAF6255806834AD13BF995 /* FTToastIndicator.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -DOS_OBJECT_USE_OBJC=0"; }; };
+		52DA869239ED6B498037EFDA686F511A /* OAuthWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE29C29D90EEB8603447906553C42357 /* OAuthWebViewController.swift */; };
+		5642F9A603E5E1AE8456D7220FA15EDB /* OAuth1Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7927076E66E6D1BB94B5725102ECEFD /* OAuth1Swift.swift */; };
+		5EC8BC294C848E783E16573187AB29CA /* AudiomackSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB417EE2B8A94ADA0A851D911C5FB22E /* AudiomackSearchResponse.swift */; };
+		5F7AA7C92420F8BC03F3ECAB89BBB26A /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D3FBAAF710D6DB2A86D3E0484DB32 /* SHA1.swift */; };
+		68A71DEF6B913E53BCB5A84723E06184 /* OAuthSwiftClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1FE9EEE5A6C6EA572180EA78F7C57D /* OAuthSwiftClient.swift */; };
+		6B10B35B334DE0AD1E72CDFE5A761B29 /* AudiomackAuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D4EB3F114A08FDCD82EB6446BF41F1 /* AudiomackAuthClient.swift */; };
+		6E360BC709B7D0AAED756F399BFE5D42 /* Pods-AudiomackSwiftLibrary_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31254F0CBF8D23424A84E817B03E0750 /* Pods-AudiomackSwiftLibrary_Example-dummy.m */; };
+		6E574AB05132D73BE3CB2F4F11C8FCE9 /* NSError+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8E521E4155B2FF73D1076A46264C552 /* NSError+OAuthSwift.swift */; };
+		6FB0B55BD6FB566A09A7899EADC48861 /* String+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = C207703BBB56229A8B54448A26341C3A /* String+OAuthSwift.swift */; };
+		731BEA9FC30774EA87468BDA9F723F56 /* AudiomackPlaylistClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F490EC100326D644C5E8239B9625F2 /* AudiomackPlaylistClient.swift */; };
+		742776F50C173B8A8B2DE6F05C05F240 /* AudiomackStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F674E9D6D343843E1D2978C8E50A2B41 /* AudiomackStat.swift */; };
+		7BF5ECADAABDA8E408B24A015524B14C /* URL+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF6F8EC2E6AE52E3865D61CC31196D7 /* URL+OAuthSwift.swift */; };
+		82EA98C06367BB783D917D7E621A1BBB /* AudiomackRegisteredUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8374C2479BF86F29F9DAA743B1DD7BCA /* AudiomackRegisteredUser.swift */; };
+		8360C8879E3BA8C65753C035462ED2BF /* FTToastIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = BD0B62853DA85FCD6B90C3846527887F /* FTToastIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83B12B87257B5C2CF9F08480453070F1 /* FTIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = C78DECFA0389F53CCCF87CCB8FE607C4 /* FTIndicator.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		8D27F58210BCBF170E28B75B3D83D20A /* FTNotificationIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DBD0BD10CF1D82DE92E77E40BF13FE7 /* FTNotificationIndicator.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0 -DOS_OBJECT_USE_OBJC=0"; }; };
+		8F94991D715B47BD4E3E238AB1936ADC /* Credential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D335973AA4210D89E2107433E4AF523 /* Credential.swift */; };
+		921AB16D2407858470A5FEC9228B41A9 /* OAuth2Swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6322CDBDEFC060EEC9AFC149B1825417 /* OAuth2Swift.swift */; };
+		93BECC2B8D9CFF83134B052A4AAA2FE2 /* AudiomackSwiftLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 551EACFC96662EF258F2C3DFDB9D786D /* AudiomackSwiftLibrary-dummy.m */; };
+		94A0F35227533A56757572025CE63401 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94260ADEB876B7AF842B5869845DE533 /* ApiClient.swift */; };
+		954CADF45D03CB263432F83282B5F319 /* AudiomackUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5D61BF3B9DA678E55653936F253A43 /* AudiomackUser.swift */; };
+		A3D4611F03A968618513647E141B09C0 /* AudiomackChartClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C8597F72A3B3D7A3972ED126303F3A /* AudiomackChartClient.swift */; };
+		A79567A190544E080B28DE4CEEC90F41 /* Int+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B77F61BA1DDDA148A5289D52CC7E15 /* Int+OAuthSwift.swift */; };
+		A8CF8F75F78EE01CE268F0EC6885311C /* Objc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113C511F330D9FAA97F0A17834BFF0ED /* Objc.swift */; };
+		A9061A70C3B6ACFA004DF947ABC3672E /* FTProgressIndicator.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9F0B3BB9165ABDF83F63F1CC2E21BF86 /* FTProgressIndicator.bundle */; };
+		AC7DB91D13EDFEA9D4ADE2C04148787A /* OAuthSwiftHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9806FA9F5B43C3AEBAEBEBE67AA4C163 /* OAuthSwiftHTTPRequest.swift */; };
+		B14534EF3E6920403D84BAF330B49D9E /* FTProgressIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A88B2E8AC7649684F653B938DCEAEFC /* FTProgressIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B187D66BC7D0ED6C6AF96EA2DD645764 /* OAuthSwiftError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707E08F7A45FF2C76995CA868C45FD33 /* OAuthSwiftError.swift */; };
+		B535DA8521C7361C7F51A5CFED857D2A /* FTIndicator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 325E255DF756C8847E1D7E98876699DE /* FTIndicator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE6E495210514F763474484A3F91F4EF /* OAuthSwiftURLHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7D68269E5FB800CE9415E528ACF0C2 /* OAuthSwiftURLHandlerType.swift */; };
+		C05444A5B970F46BE39943EDECEDE7AB /* Data+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B2F940F7BACD34F1F5BE73D8852EF2A /* Data+OAuthSwift.swift */; };
+		C59D931BDB85CEA93CADFA8244523B0F /* AudiomackSearchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F5A28982F6D8C9D8EE16BC7A880572 /* AudiomackSearchClient.swift */; };
+		C7B1E0B210900427DE1818BF31259BA5 /* ApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C5360D2382051826977BBEEB74A4E62 /* ApiResponse.swift */; };
+		CAF9B685C6B4F21C02D6F58042D97300 /* AudiomackMusicClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E252827807423162D0E9EDB19F39729B /* AudiomackMusicClient.swift */; };
+		CC8E905520734CDEC4A63B643623213E /* FTIndicator.h in Headers */ = {isa = PBXBuildFile; fileRef = 4200F3BBF32659A9582D9AEFE2B3E55D /* FTIndicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDD4F4C69FE27419AD883FDDA405DE4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		D3A0B1B4027D7124B44F093CA1E8B022 /* Pods-AudiomackSwiftLibrary_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0366DB2A1F5913E5BF57858D991DC6E /* Pods-AudiomackSwiftLibrary_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5627D90FBC363828BF3DC4850034306 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
-		FFA94F61F1A2EB98E75162E37781513A /* AudiomackSwiftLibrary-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EA5A555BB10D684C4BFCA930E10746F /* AudiomackSwiftLibrary-dummy.m */; };
+		D73C0925367D0E880E691EB353C89642 /* AudiomackMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF9FB9E95F56524A6F4500710408910D /* AudiomackMusic.swift */; };
+		DAEE9806642E7C3B6980D6D3504D2F79 /* UIApplication+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338A4E6057E66F5C37EB024D6C78E896 /* UIApplication+OAuthSwift.swift */; };
+		DC3FE976A52792BFFE390DF635C50737 /* NotificationCenter+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26F54B540E479950625AC8486FE25B2 /* NotificationCenter+OAuthSwift.swift */; };
+		DD3BF216B25312C479A6D336BDDE20B8 /* Collection+OAuthSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E539A42294A718E0483437244850D1 /* Collection+OAuthSwift.swift */; };
+		DF801FDD75FE56477CCA00462EF83816 /* AudiomackError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C21DD815F1849A81A70315ADBDE5B60 /* AudiomackError.swift */; };
+		E62987D5A8F9AF7C09217E3E886E2CC4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
+		E909C444376C76764D1707E0ADB8728B /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C5E236BE65CD5C316D34BA96CE7AAE0 /* Result.swift */; };
+		EDE32D8354E58304DAD8442DFA8A397E /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6716270D5F6F1350ABA141F5A82A573E /* HMAC.swift */; };
+		F4EE597DC769A94A4F7C1A5D3506B9D6 /* OAuthSwiftMultipartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E98768C09872B60BB27137405AEA3B /* OAuthSwiftMultipartData.swift */; };
+		F5B2A5409C7606F470699F230B7E7A41 /* AudiomackArtistClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C110442B1B0E2A7449F73C59142DED2 /* AudiomackArtistClient.swift */; };
+		F6B52204002FC8B8A030D3F25B867C94 /* AuthenticationRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1FAAAE0907C4363587FE4BCF09E955 /* AuthenticationRequests.swift */; };
+		FFC4D3E5FEFC32378E41CC4B9A41C82B /* AudiomackSwiftLibrary-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 68522D5651C6E6965F6E6D2C848151E0 /* AudiomackSwiftLibrary-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		095F049F25762A80BE585FD2AA47DF20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A84DA1D502917E8956383E16DCBDC7CD;
+			remoteInfo = FTIndicator;
+		};
 		63BC0EDFBBCED86833AAEE448D80B7A0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D28EAD3C119BFDCA7A02A40650CFB730;
+			remoteGlobalIDString = 2EEA7A6F51895F2064E9B1999C92D417;
 			remoteInfo = "Pods-AudiomackSwiftLibrary_Example";
 		};
-		8BB5AFF7748419732D3DD8F061D3C8C9 /* PBXContainerItemProxy */ = {
+		E8B7320BE2D2370A4D59223D4D0284BC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B4E6FC7A3EF2EE5AB8D5CA1DE3122254;
+			remoteGlobalIDString = D7FCAE4BCB043CA794C4C9F38E42921A;
 			remoteInfo = AudiomackSwiftLibrary;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03F34E8E379CE1DA87F1D098C0B0225E /* Pods_AudiomackSwiftLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AudiomackSwiftLibrary_Tests.framework; path = "Pods-AudiomackSwiftLibrary_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		08932C5ACE94581C49FDCD562594BB68 /* AudiomackSwiftLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AudiomackSwiftLibrary.xcconfig; sourceTree = "<group>"; };
 		0AB7B34FDF679D1799C340E6B87FDA07 /* Pods-AudiomackSwiftLibrary_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AudiomackSwiftLibrary_Example-frameworks.sh"; sourceTree = "<group>"; };
+		0B2F940F7BACD34F1F5BE73D8852EF2A /* Data+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Data+OAuthSwift.swift"; sourceTree = "<group>"; };
+		0D274389B55DA2C28C0880AF1AF9BE13 /* AudiomackClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AudiomackClient.swift; path = AudiomackSwiftLibrary/Classes/AudiomackClient.swift; sourceTree = "<group>"; };
+		113C511F330D9FAA97F0A17834BFF0ED /* Objc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Objc.swift; sourceTree = "<group>"; };
+		169F037C4D58A1E054A60628AD198DCB /* FTIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FTIndicator.framework; path = FTIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		216C45FD2A6D5A36273286F698367619 /* Pods-AudiomackSwiftLibrary_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudiomackSwiftLibrary_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		23C5C6724B67FDAB5907706E27148479 /* Pods-AudiomackSwiftLibrary_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AudiomackSwiftLibrary_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		242830FC4B3E1C42C355072C979032BF /* Pods-AudiomackSwiftLibrary_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AudiomackSwiftLibrary_Tests-resources.sh"; sourceTree = "<group>"; };
-		2499A3DE71CA2F06FD8E2BD613B7730F /* AudiomackSwiftLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AudiomackSwiftLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25D5F8C516A0794D664BA4440B86E7F9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		25F3DB943CA0B9CAA8F6AFB45681EFDC /* Pods-AudiomackSwiftLibrary_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudiomackSwiftLibrary_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		29F4343D57054EAD2DEE149E11848BC7 /* FTProgressIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTProgressIndicator.m; path = FTIndicator/FTProgressIndicator/FTProgressIndicator.m; sourceTree = "<group>"; };
+		2CF6F8EC2E6AE52E3865D61CC31196D7 /* URL+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "URL+OAuthSwift.swift"; sourceTree = "<group>"; };
 		2F44EFFD8064FCC777E53404278F6145 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31254F0CBF8D23424A84E817B03E0750 /* Pods-AudiomackSwiftLibrary_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AudiomackSwiftLibrary_Example-dummy.m"; sourceTree = "<group>"; };
-		4073A7A671E353BE437FA7C10FA95FAD /* AudiomackSwiftLibrary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AudiomackSwiftLibrary-umbrella.h"; sourceTree = "<group>"; };
+		3234F86F327FB3BE6DBE8071FE44D2A6 /* AudiomackSwiftLibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AudiomackSwiftLibrary.modulemap; sourceTree = "<group>"; };
+		325E255DF756C8847E1D7E98876699DE /* FTIndicator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FTIndicator-umbrella.h"; sourceTree = "<group>"; };
+		338A4E6057E66F5C37EB024D6C78E896 /* UIApplication+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIApplication+OAuthSwift.swift"; sourceTree = "<group>"; };
+		387D3FBAAF710D6DB2A86D3E0484DB32 /* SHA1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
 		40992CA1535676881A0508A2B667F664 /* Pods-AudiomackSwiftLibrary_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AudiomackSwiftLibrary_Example-umbrella.h"; sourceTree = "<group>"; };
-		43E512572F4CDB86AF8A7FA4750294FC /* AudiomackSwiftLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = AudiomackSwiftLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4200F3BBF32659A9582D9AEFE2B3E55D /* FTIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTIndicator.h; path = FTIndicator/FTIndicator.h; sourceTree = "<group>"; };
+		45834E48E5619BB9797B94D22CEAE485 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B5CFD4320E4EF1F868476467B0DC637 /* Pods-AudiomackSwiftLibrary_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudiomackSwiftLibrary_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4FF15CA5EFA3EC06A69D5DC651D0E397 /* AudiomackSwiftLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AudiomackSwiftLibrary.xcconfig; sourceTree = "<group>"; };
+		4C5E236BE65CD5C316D34BA96CE7AAE0 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		4D335973AA4210D89E2107433E4AF523 /* Credential.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
+		5294994854AA0BA2C51125321B8E5C08 /* FTIndicator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FTIndicator-dummy.m"; sourceTree = "<group>"; };
 		5326C4B389B42D7AB767FEA5DA5ECDAA /* Pods-AudiomackSwiftLibrary_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudiomackSwiftLibrary_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5386E996B3646894E2E4D9FFF7E9A162 /* AudiomackSwiftLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AudiomackSwiftLibrary-prefix.pch"; sourceTree = "<group>"; };
+		54E539A42294A718E0483437244850D1 /* Collection+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Collection+OAuthSwift.swift"; sourceTree = "<group>"; };
+		551EACFC96662EF258F2C3DFDB9D786D /* AudiomackSwiftLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AudiomackSwiftLibrary-dummy.m"; sourceTree = "<group>"; };
+		59D4EB3F114A08FDCD82EB6446BF41F1 /* AudiomackAuthClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudiomackAuthClient.swift; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		5A3D27797F362B5303E860DEC5ECCF7E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		5A622A550F66FB8BC6C5F7ACDA0BAF4E /* Dictionary+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Dictionary+OAuthSwift.swift"; sourceTree = "<group>"; };
 		5BC1792EBD62DFD1E3BF4CC3C710F2A3 /* Pods-AudiomackSwiftLibrary_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AudiomackSwiftLibrary_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7EA5A555BB10D684C4BFCA930E10746F /* AudiomackSwiftLibrary-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AudiomackSwiftLibrary-dummy.m"; sourceTree = "<group>"; };
+		5C110442B1B0E2A7449F73C59142DED2 /* AudiomackArtistClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudiomackArtistClient.swift; sourceTree = "<group>"; };
+		5C5D61BF3B9DA678E55653936F253A43 /* AudiomackUser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudiomackUser.swift; sourceTree = "<group>"; };
+		5DBD0BD10CF1D82DE92E77E40BF13FE7 /* FTNotificationIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTNotificationIndicator.m; path = FTIndicator/FTNotificationIndicator/FTNotificationIndicator.m; sourceTree = "<group>"; };
+		5E7D68269E5FB800CE9415E528ACF0C2 /* OAuthSwiftURLHandlerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuthSwiftURLHandlerType.swift; sourceTree = "<group>"; };
+		60C51CD19294B7835B4D7AB4ADBA4ADE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6322CDBDEFC060EEC9AFC149B1825417 /* OAuth2Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuth2Swift.swift; sourceTree = "<group>"; };
+		6716270D5F6F1350ABA141F5A82A573E /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
+		68522D5651C6E6965F6E6D2C848151E0 /* AudiomackSwiftLibrary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AudiomackSwiftLibrary-umbrella.h"; sourceTree = "<group>"; };
+		68C8597F72A3B3D7A3972ED126303F3A /* AudiomackChartClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudiomackChartClient.swift; sourceTree = "<group>"; };
+		6B12459FD6CF9EF8DA0911D1AA26761F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		707E08F7A45FF2C76995CA868C45FD33 /* OAuthSwiftError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuthSwiftError.swift; sourceTree = "<group>"; };
+		782F528FB4AC215FF2CF2D876C4FF625 /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		78E98768C09872B60BB27137405AEA3B /* OAuthSwiftMultipartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuthSwiftMultipartData.swift; sourceTree = "<group>"; };
+		795064BFCFAC3E6E9399E8D29AF91C6F /* AudiomackSwiftLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = AudiomackSwiftLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		7A197F841462EB066441B2F60B4480F9 /* OAuthSwiftResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuthSwiftResponse.swift; sourceTree = "<group>"; };
+		7C5360D2382051826977BBEEB74A4E62 /* ApiResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		7F015EE2A21C57F39A5A064FDBA92A1F /* Pods-AudiomackSwiftLibrary_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AudiomackSwiftLibrary_Example-resources.sh"; sourceTree = "<group>"; };
 		82A230F54363280F70D89636D86A3074 /* Pods-AudiomackSwiftLibrary_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AudiomackSwiftLibrary_Tests.modulemap"; sourceTree = "<group>"; };
-		8425CD7F2193D4E900CF4239 /* UIApplication+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+OAuthSwift.swift"; sourceTree = "<group>"; };
-		8425CD802193D4E900CF4239 /* OAuthSwiftMultipartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftMultipartData.swift; sourceTree = "<group>"; };
-		8425CD812193D4E900CF4239 /* OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwift.swift; sourceTree = "<group>"; };
-		8425CD822193D4E900CF4239 /* HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
-		8425CD832193D4E900CF4239 /* Objc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objc.swift; sourceTree = "<group>"; };
-		8425CD842193D4E900CF4239 /* OAuth2Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth2Swift.swift; sourceTree = "<group>"; };
-		8425CD852193D4E900CF4239 /* Int+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+OAuthSwift.swift"; sourceTree = "<group>"; };
-		8425CD862193D4E900CF4239 /* OAuthSwiftURLHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftURLHandlerType.swift; sourceTree = "<group>"; };
-		8425CD872193D4E900CF4239 /* String+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+OAuthSwift.swift"; sourceTree = "<group>"; };
-		8425CD882193D4E900CF4239 /* NSError+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSError+OAuthSwift.swift"; sourceTree = "<group>"; };
-		8425CD892193D4E900CF4239 /* OAuthSwiftCredential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftCredential.swift; sourceTree = "<group>"; };
-		8425CD8A2193D4E900CF4239 /* OAuthSwiftResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftResponse.swift; sourceTree = "<group>"; };
-		8425CD8B2193D4E900CF4239 /* OAuthSwiftError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftError.swift; sourceTree = "<group>"; };
-		8425CD8C2193D4E900CF4239 /* NotificationCenter+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+OAuthSwift.swift"; sourceTree = "<group>"; };
-		8425CD8D2193D4E900CF4239 /* SHA1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
-		8425CD8E2193D4E900CF4239 /* Dictionary+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+OAuthSwift.swift"; sourceTree = "<group>"; };
-		8425CD8F2193D4E900CF4239 /* URL+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+OAuthSwift.swift"; sourceTree = "<group>"; };
-		8425CD902193D4E900CF4239 /* OAuth1Swift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuth1Swift.swift; sourceTree = "<group>"; };
-		8425CD912193D4E900CF4239 /* Data+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+OAuthSwift.swift"; sourceTree = "<group>"; };
-		8425CD922193D4E900CF4239 /* Collection+OAuthSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Collection+OAuthSwift.swift"; sourceTree = "<group>"; };
-		8425CD932193D4E900CF4239 /* Credential.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credential.swift; sourceTree = "<group>"; };
-		8425CD942193D4E900CF4239 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		8425CD952193D4E900CF4239 /* OAuthSwiftHTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftHTTPRequest.swift; sourceTree = "<group>"; };
-		8425CD962193D4E900CF4239 /* OAuthWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthWebViewController.swift; sourceTree = "<group>"; };
-		8425CD972193D4E900CF4239 /* OAuthSwiftClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthSwiftClient.swift; sourceTree = "<group>"; };
-		842A5B112189B02700E3EE79 /* AudiomackClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AudiomackClient.swift; path = AudiomackSwiftLibrary/Classes/AudiomackClient.swift; sourceTree = "<group>"; };
-		842A5B152189B44C00E3EE79 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
-		842A5B162189B44C00E3EE79 /* ApiResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
-		842A5B172189B44C00E3EE79 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
-		842A5B1B2189B48000E3EE79 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		846C02F72195B80500AF82F3 /* AudiomackMusic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudiomackMusic.swift; sourceTree = "<group>"; };
-		846C02F82195B80500AF82F3 /* AudiomackStat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudiomackStat.swift; sourceTree = "<group>"; };
-		846C02F92195B80500AF82F3 /* AudiomackRegisteredUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudiomackRegisteredUser.swift; sourceTree = "<group>"; };
-		846C02FA2195B80500AF82F3 /* AudiomackUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudiomackUser.swift; sourceTree = "<group>"; };
-		846C02FC2195B80600AF82F3 /* AudiomackSearchResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudiomackSearchResponse.swift; sourceTree = "<group>"; };
-		846C02FD2195B80600AF82F3 /* RegisterResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
-		846C02FF2195B80600AF82F3 /* AudiomackSearchClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudiomackSearchClient.swift; sourceTree = "<group>"; };
-		846C03002195B80600AF82F3 /* AudiomackChartClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudiomackChartClient.swift; sourceTree = "<group>"; };
-		846C03012195B80600AF82F3 /* AudiomackArtistClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudiomackArtistClient.swift; sourceTree = "<group>"; };
-		846C03022195B80600AF82F3 /* AudiomackAuthClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudiomackAuthClient.swift; sourceTree = "<group>"; };
-		846C03032195B80600AF82F3 /* AudiomackMusicClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudiomackMusicClient.swift; sourceTree = "<group>"; };
-		846C03052195B80600AF82F3 /* AuthenticationRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationRequests.swift; sourceTree = "<group>"; };
-		846C03122195C7B100AF82F3 /* AudiomackPlaylistClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudiomackPlaylistClient.swift; sourceTree = "<group>"; };
-		8472CADF2197C03200986286 /* AudiomackError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudiomackError.swift; sourceTree = "<group>"; };
+		8374C2479BF86F29F9DAA743B1DD7BCA /* AudiomackRegisteredUser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudiomackRegisteredUser.swift; sourceTree = "<group>"; };
 		860DF7022257D6AF371281897B88F6EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		882F1BC766F72C79705F9771E1FBE97E /* Pods_AudiomackSwiftLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudiomackSwiftLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C07E1503BFB203744D3CEB9107ECF21 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		97F83C2404D35836E26C6DF240553E8C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		9848E37A84A244DBDCA122BCD5C29E42 /* Pods_AudiomackSwiftLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudiomackSwiftLibrary_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C21DD815F1849A81A70315ADBDE5B60 /* AudiomackError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudiomackError.swift; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94260ADEB876B7AF842B5869845DE533 /* ApiClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		94B77F61BA1DDDA148A5289D52CC7E15 /* Int+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Int+OAuthSwift.swift"; sourceTree = "<group>"; };
+		9806FA9F5B43C3AEBAEBEBE67AA4C163 /* OAuthSwiftHTTPRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuthSwiftHTTPRequest.swift; sourceTree = "<group>"; };
+		9A88B2E8AC7649684F653B938DCEAEFC /* FTProgressIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTProgressIndicator.h; path = FTIndicator/FTProgressIndicator/FTProgressIndicator.h; sourceTree = "<group>"; };
+		9E1FE9EEE5A6C6EA572180EA78F7C57D /* OAuthSwiftClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuthSwiftClient.swift; sourceTree = "<group>"; };
+		9F0B3BB9165ABDF83F63F1CC2E21BF86 /* FTProgressIndicator.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = FTProgressIndicator.bundle; path = FTIndicator/FTProgressIndicator/FTProgressIndicator.bundle; sourceTree = "<group>"; };
 		9FBF70344500D7A60D62913CB5F5C0DA /* Pods-AudiomackSwiftLibrary_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AudiomackSwiftLibrary_Example.modulemap"; sourceTree = "<group>"; };
+		A1E9BAF7DABE88286BBF4C3718F28484 /* RegisterResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RegisterResponse.swift; sourceTree = "<group>"; };
+		A26F54B540E479950625AC8486FE25B2 /* NotificationCenter+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+OAuthSwift.swift"; sourceTree = "<group>"; };
+		AB417EE2B8A94ADA0A851D911C5FB22E /* AudiomackSearchResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudiomackSearchResponse.swift; sourceTree = "<group>"; };
 		B386B58B814D29681A45A687CADC64C4 /* Pods-AudiomackSwiftLibrary_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AudiomackSwiftLibrary_Tests-dummy.m"; sourceTree = "<group>"; };
+		B408E9D9D2D13B3F836F9E9589B317B2 /* AudiomackSwiftLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AudiomackSwiftLibrary.framework; path = AudiomackSwiftLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAA9E2E6BD865BED84C7306B32082143 /* Pods-AudiomackSwiftLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudiomackSwiftLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		BB9C24BE3B1E56AA02933080E18D6A9E /* FTNotificationIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTNotificationIndicator.h; path = FTIndicator/FTNotificationIndicator/FTNotificationIndicator.h; sourceTree = "<group>"; };
+		BD0B62853DA85FCD6B90C3846527887F /* FTToastIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTToastIndicator.h; path = FTIndicator/FTToastIndicator/FTToastIndicator.h; sourceTree = "<group>"; };
+		C207703BBB56229A8B54448A26341C3A /* String+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+OAuthSwift.swift"; sourceTree = "<group>"; };
+		C346E535A61FFD1B7B6E01670AC8A010 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		C4EB2B780E7D6FE52ECA462A6976CC11 /* OAuthSwiftCredential.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuthSwiftCredential.swift; sourceTree = "<group>"; };
+		C78DECFA0389F53CCCF87CCB8FE607C4 /* FTIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTIndicator.m; path = FTIndicator/FTIndicator.m; sourceTree = "<group>"; };
+		C7927076E66E6D1BB94B5725102ECEFD /* OAuth1Swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuth1Swift.swift; sourceTree = "<group>"; };
+		C7F5A28982F6D8C9D8EE16BC7A880572 /* AudiomackSearchClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudiomackSearchClient.swift; sourceTree = "<group>"; };
 		CFAF6F815CAD819661F28DEBCC384B16 /* Pods-AudiomackSwiftLibrary_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudiomackSwiftLibrary_Example.release.xcconfig"; sourceTree = "<group>"; };
+		D68816A386AAF6255806834AD13BF995 /* FTToastIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTToastIndicator.m; path = FTIndicator/FTToastIndicator/FTToastIndicator.m; sourceTree = "<group>"; };
+		D72F7CC80578FDC1B3A4A6B44F5D1AA8 /* OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuthSwift.swift; sourceTree = "<group>"; };
+		DDE680B9128B989598D346AF220A6BE5 /* FTIndicator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FTIndicator.xcconfig; sourceTree = "<group>"; };
+		DE29C29D90EEB8603447906553C42357 /* OAuthWebViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuthWebViewController.swift; sourceTree = "<group>"; };
+		DF204DECA3FAB04F00FCE0FA9EB62789 /* Pods_AudiomackSwiftLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AudiomackSwiftLibrary_Example.framework; path = "Pods-AudiomackSwiftLibrary_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF9FB9E95F56524A6F4500710408910D /* AudiomackMusic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudiomackMusic.swift; sourceTree = "<group>"; };
 		E027BE5B7A32007F0A273574B31D5647 /* Pods-AudiomackSwiftLibrary_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AudiomackSwiftLibrary_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		E0366DB2A1F5913E5BF57858D991DC6E /* Pods-AudiomackSwiftLibrary_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AudiomackSwiftLibrary_Tests-umbrella.h"; sourceTree = "<group>"; };
-		E3AA743C32AA0DF154617CD36E886A24 /* AudiomackSwiftLibrary-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AudiomackSwiftLibrary-prefix.pch"; sourceTree = "<group>"; };
-		EBE89E95432DA4227831B93E5F0EC483 /* AudiomackSwiftLibrary.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AudiomackSwiftLibrary.modulemap; sourceTree = "<group>"; };
+		E252827807423162D0E9EDB19F39729B /* AudiomackMusicClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudiomackMusicClient.swift; sourceTree = "<group>"; };
+		E5F490EC100326D644C5E8239B9625F2 /* AudiomackPlaylistClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudiomackPlaylistClient.swift; sourceTree = "<group>"; };
+		E8E521E4155B2FF73D1076A46264C552 /* NSError+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSError+OAuthSwift.swift"; sourceTree = "<group>"; };
+		E93A9B51E9FBB4E93C3DC7EC1CC3C5ED /* FTIndicator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FTIndicator-prefix.pch"; sourceTree = "<group>"; };
+		EE1FAAAE0907C4363587FE4BCF09E955 /* AuthenticationRequests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthenticationRequests.swift; sourceTree = "<group>"; };
+		F674E9D6D343843E1D2978C8E50A2B41 /* AudiomackStat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudiomackStat.swift; sourceTree = "<group>"; };
+		FB505762ACDBF8C697F44465A3AE6F24 /* FTIndicator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FTIndicator.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		09820A761EC544F0BD4ED5AC19233FBB /* Frameworks */ = {
+		66992432D1FA9466F542434F52B28C68 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82F99787F249759CFEC0AFE798AAD5E5 /* Foundation.framework in Frameworks */,
+				E62987D5A8F9AF7C09217E3E886E2CC4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95F0D83CA03A54328544904F02612028 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDD4F4C69FE27419AD883FDDA405DE4A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C397F86201649546B35A635C21CCFFBB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				352D17AA8C02D199885E2398B56C3A10 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,29 +228,86 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E67FCD81C9E2B2FC95A80C4CF83E66D6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2E6B1F63AFAD979F9B5FFE9ECB617B99 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		096EEE8D45598F38FCB155CCAD99970C /* Support Files */ = {
+		031BC83F49551B3774A28380ED708AE5 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EBE89E95432DA4227831B93E5F0EC483 /* AudiomackSwiftLibrary.modulemap */,
-				4FF15CA5EFA3EC06A69D5DC651D0E397 /* AudiomackSwiftLibrary.xcconfig */,
-				7EA5A555BB10D684C4BFCA930E10746F /* AudiomackSwiftLibrary-dummy.m */,
-				E3AA743C32AA0DF154617CD36E886A24 /* AudiomackSwiftLibrary-prefix.pch */,
-				4073A7A671E353BE437FA7C10FA95FAD /* AudiomackSwiftLibrary-umbrella.h */,
-				8C07E1503BFB203744D3CEB9107ECF21 /* Info.plist */,
+				4CDDC456278BAE2C7DD6B3FDCA0410FA /* AudiomackSwiftLibrary */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/AudiomackSwiftLibrary";
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		0D039FE09DD7100311F72243CAB9CB4C /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				5C110442B1B0E2A7449F73C59142DED2 /* AudiomackArtistClient.swift */,
+				59D4EB3F114A08FDCD82EB6446BF41F1 /* AudiomackAuthClient.swift */,
+				68C8597F72A3B3D7A3972ED126303F3A /* AudiomackChartClient.swift */,
+				E252827807423162D0E9EDB19F39729B /* AudiomackMusicClient.swift */,
+				E5F490EC100326D644C5E8239B9625F2 /* AudiomackPlaylistClient.swift */,
+				C7F5A28982F6D8C9D8EE16BC7A880572 /* AudiomackSearchClient.swift */,
+			);
+			name = Clients;
+			path = AudiomackSwiftLibrary/Classes/Clients;
+			sourceTree = "<group>";
+		};
+		172AB5769DEED72C454B5DA0EBE0AC82 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8C21DD815F1849A81A70315ADBDE5B60 /* AudiomackError.swift */,
+				DF9FB9E95F56524A6F4500710408910D /* AudiomackMusic.swift */,
+				8374C2479BF86F29F9DAA743B1DD7BCA /* AudiomackRegisteredUser.swift */,
+				F674E9D6D343843E1D2978C8E50A2B41 /* AudiomackStat.swift */,
+				5C5D61BF3B9DA678E55653936F253A43 /* AudiomackUser.swift */,
+			);
+			name = Entities;
+			path = AudiomackSwiftLibrary/Classes/Entities;
+			sourceTree = "<group>";
+		};
+		2208757F9CDC3D2F52D743AB1D5B2739 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB38EDD31F71D754089540FFE611938A /* FTIndicator */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		29261074BCBC19B63BA8C0986766231C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B408E9D9D2D13B3F836F9E9589B317B2 /* AudiomackSwiftLibrary.framework */,
+				169F037C4D58A1E054A60628AD198DCB /* FTIndicator.framework */,
+				DF204DECA3FAB04F00FCE0FA9EB62789 /* Pods_AudiomackSwiftLibrary_Example.framework */,
+				03F34E8E379CE1DA87F1D098C0B0225E /* Pods_AudiomackSwiftLibrary_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CDDC456278BAE2C7DD6B3FDCA0410FA /* AudiomackSwiftLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				0D274389B55DA2C28C0880AF1AF9BE13 /* AudiomackClient.swift */,
+				0D039FE09DD7100311F72243CAB9CB4C /* Clients */,
+				172AB5769DEED72C454B5DA0EBE0AC82 /* Entities */,
+				DF9AF7D71F9B523D0EF155ABCE987DBB /* Oauth */,
+				D2D7C75FAA4F93F4B53C4CA062F249F7 /* Pod */,
+				595E1E4EB368234E52134D76DDFC00E9 /* Requests */,
+				EBAD116B2E553175F3F190EF15589570 /* Responses */,
+				8C208CA06D52A3563B5EFF21FF420F9F /* Support Files */,
+			);
+			name = AudiomackSwiftLibrary;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		595E1E4EB368234E52134D76DDFC00E9 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				EE1FAAAE0907C4363587FE4BCF09E955 /* AuthenticationRequests.swift */,
+			);
+			name = Requests;
+			path = AudiomackSwiftLibrary/Classes/Requests;
 			sourceTree = "<group>";
 		};
 		5E0D919E635D23B70123790B8308F8EF /* iOS */ = {
@@ -210,132 +318,23 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		62408AFD41800ED9E67E23B42960EAF7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				2499A3DE71CA2F06FD8E2BD613B7730F /* AudiomackSwiftLibrary.framework */,
-				9848E37A84A244DBDCA122BCD5C29E42 /* Pods_AudiomackSwiftLibrary_Example.framework */,
-				882F1BC766F72C79705F9771E1FBE97E /* Pods_AudiomackSwiftLibrary_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		76FAC9F8A201BA0B2A81353E2EDBAFB6 /* AudiomackSwiftLibrary */ = {
-			isa = PBXGroup;
-			children = (
-				842A5B112189B02700E3EE79 /* AudiomackClient.swift */,
-				846C02FE2195B80600AF82F3 /* Clients */,
-				846C02F62195B80500AF82F3 /* Entities */,
-				8425CD7E2193D4E900CF4239 /* Oauth */,
-				E988BAAA5A68D4F1D0E96CBA83F234BB /* Pod */,
-				846C03042195B80600AF82F3 /* Requests */,
-				846C02FB2195B80600AF82F3 /* Responses */,
-				096EEE8D45598F38FCB155CCAD99970C /* Support Files */,
-			);
-			name = AudiomackSwiftLibrary;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		7A4BBC0402CE2D3E57F23BC3DA9D71BF /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				76FAC9F8A201BA0B2A81353E2EDBAFB6 /* AudiomackSwiftLibrary */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				7A4BBC0402CE2D3E57F23BC3DA9D71BF /* Development Pods */,
+				031BC83F49551B3774A28380ED708AE5 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				62408AFD41800ED9E67E23B42960EAF7 /* Products */,
+				2208757F9CDC3D2F52D743AB1D5B2739 /* Pods */,
+				29261074BCBC19B63BA8C0986766231C /* Products */,
 				BCDE7B3D6DFE25E07BDE213B43E2984A /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8425CD7E2193D4E900CF4239 /* Oauth */ = {
+		829437673B7671D4B9D732D59C37D942 /* FTNotificationIndicator */ = {
 			isa = PBXGroup;
 			children = (
-				842A5B152189B44C00E3EE79 /* ApiClient.swift */,
-				842A5B162189B44C00E3EE79 /* ApiResponse.swift */,
-				842A5B172189B44C00E3EE79 /* JSON.swift */,
-				842A5B1B2189B48000E3EE79 /* Result.swift */,
-				8425CD7F2193D4E900CF4239 /* UIApplication+OAuthSwift.swift */,
-				8425CD802193D4E900CF4239 /* OAuthSwiftMultipartData.swift */,
-				8425CD812193D4E900CF4239 /* OAuthSwift.swift */,
-				8425CD822193D4E900CF4239 /* HMAC.swift */,
-				8425CD832193D4E900CF4239 /* Objc.swift */,
-				8425CD842193D4E900CF4239 /* OAuth2Swift.swift */,
-				8425CD852193D4E900CF4239 /* Int+OAuthSwift.swift */,
-				8425CD862193D4E900CF4239 /* OAuthSwiftURLHandlerType.swift */,
-				8425CD872193D4E900CF4239 /* String+OAuthSwift.swift */,
-				8425CD882193D4E900CF4239 /* NSError+OAuthSwift.swift */,
-				8425CD892193D4E900CF4239 /* OAuthSwiftCredential.swift */,
-				8425CD8A2193D4E900CF4239 /* OAuthSwiftResponse.swift */,
-				8425CD8B2193D4E900CF4239 /* OAuthSwiftError.swift */,
-				8425CD8C2193D4E900CF4239 /* NotificationCenter+OAuthSwift.swift */,
-				8425CD8D2193D4E900CF4239 /* SHA1.swift */,
-				8425CD8E2193D4E900CF4239 /* Dictionary+OAuthSwift.swift */,
-				8425CD8F2193D4E900CF4239 /* URL+OAuthSwift.swift */,
-				8425CD902193D4E900CF4239 /* OAuth1Swift.swift */,
-				8425CD912193D4E900CF4239 /* Data+OAuthSwift.swift */,
-				8425CD922193D4E900CF4239 /* Collection+OAuthSwift.swift */,
-				8425CD932193D4E900CF4239 /* Credential.swift */,
-				8425CD942193D4E900CF4239 /* Utils.swift */,
-				8425CD952193D4E900CF4239 /* OAuthSwiftHTTPRequest.swift */,
-				8425CD962193D4E900CF4239 /* OAuthWebViewController.swift */,
-				8425CD972193D4E900CF4239 /* OAuthSwiftClient.swift */,
 			);
-			name = Oauth;
-			path = AudiomackSwiftLibrary/Classes/Oauth;
-			sourceTree = "<group>";
-		};
-		846C02F62195B80500AF82F3 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				846C02F72195B80500AF82F3 /* AudiomackMusic.swift */,
-				846C02F82195B80500AF82F3 /* AudiomackStat.swift */,
-				846C02F92195B80500AF82F3 /* AudiomackRegisteredUser.swift */,
-				846C02FA2195B80500AF82F3 /* AudiomackUser.swift */,
-				8472CADF2197C03200986286 /* AudiomackError.swift */,
-			);
-			name = Entities;
-			path = AudiomackSwiftLibrary/Classes/Entities;
-			sourceTree = "<group>";
-		};
-		846C02FB2195B80600AF82F3 /* Responses */ = {
-			isa = PBXGroup;
-			children = (
-				846C02FC2195B80600AF82F3 /* AudiomackSearchResponse.swift */,
-				846C02FD2195B80600AF82F3 /* RegisterResponse.swift */,
-			);
-			name = Responses;
-			path = AudiomackSwiftLibrary/Classes/Responses;
-			sourceTree = "<group>";
-		};
-		846C02FE2195B80600AF82F3 /* Clients */ = {
-			isa = PBXGroup;
-			children = (
-				846C02FF2195B80600AF82F3 /* AudiomackSearchClient.swift */,
-				846C03002195B80600AF82F3 /* AudiomackChartClient.swift */,
-				846C03012195B80600AF82F3 /* AudiomackArtistClient.swift */,
-				846C03022195B80600AF82F3 /* AudiomackAuthClient.swift */,
-				846C03032195B80600AF82F3 /* AudiomackMusicClient.swift */,
-				846C03122195C7B100AF82F3 /* AudiomackPlaylistClient.swift */,
-			);
-			name = Clients;
-			path = AudiomackSwiftLibrary/Classes/Clients;
-			sourceTree = "<group>";
-		};
-		846C03042195B80600AF82F3 /* Requests */ = {
-			isa = PBXGroup;
-			children = (
-				846C03052195B80600AF82F3 /* AuthenticationRequests.swift */,
-			);
-			name = Requests;
-			path = AudiomackSwiftLibrary/Classes/Requests;
+			name = FTNotificationIndicator;
 			sourceTree = "<group>";
 		};
 		89AF0A59669739DA382C5C5D04B79696 /* Pods-AudiomackSwiftLibrary_Tests */ = {
@@ -356,6 +355,56 @@
 			path = "Target Support Files/Pods-AudiomackSwiftLibrary_Tests";
 			sourceTree = "<group>";
 		};
+		8C208CA06D52A3563B5EFF21FF420F9F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3234F86F327FB3BE6DBE8071FE44D2A6 /* AudiomackSwiftLibrary.modulemap */,
+				08932C5ACE94581C49FDCD562594BB68 /* AudiomackSwiftLibrary.xcconfig */,
+				551EACFC96662EF258F2C3DFDB9D786D /* AudiomackSwiftLibrary-dummy.m */,
+				5386E996B3646894E2E4D9FFF7E9A162 /* AudiomackSwiftLibrary-prefix.pch */,
+				68522D5651C6E6965F6E6D2C848151E0 /* AudiomackSwiftLibrary-umbrella.h */,
+				60C51CD19294B7835B4D7AB4ADBA4ADE /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/AudiomackSwiftLibrary";
+			sourceTree = "<group>";
+		};
+		97A63DFC8D7BBC8936F0F871B91D71A0 /* FTProgressIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				E4EB3AED53C05A89353FD4AC1E1313CB /* Resources */,
+			);
+			name = FTProgressIndicator;
+			sourceTree = "<group>";
+		};
+		A89ADE7585DC4F4BA36FABDAD131A437 /* FTToastIndicator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = FTToastIndicator;
+			sourceTree = "<group>";
+		};
+		BB38EDD31F71D754089540FFE611938A /* FTIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				4200F3BBF32659A9582D9AEFE2B3E55D /* FTIndicator.h */,
+				C78DECFA0389F53CCCF87CCB8FE607C4 /* FTIndicator.m */,
+				BB9C24BE3B1E56AA02933080E18D6A9E /* FTNotificationIndicator.h */,
+				5DBD0BD10CF1D82DE92E77E40BF13FE7 /* FTNotificationIndicator.m */,
+				9A88B2E8AC7649684F653B938DCEAEFC /* FTProgressIndicator.h */,
+				29F4343D57054EAD2DEE149E11848BC7 /* FTProgressIndicator.m */,
+				BD0B62853DA85FCD6B90C3846527887F /* FTToastIndicator.h */,
+				D68816A386AAF6255806834AD13BF995 /* FTToastIndicator.m */,
+				829437673B7671D4B9D732D59C37D942 /* FTNotificationIndicator */,
+				97A63DFC8D7BBC8936F0F871B91D71A0 /* FTProgressIndicator */,
+				A89ADE7585DC4F4BA36FABDAD131A437 /* FTToastIndicator */,
+				FC8DECBFFBB13400C12AA952C6A9093B /* Resources */,
+				EC972134DBFFB745B967738A80031D66 /* Support Files */,
+			);
+			name = FTIndicator;
+			path = FTIndicator;
+			sourceTree = "<group>";
+		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,6 +420,60 @@
 				89AF0A59669739DA382C5C5D04B79696 /* Pods-AudiomackSwiftLibrary_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D2D7C75FAA4F93F4B53C4CA062F249F7 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				795064BFCFAC3E6E9399E8D29AF91C6F /* AudiomackSwiftLibrary.podspec */,
+				25D5F8C516A0794D664BA4440B86E7F9 /* LICENSE */,
+				6B12459FD6CF9EF8DA0911D1AA26761F /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		DF9AF7D71F9B523D0EF155ABCE987DBB /* Oauth */ = {
+			isa = PBXGroup;
+			children = (
+				94260ADEB876B7AF842B5869845DE533 /* ApiClient.swift */,
+				7C5360D2382051826977BBEEB74A4E62 /* ApiResponse.swift */,
+				54E539A42294A718E0483437244850D1 /* Collection+OAuthSwift.swift */,
+				4D335973AA4210D89E2107433E4AF523 /* Credential.swift */,
+				0B2F940F7BACD34F1F5BE73D8852EF2A /* Data+OAuthSwift.swift */,
+				5A622A550F66FB8BC6C5F7ACDA0BAF4E /* Dictionary+OAuthSwift.swift */,
+				6716270D5F6F1350ABA141F5A82A573E /* HMAC.swift */,
+				94B77F61BA1DDDA148A5289D52CC7E15 /* Int+OAuthSwift.swift */,
+				782F528FB4AC215FF2CF2D876C4FF625 /* JSON.swift */,
+				A26F54B540E479950625AC8486FE25B2 /* NotificationCenter+OAuthSwift.swift */,
+				E8E521E4155B2FF73D1076A46264C552 /* NSError+OAuthSwift.swift */,
+				C7927076E66E6D1BB94B5725102ECEFD /* OAuth1Swift.swift */,
+				6322CDBDEFC060EEC9AFC149B1825417 /* OAuth2Swift.swift */,
+				D72F7CC80578FDC1B3A4A6B44F5D1AA8 /* OAuthSwift.swift */,
+				9E1FE9EEE5A6C6EA572180EA78F7C57D /* OAuthSwiftClient.swift */,
+				C4EB2B780E7D6FE52ECA462A6976CC11 /* OAuthSwiftCredential.swift */,
+				707E08F7A45FF2C76995CA868C45FD33 /* OAuthSwiftError.swift */,
+				9806FA9F5B43C3AEBAEBEBE67AA4C163 /* OAuthSwiftHTTPRequest.swift */,
+				78E98768C09872B60BB27137405AEA3B /* OAuthSwiftMultipartData.swift */,
+				7A197F841462EB066441B2F60B4480F9 /* OAuthSwiftResponse.swift */,
+				5E7D68269E5FB800CE9415E528ACF0C2 /* OAuthSwiftURLHandlerType.swift */,
+				DE29C29D90EEB8603447906553C42357 /* OAuthWebViewController.swift */,
+				113C511F330D9FAA97F0A17834BFF0ED /* Objc.swift */,
+				4C5E236BE65CD5C316D34BA96CE7AAE0 /* Result.swift */,
+				387D3FBAAF710D6DB2A86D3E0484DB32 /* SHA1.swift */,
+				C207703BBB56229A8B54448A26341C3A /* String+OAuthSwift.swift */,
+				338A4E6057E66F5C37EB024D6C78E896 /* UIApplication+OAuthSwift.swift */,
+				2CF6F8EC2E6AE52E3865D61CC31196D7 /* URL+OAuthSwift.swift */,
+				C346E535A61FFD1B7B6E01670AC8A010 /* Utils.swift */,
+			);
+			name = Oauth;
+			path = AudiomackSwiftLibrary/Classes/Oauth;
+			sourceTree = "<group>";
+		};
+		E4EB3AED53C05A89353FD4AC1E1313CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		E95BBDC2294DCC2B8EF7D894C8CFC41C /* Pods-AudiomackSwiftLibrary_Example */ = {
@@ -391,14 +494,36 @@
 			path = "Target Support Files/Pods-AudiomackSwiftLibrary_Example";
 			sourceTree = "<group>";
 		};
-		E988BAAA5A68D4F1D0E96CBA83F234BB /* Pod */ = {
+		EBAD116B2E553175F3F190EF15589570 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
-				43E512572F4CDB86AF8A7FA4750294FC /* AudiomackSwiftLibrary.podspec */,
-				97F83C2404D35836E26C6DF240553E8C /* LICENSE */,
-				5A3D27797F362B5303E860DEC5ECCF7E /* README.md */,
+				AB417EE2B8A94ADA0A851D911C5FB22E /* AudiomackSearchResponse.swift */,
+				A1E9BAF7DABE88286BBF4C3718F28484 /* RegisterResponse.swift */,
 			);
-			name = Pod;
+			name = Responses;
+			path = AudiomackSwiftLibrary/Classes/Responses;
+			sourceTree = "<group>";
+		};
+		EC972134DBFFB745B967738A80031D66 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB505762ACDBF8C697F44465A3AE6F24 /* FTIndicator.modulemap */,
+				DDE680B9128B989598D346AF220A6BE5 /* FTIndicator.xcconfig */,
+				5294994854AA0BA2C51125321B8E5C08 /* FTIndicator-dummy.m */,
+				E93A9B51E9FBB4E93C3DC7EC1CC3C5ED /* FTIndicator-prefix.pch */,
+				325E255DF756C8847E1D7E98876699DE /* FTIndicator-umbrella.h */,
+				45834E48E5619BB9797B94D22CEAE485 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FTIndicator";
+			sourceTree = "<group>";
+		};
+		FC8DECBFFBB13400C12AA952C6A9093B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9F0B3BB9165ABDF83F63F1CC2E21BF86 /* FTProgressIndicator.bundle */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,40 +537,72 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3F9CEC8F0D18B299EB45791A94CE2393 /* Headers */ = {
+		63FA6E88100069DA7504963CF92F7473 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00C984C716688B0DE77A86175AEF7067 /* Pods-AudiomackSwiftLibrary_Example-umbrella.h in Headers */,
+				FFC4D3E5FEFC32378E41CC4B9A41C82B /* AudiomackSwiftLibrary-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BC7FC5FDD21719965150F6EB93BE9971 /* Headers */ = {
+		94875307C3C242943FD44712600069D9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA722DB6A67C41F08461AAD42D4D5679 /* AudiomackSwiftLibrary-umbrella.h in Headers */,
+				B535DA8521C7361C7F51A5CFED857D2A /* FTIndicator-umbrella.h in Headers */,
+				CC8E905520734CDEC4A63B643623213E /* FTIndicator.h in Headers */,
+				2CD5BD9767AAA0B31D28CEE9B362CAC7 /* FTNotificationIndicator.h in Headers */,
+				B14534EF3E6920403D84BAF330B49D9E /* FTProgressIndicator.h in Headers */,
+				8360C8879E3BA8C65753C035462ED2BF /* FTToastIndicator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95B611FAE0DF23576F18723CF803E78D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				439B7239E74621FF100840D50B15375F /* Pods-AudiomackSwiftLibrary_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		B4E6FC7A3EF2EE5AB8D5CA1DE3122254 /* AudiomackSwiftLibrary */ = {
+		2EEA7A6F51895F2064E9B1999C92D417 /* Pods-AudiomackSwiftLibrary_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 170165E907E876EF7A790F94E203702E /* Build configuration list for PBXNativeTarget "AudiomackSwiftLibrary" */;
+			buildConfigurationList = 2419738CD31CA9EAE924AB69B33E1B3F /* Build configuration list for PBXNativeTarget "Pods-AudiomackSwiftLibrary_Example" */;
 			buildPhases = (
-				481145C555BA7FFF3313958EC2A60680 /* Sources */,
-				09820A761EC544F0BD4ED5AC19233FBB /* Frameworks */,
-				BC7FC5FDD21719965150F6EB93BE9971 /* Headers */,
+				BE5855C7A0429CBB300D4956ECD454A4 /* Sources */,
+				C397F86201649546B35A635C21CCFFBB /* Frameworks */,
+				95B611FAE0DF23576F18723CF803E78D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE5C543EDC1C5D82B77D4BA0F4ECA450 /* PBXTargetDependency */,
+				B36CECF22C767DDAB9CF7E42E342979A /* PBXTargetDependency */,
+			);
+			name = "Pods-AudiomackSwiftLibrary_Example";
+			productName = "Pods-AudiomackSwiftLibrary_Example";
+			productReference = DF204DECA3FAB04F00FCE0FA9EB62789 /* Pods_AudiomackSwiftLibrary_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A84DA1D502917E8956383E16DCBDC7CD /* FTIndicator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DC9F1BF5E31E5A6109CEE2DCE8133D6 /* Build configuration list for PBXNativeTarget "FTIndicator" */;
+			buildPhases = (
+				E74F4BF4EF03EF65D9E7BAE070737C54 /* Sources */,
+				95F0D83CA03A54328544904F02612028 /* Frameworks */,
+				94875307C3C242943FD44712600069D9 /* Headers */,
+				D3A5D21DC9CCE7ECDE4D72E370D20984 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = AudiomackSwiftLibrary;
-			productName = AudiomackSwiftLibrary;
-			productReference = 2499A3DE71CA2F06FD8E2BD613B7730F /* AudiomackSwiftLibrary.framework */;
+			name = FTIndicator;
+			productName = FTIndicator;
+			productReference = 169F037C4D58A1E054A60628AD198DCB /* FTIndicator.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B8A2072C67AE80CD6B99D8E2E426A3F7 /* Pods-AudiomackSwiftLibrary_Tests */ = {
@@ -463,25 +620,24 @@
 			);
 			name = "Pods-AudiomackSwiftLibrary_Tests";
 			productName = "Pods-AudiomackSwiftLibrary_Tests";
-			productReference = 882F1BC766F72C79705F9771E1FBE97E /* Pods_AudiomackSwiftLibrary_Tests.framework */;
+			productReference = 03F34E8E379CE1DA87F1D098C0B0225E /* Pods_AudiomackSwiftLibrary_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D28EAD3C119BFDCA7A02A40650CFB730 /* Pods-AudiomackSwiftLibrary_Example */ = {
+		D7FCAE4BCB043CA794C4C9F38E42921A /* AudiomackSwiftLibrary */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DC83845560BCCC39103586172F049F88 /* Build configuration list for PBXNativeTarget "Pods-AudiomackSwiftLibrary_Example" */;
+			buildConfigurationList = 60412C234B6AEEE4CD631F0A5AC579D3 /* Build configuration list for PBXNativeTarget "AudiomackSwiftLibrary" */;
 			buildPhases = (
-				65348F0EE608096E816508A8E6C1EF45 /* Sources */,
-				E67FCD81C9E2B2FC95A80C4CF83E66D6 /* Frameworks */,
-				3F9CEC8F0D18B299EB45791A94CE2393 /* Headers */,
+				149EEDCA76914596A96FB058A5DB4DFD /* Sources */,
+				66992432D1FA9466F542434F52B28C68 /* Frameworks */,
+				63FA6E88100069DA7504963CF92F7473 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D27CDBDF38D94A562C86EDF3EF5F016A /* PBXTargetDependency */,
 			);
-			name = "Pods-AudiomackSwiftLibrary_Example";
-			productName = "Pods-AudiomackSwiftLibrary_Example";
-			productReference = 9848E37A84A244DBDCA122BCD5C29E42 /* Pods_AudiomackSwiftLibrary_Example.framework */;
+			name = AudiomackSwiftLibrary;
+			productName = AudiomackSwiftLibrary;
+			productReference = B408E9D9D2D13B3F836F9E9589B317B2 /* AudiomackSwiftLibrary.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -491,7 +647,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -501,75 +657,79 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 62408AFD41800ED9E67E23B42960EAF7 /* Products */;
+			productRefGroup = 29261074BCBC19B63BA8C0986766231C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B4E6FC7A3EF2EE5AB8D5CA1DE3122254 /* AudiomackSwiftLibrary */,
-				D28EAD3C119BFDCA7A02A40650CFB730 /* Pods-AudiomackSwiftLibrary_Example */,
+				D7FCAE4BCB043CA794C4C9F38E42921A /* AudiomackSwiftLibrary */,
+				A84DA1D502917E8956383E16DCBDC7CD /* FTIndicator */,
+				2EEA7A6F51895F2064E9B1999C92D417 /* Pods-AudiomackSwiftLibrary_Example */,
 				B8A2072C67AE80CD6B99D8E2E426A3F7 /* Pods-AudiomackSwiftLibrary_Tests */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		481145C555BA7FFF3313958EC2A60680 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		D3A5D21DC9CCE7ECDE4D72E370D20984 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFA94F61F1A2EB98E75162E37781513A /* AudiomackSwiftLibrary-dummy.m in Sources */,
-				846C03082195B80600AF82F3 /* AudiomackRegisteredUser.swift in Sources */,
-				8425CD9E2193D4E900CF4239 /* Int+OAuthSwift.swift in Sources */,
-				8425CDA12193D4E900CF4239 /* NSError+OAuthSwift.swift in Sources */,
-				8425CDA32193D4E900CF4239 /* OAuthSwiftResponse.swift in Sources */,
-				8425CDAB2193D4E900CF4239 /* Collection+OAuthSwift.swift in Sources */,
-				846C03072195B80600AF82F3 /* AudiomackStat.swift in Sources */,
-				8425CDA02193D4E900CF4239 /* String+OAuthSwift.swift in Sources */,
-				8472CAE02197C03200986286 /* AudiomackError.swift in Sources */,
-				842A5B122189B02700E3EE79 /* AudiomackClient.swift in Sources */,
-				8425CDAF2193D4E900CF4239 /* OAuthWebViewController.swift in Sources */,
-				8425CDA92193D4E900CF4239 /* OAuth1Swift.swift in Sources */,
-				846C030F2195B80600AF82F3 /* AudiomackAuthClient.swift in Sources */,
-				8425CD9C2193D4E900CF4239 /* Objc.swift in Sources */,
-				8425CDAC2193D4E900CF4239 /* Credential.swift in Sources */,
-				842A5B1C2189B48000E3EE79 /* Result.swift in Sources */,
-				8425CD982193D4E900CF4239 /* UIApplication+OAuthSwift.swift in Sources */,
-				8425CDB02193D4E900CF4239 /* OAuthSwiftClient.swift in Sources */,
-				8425CDAD2193D4E900CF4239 /* Utils.swift in Sources */,
-				8425CDAA2193D4E900CF4239 /* Data+OAuthSwift.swift in Sources */,
-				846C030E2195B80600AF82F3 /* AudiomackArtistClient.swift in Sources */,
-				842A5B1A2189B44C00E3EE79 /* JSON.swift in Sources */,
-				8425CD9F2193D4E900CF4239 /* OAuthSwiftURLHandlerType.swift in Sources */,
-				8425CDA22193D4E900CF4239 /* OAuthSwiftCredential.swift in Sources */,
-				842A5B192189B44C00E3EE79 /* ApiResponse.swift in Sources */,
-				8425CD9B2193D4E900CF4239 /* HMAC.swift in Sources */,
-				846C030A2195B80600AF82F3 /* AudiomackSearchResponse.swift in Sources */,
-				8425CDA62193D4E900CF4239 /* SHA1.swift in Sources */,
-				8425CDA42193D4E900CF4239 /* OAuthSwiftError.swift in Sources */,
-				8425CD9D2193D4E900CF4239 /* OAuth2Swift.swift in Sources */,
-				8425CD9A2193D4E900CF4239 /* OAuthSwift.swift in Sources */,
-				846C03092195B80600AF82F3 /* AudiomackUser.swift in Sources */,
-				8425CD992193D4E900CF4239 /* OAuthSwiftMultipartData.swift in Sources */,
-				846C030B2195B80600AF82F3 /* RegisterResponse.swift in Sources */,
-				8425CDA72193D4E900CF4239 /* Dictionary+OAuthSwift.swift in Sources */,
-				846C030D2195B80600AF82F3 /* AudiomackChartClient.swift in Sources */,
-				8425CDA82193D4E900CF4239 /* URL+OAuthSwift.swift in Sources */,
-				846C030C2195B80600AF82F3 /* AudiomackSearchClient.swift in Sources */,
-				846C03112195B80600AF82F3 /* AuthenticationRequests.swift in Sources */,
-				846C03102195B80600AF82F3 /* AudiomackMusicClient.swift in Sources */,
-				8425CDA52193D4E900CF4239 /* NotificationCenter+OAuthSwift.swift in Sources */,
-				8425CDAE2193D4E900CF4239 /* OAuthSwiftHTTPRequest.swift in Sources */,
-				846C03062195B80600AF82F3 /* AudiomackMusic.swift in Sources */,
-				842A5B182189B44C00E3EE79 /* ApiClient.swift in Sources */,
-				846C03132195C7B100AF82F3 /* AudiomackPlaylistClient.swift in Sources */,
+				A9061A70C3B6ACFA004DF947ABC3672E /* FTProgressIndicator.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		65348F0EE608096E816508A8E6C1EF45 /* Sources */ = {
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		149EEDCA76914596A96FB058A5DB4DFD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5BFEBCCE1674D389F9588DD75383C9B /* Pods-AudiomackSwiftLibrary_Example-dummy.m in Sources */,
+				94A0F35227533A56757572025CE63401 /* ApiClient.swift in Sources */,
+				C7B1E0B210900427DE1818BF31259BA5 /* ApiResponse.swift in Sources */,
+				F5B2A5409C7606F470699F230B7E7A41 /* AudiomackArtistClient.swift in Sources */,
+				6B10B35B334DE0AD1E72CDFE5A761B29 /* AudiomackAuthClient.swift in Sources */,
+				A3D4611F03A968618513647E141B09C0 /* AudiomackChartClient.swift in Sources */,
+				2BB5BBD74191B932F6243471B40EFA8D /* AudiomackClient.swift in Sources */,
+				DF801FDD75FE56477CCA00462EF83816 /* AudiomackError.swift in Sources */,
+				D73C0925367D0E880E691EB353C89642 /* AudiomackMusic.swift in Sources */,
+				CAF9B685C6B4F21C02D6F58042D97300 /* AudiomackMusicClient.swift in Sources */,
+				731BEA9FC30774EA87468BDA9F723F56 /* AudiomackPlaylistClient.swift in Sources */,
+				82EA98C06367BB783D917D7E621A1BBB /* AudiomackRegisteredUser.swift in Sources */,
+				C59D931BDB85CEA93CADFA8244523B0F /* AudiomackSearchClient.swift in Sources */,
+				5EC8BC294C848E783E16573187AB29CA /* AudiomackSearchResponse.swift in Sources */,
+				742776F50C173B8A8B2DE6F05C05F240 /* AudiomackStat.swift in Sources */,
+				93BECC2B8D9CFF83134B052A4AAA2FE2 /* AudiomackSwiftLibrary-dummy.m in Sources */,
+				954CADF45D03CB263432F83282B5F319 /* AudiomackUser.swift in Sources */,
+				F6B52204002FC8B8A030D3F25B867C94 /* AuthenticationRequests.swift in Sources */,
+				DD3BF216B25312C479A6D336BDDE20B8 /* Collection+OAuthSwift.swift in Sources */,
+				8F94991D715B47BD4E3E238AB1936ADC /* Credential.swift in Sources */,
+				C05444A5B970F46BE39943EDECEDE7AB /* Data+OAuthSwift.swift in Sources */,
+				14E5AF78E73022A64ACB2F3692F87A07 /* Dictionary+OAuthSwift.swift in Sources */,
+				EDE32D8354E58304DAD8442DFA8A397E /* HMAC.swift in Sources */,
+				A79567A190544E080B28DE4CEEC90F41 /* Int+OAuthSwift.swift in Sources */,
+				3B6B6DB083A7EE6F63733D22622D6FDB /* JSON.swift in Sources */,
+				DC3FE976A52792BFFE390DF635C50737 /* NotificationCenter+OAuthSwift.swift in Sources */,
+				6E574AB05132D73BE3CB2F4F11C8FCE9 /* NSError+OAuthSwift.swift in Sources */,
+				5642F9A603E5E1AE8456D7220FA15EDB /* OAuth1Swift.swift in Sources */,
+				921AB16D2407858470A5FEC9228B41A9 /* OAuth2Swift.swift in Sources */,
+				2DB800E3FDAB4CE924936DDE0F7815B6 /* OAuthSwift.swift in Sources */,
+				68A71DEF6B913E53BCB5A84723E06184 /* OAuthSwiftClient.swift in Sources */,
+				0177DB5EB36D24D6029F0738AD18B6CE /* OAuthSwiftCredential.swift in Sources */,
+				B187D66BC7D0ED6C6AF96EA2DD645764 /* OAuthSwiftError.swift in Sources */,
+				AC7DB91D13EDFEA9D4ADE2C04148787A /* OAuthSwiftHTTPRequest.swift in Sources */,
+				F4EE597DC769A94A4F7C1A5D3506B9D6 /* OAuthSwiftMultipartData.swift in Sources */,
+				2CEE3A86C7685AABD392DB2F17254E14 /* OAuthSwiftResponse.swift in Sources */,
+				BE6E495210514F763474484A3F91F4EF /* OAuthSwiftURLHandlerType.swift in Sources */,
+				52DA869239ED6B498037EFDA686F511A /* OAuthWebViewController.swift in Sources */,
+				A8CF8F75F78EE01CE268F0EC6885311C /* Objc.swift in Sources */,
+				4509BFF8D25FA9B1D98AB660642FE2F8 /* RegisterResponse.swift in Sources */,
+				E909C444376C76764D1707E0ADB8728B /* Result.swift in Sources */,
+				5F7AA7C92420F8BC03F3ECAB89BBB26A /* SHA1.swift in Sources */,
+				6FB0B55BD6FB566A09A7899EADC48861 /* String+OAuthSwift.swift in Sources */,
+				DAEE9806642E7C3B6980D6D3504D2F79 /* UIApplication+OAuthSwift.swift in Sources */,
+				7BF5ECADAABDA8E408B24A015524B14C /* URL+OAuthSwift.swift in Sources */,
+				19BA57C0A78A4EA88EB0DE0214757FA1 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,56 +741,50 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BE5855C7A0429CBB300D4956ECD454A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E360BC709B7D0AAED756F399BFE5D42 /* Pods-AudiomackSwiftLibrary_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E74F4BF4EF03EF65D9E7BAE070737C54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				017A344033D4E1C4CF0DF9575978A496 /* FTIndicator-dummy.m in Sources */,
+				83B12B87257B5C2CF9F08480453070F1 /* FTIndicator.m in Sources */,
+				8D27F58210BCBF170E28B75B3D83D20A /* FTNotificationIndicator.m in Sources */,
+				4D472CA6F2D69A175CA36DC8782923D8 /* FTProgressIndicator.m in Sources */,
+				5033511AFAC0F0F554A57929EAD0F199 /* FTToastIndicator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		59AE8D584AE5D835CDC0647421CFE765 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-AudiomackSwiftLibrary_Example";
-			target = D28EAD3C119BFDCA7A02A40650CFB730 /* Pods-AudiomackSwiftLibrary_Example */;
+			target = 2EEA7A6F51895F2064E9B1999C92D417 /* Pods-AudiomackSwiftLibrary_Example */;
 			targetProxy = 63BC0EDFBBCED86833AAEE448D80B7A0 /* PBXContainerItemProxy */;
 		};
-		D27CDBDF38D94A562C86EDF3EF5F016A /* PBXTargetDependency */ = {
+		B36CECF22C767DDAB9CF7E42E342979A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FTIndicator;
+			target = A84DA1D502917E8956383E16DCBDC7CD /* FTIndicator */;
+			targetProxy = 095F049F25762A80BE585FD2AA47DF20 /* PBXContainerItemProxy */;
+		};
+		FE5C543EDC1C5D82B77D4BA0F4ECA450 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AudiomackSwiftLibrary;
-			target = B4E6FC7A3EF2EE5AB8D5CA1DE3122254 /* AudiomackSwiftLibrary */;
-			targetProxy = 8BB5AFF7748419732D3DD8F061D3C8C9 /* PBXContainerItemProxy */;
+			target = D7FCAE4BCB043CA794C4C9F38E42921A /* AudiomackSwiftLibrary */;
+			targetProxy = E8B7320BE2D2370A4D59223D4D0284BC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		06E6BE8780983B61BA01FBEC81042038 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FF15CA5EFA3EC06A69D5DC651D0E397 /* AudiomackSwiftLibrary.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AudiomackSwiftLibrary/AudiomackSwiftLibrary-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AudiomackSwiftLibrary/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AudiomackSwiftLibrary/AudiomackSwiftLibrary.modulemap";
-				PRODUCT_MODULE_NAME = AudiomackSwiftLibrary;
-				PRODUCT_NAME = AudiomackSwiftLibrary;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		0FEE835B2337F76114E71A06554D79B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4B5CFD4320E4EF1F868476467B0DC637 /* Pods-AudiomackSwiftLibrary_Tests.debug.xcconfig */;
@@ -664,79 +818,9 @@
 			};
 			name = Debug;
 		};
-		1408D4EC1E51CC0D2897E4A0D7A70540 /* Release */ = {
+		340DE6F0B39F3472C626EE245A3BCFF7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFAF6F815CAD819661F28DEBCC384B16 /* Pods-AudiomackSwiftLibrary_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AudiomackSwiftLibrary_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AudiomackSwiftLibrary_Example/Pods-AudiomackSwiftLibrary_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		2BC60EE3D81A95C2130AD7F6F19D306D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BAA9E2E6BD865BED84C7306B32082143 /* Pods-AudiomackSwiftLibrary_Example.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AudiomackSwiftLibrary_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AudiomackSwiftLibrary_Example/Pods-AudiomackSwiftLibrary_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		843EDD65599A9E8E13C501562C1ADE69 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FF15CA5EFA3EC06A69D5DC651D0E397 /* AudiomackSwiftLibrary.xcconfig */;
+			baseConfigurationReference = 08932C5ACE94581C49FDCD562594BB68 /* AudiomackSwiftLibrary.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -750,7 +834,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/AudiomackSwiftLibrary/AudiomackSwiftLibrary-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/AudiomackSwiftLibrary/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AudiomackSwiftLibrary/AudiomackSwiftLibrary.modulemap";
 				PRODUCT_MODULE_NAME = AudiomackSwiftLibrary;
@@ -766,6 +850,37 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		828035D1875B777C0A8D1DEF46D1EEC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDE680B9128B989598D346AF220A6BE5 /* FTIndicator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FTIndicator/FTIndicator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FTIndicator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FTIndicator/FTIndicator.modulemap";
+				PRODUCT_MODULE_NAME = FTIndicator;
+				PRODUCT_NAME = FTIndicator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		8B33C5230DE4A9DFA6D8F46505DD7AF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -829,6 +944,76 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
+		};
+		8BD653A959707B2BD36AED584EBE6B26 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAA9E2E6BD865BED84C7306B32082143 /* Pods-AudiomackSwiftLibrary_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AudiomackSwiftLibrary_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AudiomackSwiftLibrary_Example/Pods-AudiomackSwiftLibrary_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9B6412762E73A95329CFBA9B7FDF7D41 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFAF6F815CAD819661F28DEBCC384B16 /* Pods-AudiomackSwiftLibrary_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AudiomackSwiftLibrary_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AudiomackSwiftLibrary_Example/Pods-AudiomackSwiftLibrary_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		ADC003B6C272F52FE29C52DE2F0BD87B /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -918,19 +1103,82 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		BC5AA7570817B64659410C1ABAA35047 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08932C5ACE94581C49FDCD562594BB68 /* AudiomackSwiftLibrary.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AudiomackSwiftLibrary/AudiomackSwiftLibrary-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AudiomackSwiftLibrary/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AudiomackSwiftLibrary/AudiomackSwiftLibrary.modulemap";
+				PRODUCT_MODULE_NAME = AudiomackSwiftLibrary;
+				PRODUCT_NAME = AudiomackSwiftLibrary;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D05C31228D3160E83D8B58EEF8860950 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDE680B9128B989598D346AF220A6BE5 /* FTIndicator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FTIndicator/FTIndicator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FTIndicator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FTIndicator/FTIndicator.modulemap";
+				PRODUCT_MODULE_NAME = FTIndicator;
+				PRODUCT_NAME = FTIndicator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		170165E907E876EF7A790F94E203702E /* Build configuration list for PBXNativeTarget "AudiomackSwiftLibrary" */ = {
+		2419738CD31CA9EAE924AB69B33E1B3F /* Build configuration list for PBXNativeTarget "Pods-AudiomackSwiftLibrary_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				06E6BE8780983B61BA01FBEC81042038 /* Debug */,
-				843EDD65599A9E8E13C501562C1ADE69 /* Release */,
+				8BD653A959707B2BD36AED584EBE6B26 /* Debug */,
+				9B6412762E73A95329CFBA9B7FDF7D41 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -944,20 +1192,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		3DC9F1BF5E31E5A6109CEE2DCE8133D6 /* Build configuration list for PBXNativeTarget "FTIndicator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				828035D1875B777C0A8D1DEF46D1EEC3 /* Debug */,
+				D05C31228D3160E83D8B58EEF8860950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60412C234B6AEEE4CD631F0A5AC579D3 /* Build configuration list for PBXNativeTarget "AudiomackSwiftLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC5AA7570817B64659410C1ABAA35047 /* Debug */,
+				340DE6F0B39F3472C626EE245A3BCFF7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6079A8E13B09D419E6A3476982AFB94C /* Build configuration list for PBXNativeTarget "Pods-AudiomackSwiftLibrary_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0FEE835B2337F76114E71A06554D79B6 /* Debug */,
 				ADC003B6C272F52FE29C52DE2F0BD87B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DC83845560BCCC39103586172F049F88 /* Build configuration list for PBXNativeTarget "Pods-AudiomackSwiftLibrary_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2BC60EE3D81A95C2130AD7F6F19D306D /* Debug */,
-				1408D4EC1E51CC0D2897E4A0D7A70540 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
