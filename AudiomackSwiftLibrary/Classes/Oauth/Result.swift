@@ -33,10 +33,15 @@ public enum Result<T> {
 
 public extension Error {
 	var audiomackError: AudiomackError? {
-		let apiError = self as! ApiError
-		if let resultError = try? AudiomackError(data: apiError.data, response: apiError.httpUrlResponse) {
+		if let apiError = self as? ApiError {
+			if let resultError = try? AudiomackError(data: apiError.data, response: apiError.httpUrlResponse) {
 			return resultError
-		} else{
+			} else{
+				return nil
+			}
+		}else if let apiError = self as? OAuthSwiftError{
+			return AudiomackError(code: apiError.errorCode, message: apiError.description, description: apiError.underlyingMessage ?? "", httpUrlResponse: nil)
+		}else{
 			return nil
 		}
 	}

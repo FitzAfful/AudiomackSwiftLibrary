@@ -631,6 +631,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="mkU-Yj-MVX" kind="show" id="Iwa-V4-PSV"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="0PY-Vs-Aam" rowHeight="60" style="IBUITableViewCellStyleDefault" id="JWt-qZ-wy6">
                                         <rect key="frame" x="0.0" y="115.5" width="375" height="60"/>
@@ -648,6 +651,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="sWD-EQ-nh3" kind="show" id="COz-v9-8XC"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -665,6 +671,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tfo-K5-Z6e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2286" y="-2685"/>
+        </scene>
+        <!--Search Autosuggest-->
+        <scene sceneID="Ubw-LO-jHG">
+            <objects>
+                <viewController title="Search Autosuggest" id="mkU-Yj-MVX" customClass="SearchAutosuggestController" customModule="AudiomackSwiftLibrary_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iJF-ay-oYd"/>
+                        <viewControllerLayoutGuide type="bottom" id="LU7-Mu-uJt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AFN-hR-ht6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lAw-0T-KOD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lAw-0T-KOD" secondAttribute="trailing" id="Q3n-7m-I3Z"/>
+                            <constraint firstItem="lAw-0T-KOD" firstAttribute="leading" secondItem="AFN-hR-ht6" secondAttribute="leading" id="VGi-ZK-HLX"/>
+                            <constraint firstItem="lAw-0T-KOD" firstAttribute="bottom" secondItem="LU7-Mu-uJt" secondAttribute="top" id="vpy-4u-T3v"/>
+                            <constraint firstItem="lAw-0T-KOD" firstAttribute="top" secondItem="iJF-ay-oYd" secondAttribute="bottom" id="xAh-I1-yce"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="lAw-0T-KOD" id="qE5-Ou-xRy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="We0-YZ-fEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3073" y="-2686"/>
+        </scene>
+        <!--Search Autosuggest-->
+        <scene sceneID="Obz-GL-fjI">
+            <objects>
+                <viewController title="Search Autosuggest" id="sWD-EQ-nh3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LCV-kF-MLD"/>
+                        <viewControllerLayoutGuide type="bottom" id="KzU-hD-xXQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Ce-sv-vFU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ciB-SI-6NG">
+                                <rect key="frame" x="0.0" y="115" width="375" height="552"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SFi-R2-mdY">
+                                <rect key="frame" x="16" y="79" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Music"/>
+                                    <segment title="Artists"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ciB-SI-6NG" firstAttribute="bottom" secondItem="KzU-hD-xXQ" secondAttribute="top" id="091-fk-XXw"/>
+                            <constraint firstItem="SFi-R2-mdY" firstAttribute="centerX" secondItem="ciB-SI-6NG" secondAttribute="centerX" id="4Gw-Th-k4c"/>
+                            <constraint firstItem="ciB-SI-6NG" firstAttribute="leading" secondItem="8Ce-sv-vFU" secondAttribute="leading" id="9KP-aN-k7F"/>
+                            <constraint firstItem="SFi-R2-mdY" firstAttribute="top" secondItem="LCV-kF-MLD" secondAttribute="bottom" constant="15" id="FDB-jw-FY1"/>
+                            <constraint firstItem="SFi-R2-mdY" firstAttribute="leading" secondItem="8Ce-sv-vFU" secondAttribute="leadingMargin" id="cQ7-Jm-A2z"/>
+                            <constraint firstAttribute="trailing" secondItem="ciB-SI-6NG" secondAttribute="trailing" id="cTN-Dr-Vr8"/>
+                            <constraint firstItem="ciB-SI-6NG" firstAttribute="top" secondItem="SFi-R2-mdY" secondAttribute="bottom" constant="8" id="yJF-9d-say"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7dA-Ft-LPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3884" y="-2687.4062968515746"/>
         </scene>
     </scenes>
 </document>

@@ -7,13 +7,13 @@
 
 import Foundation
 
-/// `AudiomackError` is the error type returned by Alamofire. It encompasses a few different types of errors, each with their reasons
+/// `AudiomackError` is the error type returned. It encompasses a few different types of errors, each with their reasons
 
 public struct AudiomackError : Error, InitializableWithDataAndResponse, InitializableWithJsonAndResponse {
 	public var code: Int
 	public var message: String = ""
 	public var description: String = ""
-	public var httpUrlResponse: HTTPURLResponse
+	public var httpUrlResponse: HTTPURLResponse?
 	
 	init(data: Data?, response: HTTPURLResponse) throws {
 		guard let data = data,
@@ -33,5 +33,12 @@ public struct AudiomackError : Error, InitializableWithDataAndResponse, Initiali
 		
 		self.httpUrlResponse = response
 		
+	}
+	
+	init(code: Int, message: String, description: String, httpUrlResponse: HTTPURLResponse?){
+		self.code = code
+		self.message = message
+		self.description = description
+		self.httpUrlResponse = httpUrlResponse
 	}
 }
