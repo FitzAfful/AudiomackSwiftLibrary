@@ -106,7 +106,7 @@ class PlaylistClientImplementation: PlaylistClientProtocol {
 	*/
 	
 	func getTrendingPlaylists(completionHandler: @escaping GetPlaylistArrayCompletionHandler) {
-		let url = BASE_URL + "playlist/trending"
+		let url = BASE_URL + "/playlist/trending"
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
 			let result_ = try! AudiomackMusicResponse(data: response.data)
 			completionHandler(.success(result_.results))
@@ -128,7 +128,7 @@ class PlaylistClientImplementation: PlaylistClientProtocol {
 	- Returns: If successful, an array of AudiomackMusic object
 	*/
 	func getGenreTrendingPlaylists(genre: String, completionHandler: @escaping GetPlaylistArrayCompletionHandler) {
-		let url = BASE_URL + "playlist/\(genre)/trending"
+		let url = BASE_URL + "/playlist/\(genre)/trending"
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
 			let result_ = try! AudiomackMusicResponse(data: response.data)
 			completionHandler(.success(result_.results))

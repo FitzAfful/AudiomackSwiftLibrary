@@ -43,7 +43,7 @@ key (optional) promotional key for private tracks
 For more Info: https://www.audiomack.com/data-api/docs#endpoint-play-track
 */
 
-struct PlayMusicParameter {
+public struct PlayMusicParameter {
 	var id : String
 	var session : String?
 	var album_id : String?
@@ -107,7 +107,7 @@ status - (required) one of the following: requested, loaded, started, skipped, c
 For more Info: https://www.audiomack.com/data-api/docs#endpoint-track-ad
 */
 
-struct TrackAdParameter {
+public struct TrackAdParameter {
 	var id : String
 	var status : TrackAdStatus
 	
@@ -270,7 +270,7 @@ class MusicClientImplementation: MusicClientProtocol {
 	- Returns: If successful, returns an array of AudiomackMusic objects
 	*/
 	func getGenreMostRecentMusic(genre: String, completionHandler: @escaping GetMusicArrayCompletionHandler) {
-		let url = BASE_URL + "music/\(genre)/recent"
+		let url = BASE_URL + "/music/\(genre)/recent"
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
 			let result_ = try! AudiomackMusicResponse(data: response.data)
 			completionHandler(.success(result_.results))
@@ -293,7 +293,7 @@ class MusicClientImplementation: MusicClientProtocol {
 	- Returns: If successful, returns an array of AudiomackMusic objects
 	*/
 	func getTrendingMusic(completionHandler: @escaping GetMusicArrayCompletionHandler) {
-		let url = BASE_URL + "music/trending"
+		let url = BASE_URL + "/music/trending"
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
 			let result_ = try! AudiomackMusicResponse(data: response.data)
 			completionHandler(.success(result_.results))
@@ -317,7 +317,7 @@ class MusicClientImplementation: MusicClientProtocol {
 	- Returns: If successful, returns an array of AudiomackMusic objects
 	*/
 	func getGenreTrendingMusic(genre: String, completionHandler: @escaping GetMusicArrayCompletionHandler) {
-		let url = BASE_URL + "music/\(genre)/trending"
+		let url = BASE_URL + "/music/\(genre)/trending"
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
 			let result_ = try! AudiomackMusicResponse(data: response.data)
 			completionHandler(.success(result_.results))
@@ -325,6 +325,7 @@ class MusicClientImplementation: MusicClientProtocol {
 			completionHandler(.failure(error))
 		}
 	}
+	
 	
 	
 	/** Get Music Information
@@ -349,8 +350,8 @@ class MusicClientImplementation: MusicClientProtocol {
 			url.append("?key=\(key!)")
 		}
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
-			let result_ = try! AudiomackMusicResponse(data: response.data)
-			completionHandler(.success(result_.results.first!))
+			let result_ = try! AudiomackSingleMusicResponse(data: response.data)
+			completionHandler(.success(result_.result))
 		}) { (error) in
 			completionHandler(.failure(error))
 		}
@@ -378,8 +379,8 @@ class MusicClientImplementation: MusicClientProtocol {
 			url.append("?key=\(key!)")
 		}
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
-			let result_ = try! AudiomackMusicResponse(data: response.data)
-			completionHandler(.success(result_.results.first!))
+			let result_ = try! AudiomackSingleMusicResponse(data: response.data)
+			completionHandler(.success(result_.result))
 		}) { (error) in
 			completionHandler(.failure(error))
 		}

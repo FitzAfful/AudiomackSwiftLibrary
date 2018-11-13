@@ -320,7 +320,7 @@ public class AudiomackClient {
 	
 	
 	*/
-	func getMusic(id: String, completionHandler: @escaping GetMusicCompletionHandler){
+	public func getMusic(id: String, completionHandler: @escaping GetMusicCompletionHandler){
 		musicClient.getMusic(id: id) { (result) in
 			completionHandler(result)
 		}
@@ -340,7 +340,7 @@ public class AudiomackClient {
 	
 	- Returns: If successful, returns AudiomackMusic object
 	*/
-	func getMusic(id: String, key:String, completionHandler: @escaping GetMusicCompletionHandler){
+	public func getMusic(id: String, key:String, completionHandler: @escaping GetMusicCompletionHandler){
 		musicClient.getMusic(id: id, key: key) { (result) in
 			completionHandler(result)
 		}
@@ -361,7 +361,7 @@ public class AudiomackClient {
 	
 	- Returns: If successful, returns AudiomackMusic object
 	*/
-	func getMusic(musicSlug: String, musicType: GetMusicType, artistSlug: String, key:String?, completionHandler: @escaping GetMusicCompletionHandler){
+	public func getMusic(musicSlug: String, musicType: GetMusicType, artistSlug: String, key:String?, completionHandler: @escaping GetMusicCompletionHandler){
 		musicClient.getMusic(musicSlug: musicSlug, musicType: musicType, artistSlug: artistSlug, key: key) { (result) in
 			completionHandler(result)
 		}
@@ -379,7 +379,7 @@ public class AudiomackClient {
 	
 	- Returns: If successful, returns an array of AudiomackMusic objects
 	*/
-	func getMostRecentMusic(completionHandler: @escaping GetMusicArrayCompletionHandler){
+	public func getMostRecentMusic(completionHandler: @escaping GetMusicArrayCompletionHandler){
 		self.musicClient.getMostRecentMusic { (result) in
 			completionHandler(result)
 		}
@@ -398,7 +398,7 @@ public class AudiomackClient {
 	
 	- Returns: If successful, returns an array of AudiomackMusic objects
 	*/
-	func getGenreMostRecentMusic(genre: String, completionHandler: @escaping GetMusicArrayCompletionHandler){
+	public func getGenreMostRecentMusic(genre: String, completionHandler: @escaping GetMusicArrayCompletionHandler){
 		self.musicClient.getGenreMostRecentMusic(genre: genre) { (result) in
 			completionHandler(result)
 		}
@@ -416,7 +416,7 @@ public class AudiomackClient {
 	
 	- Returns: If successful, returns an array of AudiomackMusic objects
 	*/
-	func getTrendingMusic(completionHandler: @escaping GetMusicArrayCompletionHandler){
+	public func getTrendingMusic(completionHandler: @escaping GetMusicArrayCompletionHandler){
 		self.musicClient.getTrendingMusic { (result) in
 			completionHandler(result)
 		}
@@ -435,7 +435,7 @@ public class AudiomackClient {
 	
 	- Returns: If successful, returns an array of AudiomackMusic objects
 	*/
-	func getGenreTrendingMusic(genre: String, completionHandler: @escaping GetMusicArrayCompletionHandler){
+	public func getGenreTrendingMusic(genre: String, completionHandler: @escaping GetMusicArrayCompletionHandler){
 		self.musicClient.getGenreTrendingMusic(genre: genre) { (result) in
 			completionHandler(result)
 		}
@@ -454,7 +454,7 @@ public class AudiomackClient {
 	
 	- Returns: If successful, returns A url to stream for Music item.
 	*/
-	func playMusic(parameter: PlayMusicParameter, completionHandler: @escaping MusicStreamCompletionHandler){
+	public func playMusic(parameter: PlayMusicParameter, completionHandler: @escaping MusicStreamCompletionHandler){
 		self.musicClient.playMusic(parameter: parameter) { (result) in
 			completionHandler(result)
 		}
@@ -477,7 +477,7 @@ public class AudiomackClient {
 	
 	
 	*/
-	func flagUnplayableMusic(musicSlug: String, musicType: GetMusicType, artistSlug: String,  completionHandler: @escaping FlagMusicCompletionHandler){
+	public func flagUnplayableMusic(musicSlug: String, musicType: GetMusicType, artistSlug: String,  completionHandler: @escaping FlagMusicCompletionHandler){
 		self.musicClient.flagUnplayableMusic(musicSlug: musicSlug, musicType: musicType, artistSlug: artistSlug) { (result) in
 			completionHandler(result)
 		}
@@ -495,7 +495,7 @@ public class AudiomackClient {
 	
 	- Returns: If successful, A void response with 204 http code
 	*/
-	func trackAd(parameter: TrackAdParameter, completionHandler: @escaping TrackAdCompletionHandler){
+	public func trackAd(parameter: TrackAdParameter, completionHandler: @escaping TrackAdCompletionHandler){
 		self.musicClient.trackAd(parameter: parameter) { (result) in
 			completionHandler(result)
 		}
@@ -516,7 +516,7 @@ public class AudiomackClient {
 	
 	- Returns: If successful, returns AudiomackMusic
 	*/
-	func getPlaylistInfo(id: String, fields: [String], completionHandler: @escaping GetPlaylistDetailsCompletionHandler){
+	public func getPlaylistInfo(id: String, fields: [String], completionHandler: @escaping GetPlaylistDetailsCompletionHandler){
 		self.playlistClient.getPlaylistInfo(id: id, fields: fields) { (result) in
 			completionHandler(result)
 		}
@@ -537,7 +537,7 @@ public class AudiomackClient {
 	
 	- Returns: If successful, returns AudiomackMusic
 	*/
-	func getPlaylistInfo(playlistSlug: String, artistSlug: String, fields: [String], completionHandler: @escaping GetPlaylistDetailsCompletionHandler){
+	public func getPlaylistInfo(playlistSlug: String, artistSlug: String, fields: [String], completionHandler: @escaping GetPlaylistDetailsCompletionHandler){
 		self.playlistClient.getPlaylistInfo(playlistSlug: playlistSlug, artistSlug: artistSlug, fields: fields) { (result) in
 			completionHandler(result)
 		}
@@ -553,7 +553,7 @@ public class AudiomackClient {
 	
 	- Returns: If successful, returns array of AudiomackMusic object
 	*/
-	func getTrendingPlaylists(completionHandler: @escaping GetPlaylistArrayCompletionHandler){
+	public func getTrendingPlaylists(completionHandler: @escaping GetPlaylistArrayCompletionHandler){
 		self.playlistClient.getTrendingPlaylists { (result) in
 			completionHandler(result)
 		}
@@ -570,7 +570,7 @@ public class AudiomackClient {
 	
 	- Returns: If successful, an array of AudiomackMusic object
 	*/
-	func getGenreTrendingPlaylists(genre: String, completionHandler: @escaping GetPlaylistArrayCompletionHandler){
+	public func getGenreTrendingPlaylists(genre: String, completionHandler: @escaping GetPlaylistArrayCompletionHandler){
 		self.playlistClient.getGenreTrendingPlaylists(genre: genre) { (result) in
 			completionHandler(result)
 		}

@@ -3,6 +3,7 @@ use_frameworks!
 target 'AudiomackSwiftLibrary_Example' do
   pod 'AudiomackSwiftLibrary', :path => '../'
   pod 'FTIndicator'
+  pod 'Nuke'
 
   target 'AudiomackSwiftLibrary_Tests' do
     inherit! :search_paths

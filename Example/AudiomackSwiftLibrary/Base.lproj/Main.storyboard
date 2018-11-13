@@ -179,6 +179,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="WSs-9P-wCT" kind="show" id="upD-ER-WHW"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="U06-rZ-gdb" rowHeight="60" style="IBUITableViewCellStyleDefault" id="lPy-Qu-avW">
                                         <rect key="frame" x="0.0" y="115.5" width="375" height="60"/>
@@ -196,6 +199,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="k0U-DQ-Lie" kind="show" id="hle-46-8H9"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="ywj-bR-P6k" rowHeight="60" style="IBUITableViewCellStyleDefault" id="SUd-ZX-cnp">
                                         <rect key="frame" x="0.0" y="175.5" width="375" height="60"/>
@@ -213,6 +219,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="GGX-Qh-TXx" kind="show" id="ylZ-jP-8mT"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="1BA-8B-dwE" rowHeight="60" style="IBUITableViewCellStyleDefault" id="ZiX-cY-mnU">
                                         <rect key="frame" x="0.0" y="235.5" width="375" height="60"/>
@@ -230,6 +239,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="N5w-ci-5h0" kind="show" id="47S-1h-ZVe"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="nhO-MZ-v6A" rowHeight="60" style="IBUITableViewCellStyleDefault" id="BOm-zg-Y3h">
                                         <rect key="frame" x="0.0" y="295.5" width="375" height="60"/>
@@ -247,26 +259,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="m57-pr-hgF" rowHeight="60" style="IBUITableViewCellStyleDefault" id="UF9-kX-Xj6">
-                                        <rect key="frame" x="0.0" y="355.5" width="375" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UF9-kX-Xj6" id="ELf-gx-Khr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Flag unplayable Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="m57-pr-hgF">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="59.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="prU-e6-Rcf" kind="show" id="VLo-el-AmO"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="xy6-eu-Hqs" rowHeight="60" style="IBUITableViewCellStyleDefault" id="GAa-Gc-BDw">
-                                        <rect key="frame" x="0.0" y="415.5" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="355.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GAa-Gc-BDw" id="D1F-s2-N81">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
@@ -298,6 +296,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Hh-oZ-xwU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2286" y="-1993"/>
+        </scene>
+        <!--Music Details Controller-->
+        <scene sceneID="F8H-Yx-ot2">
+            <objects>
+                <viewController id="WSs-9P-wCT" customClass="MusicDetailsController" customModule="AudiomackSwiftLibrary_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qGA-wZ-WE2"/>
+                        <viewControllerLayoutGuide type="bottom" id="QV3-vh-4rR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="miU-jr-aAK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Ug-Zi-JpG">
+                                <rect key="frame" x="16" y="72" width="343" height="575"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Ug-Zi-JpG" firstAttribute="top" secondItem="qGA-wZ-WE2" secondAttribute="bottom" constant="8" symbolic="YES" id="6hP-U9-RNp"/>
+                            <constraint firstItem="0Ug-Zi-JpG" firstAttribute="trailing" secondItem="miU-jr-aAK" secondAttribute="trailingMargin" id="9ha-Rt-MsB"/>
+                            <constraint firstAttribute="bottom" secondItem="0Ug-Zi-JpG" secondAttribute="bottom" constant="20" symbolic="YES" id="Z7R-M0-7jL"/>
+                            <constraint firstItem="0Ug-Zi-JpG" firstAttribute="leading" secondItem="miU-jr-aAK" secondAttribute="leadingMargin" id="eNR-QY-vWA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="0Ug-Zi-JpG" id="TDa-ZR-hdu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qXS-ug-I0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3072.8000000000002" y="-1993.8530734632686"/>
         </scene>
         <!--Artists API Calls-->
         <scene sceneID="jEK-9T-Pml">
@@ -828,6 +861,138 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="od6-Uw-jHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2285.5999999999999" y="145.27736131934034"/>
+        </scene>
+        <!--Recent Music-->
+        <scene sceneID="cla-kE-Gbd">
+            <objects>
+                <viewController title="Recent Music" id="k0U-DQ-Lie" customClass="RecentMusicController" customModule="AudiomackSwiftLibrary_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G6R-u6-crx"/>
+                        <viewControllerLayoutGuide type="bottom" id="ka7-n5-cgf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fiq-s1-TQ4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wlL-yH-kf3">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wlL-yH-kf3" firstAttribute="leading" secondItem="fiq-s1-TQ4" secondAttribute="leading" id="JSW-XD-27T"/>
+                            <constraint firstItem="wlL-yH-kf3" firstAttribute="top" secondItem="G6R-u6-crx" secondAttribute="bottom" id="VUd-Pb-3z2"/>
+                            <constraint firstItem="wlL-yH-kf3" firstAttribute="bottom" secondItem="ka7-n5-cgf" secondAttribute="top" id="oW7-j4-rPO"/>
+                            <constraint firstAttribute="trailing" secondItem="wlL-yH-kf3" secondAttribute="trailing" id="q3s-1C-TVn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="wlL-yH-kf3" id="5mL-vS-apZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rIj-6X-kDS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3884" y="-1994"/>
+        </scene>
+        <!--Recent Music in Rap-->
+        <scene sceneID="aCx-uf-TS4">
+            <objects>
+                <viewController title="Recent Music in Rap" id="GGX-Qh-TXx" customClass="RecentGenreMusicController" customModule="AudiomackSwiftLibrary_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0uX-5R-TUR"/>
+                        <viewControllerLayoutGuide type="bottom" id="rQV-bi-lIn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HAB-UO-gVP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cbV-c6-W2r">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cbV-c6-W2r" firstAttribute="leading" secondItem="HAB-UO-gVP" secondAttribute="leading" id="ElX-GU-cd3"/>
+                            <constraint firstItem="cbV-c6-W2r" firstAttribute="top" secondItem="0uX-5R-TUR" secondAttribute="bottom" id="K6H-xM-BAJ"/>
+                            <constraint firstItem="cbV-c6-W2r" firstAttribute="bottom" secondItem="rQV-bi-lIn" secondAttribute="top" id="Na8-eL-XzO"/>
+                            <constraint firstAttribute="trailing" secondItem="cbV-c6-W2r" secondAttribute="trailing" id="hfB-8t-aub"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="cbV-c6-W2r" id="yLt-EP-hfn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ydh-ns-M4m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4655" y="-1995"/>
+        </scene>
+        <!--Trending Music in Rap-->
+        <scene sceneID="Smy-zq-OsF">
+            <objects>
+                <viewController title="Trending Music in Rap" id="prU-e6-Rcf" customClass="TrendingGenreMusicController" customModule="AudiomackSwiftLibrary_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AeX-9D-5sh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ppw-9W-RYe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5y5-Hf-9Wf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="QYb-0O-hDB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QYb-0O-hDB" firstAttribute="leading" secondItem="5y5-Hf-9Wf" secondAttribute="leading" id="6NW-8U-XH6"/>
+                            <constraint firstItem="QYb-0O-hDB" firstAttribute="top" secondItem="AeX-9D-5sh" secondAttribute="bottom" id="cgT-Gy-PgX"/>
+                            <constraint firstItem="QYb-0O-hDB" firstAttribute="bottom" secondItem="Ppw-9W-RYe" secondAttribute="top" id="pj2-Og-DIp"/>
+                            <constraint firstAttribute="trailing" secondItem="QYb-0O-hDB" secondAttribute="trailing" id="qi3-TE-AxS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="QYb-0O-hDB" id="Mgg-a1-AQU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L78-dE-QBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6150" y="-1996"/>
+        </scene>
+        <!--Trending Music-->
+        <scene sceneID="bMV-DM-WzF">
+            <objects>
+                <viewController title="Trending Music" id="N5w-ci-5h0" customClass="TredingMusicController" customModule="AudiomackSwiftLibrary_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qyI-Ed-KEq"/>
+                        <viewControllerLayoutGuide type="bottom" id="pai-Oh-FfP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="feB-Xn-6vJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wc8-te-faT">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wc8-te-faT" firstAttribute="bottom" secondItem="pai-Oh-FfP" secondAttribute="top" id="0wx-tP-0xL"/>
+                            <constraint firstItem="wc8-te-faT" firstAttribute="leading" secondItem="feB-Xn-6vJ" secondAttribute="leading" id="BYj-uW-gTr"/>
+                            <constraint firstAttribute="trailing" secondItem="wc8-te-faT" secondAttribute="trailing" id="P2Q-D2-2ld"/>
+                            <constraint firstItem="wc8-te-faT" firstAttribute="top" secondItem="qyI-Ed-KEq" secondAttribute="bottom" id="axF-47-aFp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="wc8-te-faT" id="qks-fk-CT9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O76-0P-3CR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5404" y="-1996"/>
         </scene>
     </scenes>
 </document>

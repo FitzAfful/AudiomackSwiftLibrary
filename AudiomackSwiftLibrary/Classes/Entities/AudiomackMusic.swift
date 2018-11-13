@@ -318,7 +318,36 @@ public struct AudiomackMusicResponse: InitializableWithData, InitializableWithJs
 				let audiomackMusicItem = try AudiomackMusic(json: music!)
 				results.append(audiomackMusicItem)
 			}
-		}else {
+		}else if let results_ = json["results"] as? [String : Any]{
+			let audiomackMusicItem = try AudiomackMusic(json: results_)
+			results.append(audiomackMusicItem)
+		}else{
+			throw NSError.createParseError()
+		}
+		
+	}
+}
+
+
+public struct AudiomackSingleMusicResponse: InitializableWithData, InitializableWithJson {
+	public var result: AudiomackMusic!
+	
+	init(data: Data?) throws {
+		guard let data = data,
+			let jsonObject = try? JSONSerialization.jsonObject(with: data),
+			let json = jsonObject as? [String: Any] else {
+				throw NSError.createParseError()
+		}
+		try self.init(json: json)
+		
+	}
+	
+	
+	
+	init(json: [String : Any]) throws {
+		if let results_ = json["results"] as? [String : Any]{
+			result = try AudiomackMusic(json: results_)
+		} else{
 			throw NSError.createParseError()
 		}
 		
