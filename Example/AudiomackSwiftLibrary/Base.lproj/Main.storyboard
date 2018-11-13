@@ -117,7 +117,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="pVD-WK-Ao4" kind="show" id="jVd-Qe-EHg"/>
+                                            <segue destination="6Tg-yG-6oe" kind="show" id="VYc-YR-D5x"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -542,68 +542,6 @@
             </objects>
             <point key="canvasLocation" x="2286" y="-554"/>
         </scene>
-        <!--Chart API Calls-->
-        <scene sceneID="1T3-NG-vZH">
-            <objects>
-                <tableViewController id="pVD-WK-Ao4" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="k8r-yw-11n">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <sections>
-                            <tableViewSection headerTitle="Unauthenticated Requests" id="vD6-lJ-NVI">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="K1B-Yr-DbJ" rowHeight="60" style="IBUITableViewCellStyleDefault" id="3Dq-S4-5mg">
-                                        <rect key="frame" x="0.0" y="55.5" width="375" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Dq-S4-5mg" id="fel-WI-Ie7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Get Chart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K1B-Yr-DbJ">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="59.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="10D-cC-NFH" rowHeight="60" style="IBUITableViewCellStyleDefault" id="b3f-Dx-9OU">
-                                        <rect key="frame" x="0.0" y="115.5" width="375" height="60"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b3f-Dx-9OU" id="mDm-gV-N61">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Get Genre Specific Chart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="10D-cC-NFH">
-                                                    <rect key="frame" x="16" y="0.0" width="343" height="59.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Authenticated Requests" id="kdU-Ld-qO8">
-                                <cells/>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="pVD-WK-Ao4" id="FE8-xw-BNO"/>
-                            <outlet property="delegate" destination="pVD-WK-Ao4" id="Zw4-Tb-SBL"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Chart API Calls" id="FHG-BE-6G9"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hK1-wW-v7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2286" y="151"/>
-        </scene>
         <!--Search API Calls-->
         <scene sceneID="SXC-mw-pRt">
             <objects>
@@ -705,10 +643,10 @@
             </objects>
             <point key="canvasLocation" x="3073" y="-2686"/>
         </scene>
-        <!--Search Autosuggest-->
+        <!--Search-->
         <scene sceneID="Obz-GL-fjI">
             <objects>
-                <viewController storyboardIdentifier="SearchController" title="Search Autosuggest" id="sWD-EQ-nh3" customClass="SearchController" customModule="AudiomackSwiftLibrary_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchController" title="Search" id="sWD-EQ-nh3" customClass="SearchController" customModule="AudiomackSwiftLibrary_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LCV-kF-MLD"/>
                         <viewControllerLayoutGuide type="bottom" id="KzU-hD-xXQ"/>
@@ -752,6 +690,144 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dA-Ft-LPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3884" y="-2687.4062968515746"/>
+        </scene>
+        <!--Charts-->
+        <scene sceneID="jlK-mu-3cF">
+            <objects>
+                <viewController title="Charts" id="6Tg-yG-6oe" customClass="ChartController" customModule="AudiomackSwiftLibrary_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CFs-Ic-sMb"/>
+                        <viewControllerLayoutGuide type="bottom" id="u7o-w9-cwf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="M9d-qW-W7A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vah-oI-YRJ">
+                                <rect key="frame" x="0.0" y="290" width="375" height="377"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fkF-Hz-lCd">
+                                <rect key="frame" x="85" y="95" width="275" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="auc-g1-oEz"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Daily"/>
+                                    <segment title="Weekly"/>
+                                    <segment title="Monthly"/>
+                                    <segment title="Yearly"/>
+                                    <segment title="Total"/>
+                                </segments>
+                                <connections>
+                                    <action selector="tabChanged:" destination="6Tg-yG-6oe" eventType="valueChanged" id="vOq-Pa-jlh"/>
+                                </connections>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yWl-1K-sIf">
+                                <rect key="frame" x="127" y="145" width="232" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="232" id="vGy-Ul-ZyJ"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Songs"/>
+                                    <segment title="Albums"/>
+                                    <segment title="Playlists"/>
+                                </segments>
+                                <connections>
+                                    <action selector="tabChanged:" destination="6Tg-yG-6oe" eventType="valueChanged" id="YXP-vH-g8M"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8M-D5-mcK">
+                                <rect key="frame" x="16" y="95" width="78" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="01H-gw-3MA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMo-cH-82M">
+                                <rect key="frame" x="16" y="145" width="103" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="f1T-Hk-f4v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFh-Wr-gMe">
+                                <rect key="frame" x="99.5" y="252" width="176" height="30"/>
+                                <color key="backgroundColor" red="0.039215686270000001" green="0.36470588240000001" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Cf6-DW-vg0"/>
+                                    <constraint firstAttribute="width" constant="176" id="TN7-e5-lHf"/>
+                                </constraints>
+                                <state key="normal" title="Get Chart">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getData:" destination="6Tg-yG-6oe" eventType="touchUpInside" id="xCm-Xp-ii4"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fBK-6n-BVp">
+                                <rect key="frame" x="127" y="196" width="232" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="232" id="ADb-Sl-oRv"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="All Genres"/>
+                                    <segment title="Rap"/>
+                                    <segment title="Electronic"/>
+                                </segments>
+                                <connections>
+                                    <action selector="tabChanged:" destination="6Tg-yG-6oe" eventType="valueChanged" id="RvO-XS-nr4"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get Chart for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpQ-YB-2fP">
+                                <rect key="frame" x="16" y="196" width="105" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="2Rm-UM-PpD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yWl-1K-sIf" secondAttribute="trailing" constant="16" id="0rM-sB-VY2"/>
+                            <constraint firstItem="HpQ-YB-2fP" firstAttribute="top" secondItem="oMo-cH-82M" secondAttribute="bottom" constant="23" id="10y-e6-ajM"/>
+                            <constraint firstItem="Vah-oI-YRJ" firstAttribute="bottom" secondItem="u7o-w9-cwf" secondAttribute="top" id="20f-jV-ock"/>
+                            <constraint firstAttribute="trailing" secondItem="Vah-oI-YRJ" secondAttribute="trailing" id="3dt-AW-QPG"/>
+                            <constraint firstItem="HpQ-YB-2fP" firstAttribute="leading" secondItem="M9d-qW-W7A" secondAttribute="leading" constant="16" id="69j-gD-xZy"/>
+                            <constraint firstItem="fkF-Hz-lCd" firstAttribute="leading" secondItem="j8M-D5-mcK" secondAttribute="trailing" constant="-9" id="8pR-KY-Ehw"/>
+                            <constraint firstItem="fBK-6n-BVp" firstAttribute="leading" secondItem="HpQ-YB-2fP" secondAttribute="trailing" constant="6" id="92E-T9-jPq"/>
+                            <constraint firstItem="oMo-cH-82M" firstAttribute="top" secondItem="j8M-D5-mcK" secondAttribute="bottom" constant="22" id="Ajv-dv-y3f"/>
+                            <constraint firstItem="j8M-D5-mcK" firstAttribute="top" secondItem="CFs-Ic-sMb" secondAttribute="bottom" constant="31" id="HvB-Hz-3dt"/>
+                            <constraint firstItem="RFh-Wr-gMe" firstAttribute="top" secondItem="fBK-6n-BVp" secondAttribute="bottom" constant="28" id="IKM-nN-NX4"/>
+                            <constraint firstAttribute="trailing" secondItem="fBK-6n-BVp" secondAttribute="trailing" constant="16" id="ImQ-QM-78d"/>
+                            <constraint firstItem="oMo-cH-82M" firstAttribute="leading" secondItem="M9d-qW-W7A" secondAttribute="leading" constant="16" id="J4v-8p-HKo"/>
+                            <constraint firstItem="Vah-oI-YRJ" firstAttribute="leading" secondItem="M9d-qW-W7A" secondAttribute="leading" id="PpI-je-DrZ"/>
+                            <constraint firstAttribute="trailing" secondItem="fkF-Hz-lCd" secondAttribute="trailing" constant="15" id="Y5s-IE-51c"/>
+                            <constraint firstItem="j8M-D5-mcK" firstAttribute="leading" secondItem="M9d-qW-W7A" secondAttribute="leading" constant="16" id="kC2-ie-tbl"/>
+                            <constraint firstItem="fBK-6n-BVp" firstAttribute="top" secondItem="yWl-1K-sIf" secondAttribute="bottom" constant="23" id="mbx-NX-cqZ"/>
+                            <constraint firstItem="yWl-1K-sIf" firstAttribute="top" secondItem="fkF-Hz-lCd" secondAttribute="bottom" constant="22" id="qBQ-eP-III"/>
+                            <constraint firstItem="fkF-Hz-lCd" firstAttribute="top" secondItem="CFs-Ic-sMb" secondAttribute="bottom" constant="31" id="qMx-aZ-0nu"/>
+                            <constraint firstItem="RFh-Wr-gMe" firstAttribute="centerX" secondItem="M9d-qW-W7A" secondAttribute="centerX" id="vqm-jf-DRL"/>
+                            <constraint firstItem="yWl-1K-sIf" firstAttribute="leading" secondItem="oMo-cH-82M" secondAttribute="trailing" constant="8" id="yI2-wt-ydM"/>
+                            <constraint firstItem="Vah-oI-YRJ" firstAttribute="top" secondItem="CFs-Ic-sMb" secondAttribute="bottom" constant="226" id="zbN-CF-feq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentControlGenre" destination="fBK-6n-BVp" id="xCR-Hn-FH4"/>
+                        <outlet property="segmentControlMusic" destination="yWl-1K-sIf" id="0Q3-zc-5XO"/>
+                        <outlet property="segmentControlSort" destination="fkF-Hz-lCd" id="Sh9-HR-f9T"/>
+                        <outlet property="tableView" destination="Vah-oI-YRJ" id="2Vg-7T-53G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="od6-Uw-jHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2285.5999999999999" y="145.27736131934034"/>
         </scene>
     </scenes>
 </document>
