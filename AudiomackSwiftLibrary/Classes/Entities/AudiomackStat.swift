@@ -11,19 +11,19 @@ import Foundation
 
 public struct AudiomackStat: InitializableWithData, InitializableWithJson {
 	
-	var pageviews: String
-	var plays_raw: String
-	var plays: String
-	var downloads_raw: String
-	var downloads: String
-	var embedviews: String
-	var track_dls: String
-	var favorites_raw: String
-	var favorites: String
-	var reposts_raw: String
-	var reposts: String
-	var playlists_raw: String
-	var playlists: String
+	public var pageviews: String
+	public var plays_raw: String
+	public var plays: String
+	public var downloads_raw: String
+	public var downloads: String
+	public var embedviews: String
+	public var track_dls: String
+	public var favorites_raw: String
+	public var favorites: String
+	public var reposts_raw: String
+	public var reposts: String
+	public var playlists_raw: String
+	public var playlists: String
 	
 	
 	init(data: Data?) throws {
@@ -37,7 +37,6 @@ public struct AudiomackStat: InitializableWithData, InitializableWithJson {
 	}
 	
 	init(json: [String : Any]) throws {
-		print(json)
 		self.pageviews = String.init(describing: json["pageviews"]!)
 		self.plays_raw = String.init(describing: json["plays-raw"]!)
 		self.plays = String.init(describing:  json["plays"]!)

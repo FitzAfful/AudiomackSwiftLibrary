@@ -8,8 +8,8 @@
 import Foundation
 
 struct AudiomackRegisteredUser: InitializableWithData, InitializableWithJson {
-	var screen_name: String
-	var url_slug: String
+	public var screen_name: String
+	public var url_slug: String
 	
 	
 	init(data: Data?) throws {

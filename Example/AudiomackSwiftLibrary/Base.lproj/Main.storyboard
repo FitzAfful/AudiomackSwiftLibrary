@@ -708,7 +708,7 @@
         <!--Search Autosuggest-->
         <scene sceneID="Obz-GL-fjI">
             <objects>
-                <viewController title="Search Autosuggest" id="sWD-EQ-nh3" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchController" title="Search Autosuggest" id="sWD-EQ-nh3" customClass="SearchController" customModule="AudiomackSwiftLibrary_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LCV-kF-MLD"/>
                         <viewControllerLayoutGuide type="bottom" id="KzU-hD-xXQ"/>
@@ -724,9 +724,13 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SFi-R2-mdY">
                                 <rect key="frame" x="16" y="79" width="343" height="29"/>
                                 <segments>
-                                    <segment title="Music"/>
+                                    <segment title="Songs"/>
+                                    <segment title="Albums"/>
                                     <segment title="Artists"/>
                                 </segments>
+                                <connections>
+                                    <action selector="tabChanged:" destination="sWD-EQ-nh3" eventType="valueChanged" id="5cV-G0-IeG"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -740,6 +744,10 @@
                             <constraint firstItem="ciB-SI-6NG" firstAttribute="top" secondItem="SFi-R2-mdY" secondAttribute="bottom" constant="8" id="yJF-9d-say"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="segmentControl" destination="SFi-R2-mdY" id="lVi-F6-lo2"/>
+                        <outlet property="tableView" destination="ciB-SI-6NG" id="1Wy-Kh-df7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7dA-Ft-LPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

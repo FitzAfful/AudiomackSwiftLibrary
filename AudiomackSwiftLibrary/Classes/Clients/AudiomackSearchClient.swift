@@ -56,36 +56,35 @@ class SearchClientImplementation: SearchClientProtocol {
 			`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
 	
 	- Returns: If successful, returns AudiomackSearchResponse containing music, artists
-	
-	
 	*/
 	func search(searchText: String, resultType: SearchMusicType?  = .all , sortBy: SortType? = .relevance, genre: String?, verified: Bool?, page: Int?, limit: Int?, completionHandler: @escaping SearchCompletionHandler) {
-		var urlComponents = URLComponents(string: BASE_URL + "search")!
-		
+		var urlComponents = URLComponents(string: BASE_URL + "/search")!
+		var queries: [URLQueryItem] = []
+		queries.append(URLQueryItem(name: "q", value: searchText))
 		if(resultType != nil){
-			urlComponents.queryItems?.append(URLQueryItem(name: "show", value: resultType!.rawValue))
+			queries.append(URLQueryItem(name: "show", value: resultType!.rawValue))
 		}
 		
 		if(sortBy != nil){
-			urlComponents.queryItems?.append(URLQueryItem(name: "sort", value: sortBy!.rawValue))
+			queries.append(URLQueryItem(name: "sort", value: sortBy!.rawValue))
 		}
 		
 		if(page != nil){
-			urlComponents.queryItems?.append(URLQueryItem(name: "page", value: "\(page!)"))
+			queries.append(URLQueryItem(name: "page", value: "\(page!)"))
 		}
 		
 		if(limit != nil){
-			urlComponents.queryItems?.append(URLQueryItem(name: "limit", value: "\(limit!)"))
+			queries.append(URLQueryItem(name: "limit", value: "\(limit!)"))
 		}
 		
 		if(genre != nil){
-			urlComponents.queryItems?.append(URLQueryItem(name: "genre", value: genre!))
+			queries.append(URLQueryItem(name: "genre", value: genre!))
 		}
 		
 		if(verified != nil){
-			urlComponents.queryItems?.append(URLQueryItem(name: "verified", value: "\(verified!)"))
+			queries.append(URLQueryItem(name: "verified", value: "\(verified!)"))
 		}
-		
+		urlComponents.queryItems = queries
 		_ = authClient.oauthGenerator.client.get(urlComponents.url!.absoluteString, success: { (response) in
 			let result_ = try! AudiomackSearchResponse(data: response.data)
 			completionHandler(.success(result_))

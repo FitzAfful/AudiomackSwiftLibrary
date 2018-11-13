@@ -8,28 +8,28 @@
 import Foundation
 
 public struct AudiomackUser: InitializableWithData, InitializableWithJson {
-	var id: String = ""
-	var name: String = ""
-	var url_slug: String = ""
-	var image: String = ""
-	var hometown: String = ""
-	var bio: String = ""
-	var twitter: String = ""
-	var facebook: String = ""
-	var instagram: String = ""
-	var label: String = ""
-	var url: String = ""
-	var genre: String = ""
-	var verified: String = ""
-	var updated: String = ""
-	var created: String = ""
-	var status: String = ""
-	var video_ads: String = ""
-	var follow_download: String = ""
-	var favorite_music: [String] = []
-	var favorite_playlists: [String] = []
-	var playlists: [String] = []
-	var following: [String] = []
+	public var id: String = ""
+	public var name: String = ""
+	public var url_slug: String = ""
+	public var image: String = ""
+	public var hometown: String = ""
+	public var bio: String = ""
+	public var twitter: String = ""
+	public var facebook: String = ""
+	public var instagram: String = ""
+	public var label: String = ""
+	public var url: String = ""
+	public var genre: String = ""
+	public var verified: String = ""
+	public var updated: String = ""
+	public var created: String = ""
+	public var status: String = ""
+	public var video_ads: String = ""
+	public var follow_download: String = ""
+	public var favorite_music: [String] = []
+	public var favorite_playlists: [String] = []
+	public var playlists: [String] = []
+	public var following: [String] = []
 	
 	init(data: Data?) throws {
 		guard let data = data,
@@ -141,7 +141,7 @@ public struct AudiomackUser: InitializableWithData, InitializableWithJson {
 
 
 public struct AudiomackUserResponse: InitializableWithData, InitializableWithJson {
-	var result: AudiomackUser
+	public var result: AudiomackUser
 	
 	init(data: Data?) throws {
 		guard let data = data,
@@ -164,7 +164,7 @@ public struct AudiomackUserResponse: InitializableWithData, InitializableWithJso
 }
 
 public struct AudiomackUsersResponse: InitializableWithData, InitializableWithJson {
-	var results: [AudiomackUser] = []
+	public var results: [AudiomackUser] = []
 	
 	init(data: Data?) throws {
 		guard let data = data,

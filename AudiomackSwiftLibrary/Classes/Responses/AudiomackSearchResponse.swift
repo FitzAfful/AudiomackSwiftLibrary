@@ -9,11 +9,11 @@ import Foundation
 
 
 public struct AudiomackSearchResponse: InitializableWithData, InitializableWithJson {
-	var songs: [AudiomackMusic] = []
-	var artists: [AudiomackUser] = []
-	var albums: [AudiomackMusic] = []
-	var playlists: [AudiomackMusic] = []
-	var verified_artists: [AudiomackUser] = []
+	public var songs: [AudiomackMusic] = []
+	public var artists: [AudiomackUser] = []
+	public var albums: [AudiomackMusic] = []
+	public var playlists: [AudiomackMusic] = []
+	public var verified_artists: [AudiomackUser] = []
 	
 	init(data: Data?) throws {
 		guard let data = data,
@@ -25,6 +25,13 @@ public struct AudiomackSearchResponse: InitializableWithData, InitializableWithJ
 		
 	}
 	
+	public init(songs:[AudiomackMusic], artists: [AudiomackUser], albums: [AudiomackMusic], playlists: [AudiomackMusic], verified_artists: [AudiomackUser]) {
+		self.songs = songs
+		self.albums = albums
+		self.artists = artists
+		self.playlists = playlists
+		self.verified_artists = verified_artists
+	}
 	
 	
 	init(json: [String : Any]) throws {
@@ -62,7 +69,6 @@ public struct AudiomackSearchResponse: InitializableWithData, InitializableWithJ
 				}
 			}
 		}else {
-			print("results error")
 			throw NSError.createParseError()
 		}
 		
@@ -93,7 +99,6 @@ public struct AudiomackSearchAutoSuggestResponse: InitializableWithData, Initial
 				results.append(searchItem)
 			}
 		}else {
-			print("results error")
 			throw NSError.createParseError()
 		}
 		
