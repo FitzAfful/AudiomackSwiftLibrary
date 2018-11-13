@@ -51,7 +51,7 @@ public struct PlayMusicParameter {
 	var hq : String?
 	var key : String?
 	
-	init(id: String) {
+	public init(id: String) {
 		self.id = id
 		self.session = String.init(describing: UUID().uuid)
 		self.album_id = nil
@@ -60,7 +60,7 @@ public struct PlayMusicParameter {
 		self.key = nil
 	}
 	
-	init(id: String, album_id: String) {
+	public init(id: String, album_id: String) {
 		self.id = id
 		self.album_id = album_id
 		self.session = nil
@@ -69,7 +69,7 @@ public struct PlayMusicParameter {
 		self.key = nil
 	}
 	
-	init(id: String, playlist_id: String) {
+	public init(id: String, playlist_id: String) {
 		self.id = id
 		self.playlist_id = playlist_id
 		self.album_id = nil
@@ -78,7 +78,7 @@ public struct PlayMusicParameter {
 		self.key = nil
 	}
 	
-	init(id: String, session: String?, album_id: String?, playlist_id:String?, hq: String?, key: String?) {
+	public init(id: String, session: String?, album_id: String?, playlist_id:String?, hq: String?, key: String?) {
 		self.id = id
 		self.session = session
 		self.album_id = album_id

@@ -22,6 +22,7 @@
 		84AF3986219B3C3D00326F81 /* RecentGenreMusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF3985219B3C3D00326F81 /* RecentGenreMusicController.swift */; };
 		84AF3988219B3C6700326F81 /* TrendingGenreMusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF3987219B3C6700326F81 /* TrendingGenreMusicController.swift */; };
 		84AF398A219B3CB800326F81 /* TrendingMusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF3989219B3CB800326F81 /* TrendingMusicController.swift */; };
+		84DFF929219B517700FD460B /* PlayMusicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DFF928219B517700FD460B /* PlayMusicController.swift */; };
 		A503F0FF3DC527627FF469BE /* Pods_AudiomackSwiftLibrary_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E7F02BA077ABFFA7717629 /* Pods_AudiomackSwiftLibrary_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		84AF3985219B3C3D00326F81 /* RecentGenreMusicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentGenreMusicController.swift; sourceTree = "<group>"; };
 		84AF3987219B3C6700326F81 /* TrendingGenreMusicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingGenreMusicController.swift; sourceTree = "<group>"; };
 		84AF3989219B3CB800326F81 /* TrendingMusicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingMusicController.swift; sourceTree = "<group>"; };
+		84DFF928219B517700FD460B /* PlayMusicController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMusicController.swift; sourceTree = "<group>"; };
 		8B96CB9DE8AEBC9580F5DFCA /* Pods-AudiomackSwiftLibrary_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AudiomackSwiftLibrary_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AudiomackSwiftLibrary_Tests/Pods-AudiomackSwiftLibrary_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D8E7F02BA077ABFFA7717629 /* Pods_AudiomackSwiftLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudiomackSwiftLibrary_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -186,6 +188,7 @@
 				84AF3985219B3C3D00326F81 /* RecentGenreMusicController.swift */,
 				84AF3987219B3C6700326F81 /* TrendingGenreMusicController.swift */,
 				84AF3989219B3CB800326F81 /* TrendingMusicController.swift */,
+				84DFF928219B517700FD460B /* PlayMusicController.swift */,
 			);
 			name = Music;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				84AF3984219B37A200326F81 /* RecentMusicController.swift in Sources */,
 				84AF3982219B378400326F81 /* MusicDetailsController.swift in Sources */,
 				845A6151219ADDB900B4D655 /* SearchController.swift in Sources */,
+				84DFF929219B517700FD460B /* PlayMusicController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

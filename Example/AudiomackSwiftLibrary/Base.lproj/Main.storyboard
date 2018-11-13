@@ -279,6 +279,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="CcW-Tq-jfL" kind="show" id="Mpx-so-ukP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -960,6 +963,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L78-dE-QBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6150" y="-1996"/>
+        </scene>
+        <!--Play Music-->
+        <scene sceneID="hbM-0G-p1N">
+            <objects>
+                <viewController title="Play Music" id="CcW-Tq-jfL" customClass="PlayMusicController" customModule="AudiomackSwiftLibrary_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5CW-pQ-uKE"/>
+                        <viewControllerLayoutGuide type="bottom" id="j6S-oK-0nZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zfg-UQ-Zls">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="YbV-xY-hWi">
+                                <rect key="frame" x="16" y="72" width="343" height="256"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="cFz-rL-vuG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pn-m8-qor">
+                                <rect key="frame" x="129.5" y="377" width="116" height="49"/>
+                                <color key="backgroundColor" red="0.039215686270000001" green="0.36470588240000001" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="Rhk-IV-JjF"/>
+                                    <constraint firstAttribute="width" constant="116" id="tdW-2o-9N5"/>
+                                </constraints>
+                                <state key="normal" title="Play / Stop">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playStop:" destination="CcW-Tq-jfL" eventType="touchUpInside" id="fMs-pa-94y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="YbV-xY-hWi" secondAttribute="trailing" constant="16" id="9GE-U1-INc"/>
+                            <constraint firstItem="YbV-xY-hWi" firstAttribute="leading" secondItem="Zfg-UQ-Zls" secondAttribute="leading" constant="16" id="H7v-oz-ApD"/>
+                            <constraint firstItem="3Pn-m8-qor" firstAttribute="centerX" secondItem="Zfg-UQ-Zls" secondAttribute="centerX" id="T2o-r5-bRo"/>
+                            <constraint firstItem="YbV-xY-hWi" firstAttribute="top" secondItem="5CW-pQ-uKE" secondAttribute="bottom" constant="8" id="ewt-Tt-88E"/>
+                            <constraint firstItem="3Pn-m8-qor" firstAttribute="top" secondItem="YbV-xY-hWi" secondAttribute="bottom" constant="49" id="znv-6z-Ojt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="YbV-xY-hWi" id="dUB-Ap-pR7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ElP-5r-fEF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6928.8000000000002" y="-1996.5517241379312"/>
         </scene>
         <!--Trending Music-->
         <scene sceneID="bMV-DM-WzF">

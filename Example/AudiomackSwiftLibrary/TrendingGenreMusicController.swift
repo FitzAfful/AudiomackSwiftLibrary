@@ -33,6 +33,7 @@ class TrendingGenreMusicController: UIViewController, UITableViewDelegate, UITab
 			case let .success(response):
 				FTIndicator.dismissProgress()
 				self.recentMusic.removeAll()
+				print("Response: \(response)")
 				self.recentMusic.append(contentsOf: response)
 				self.tableView.reloadData()
 			case let .failure(error):
