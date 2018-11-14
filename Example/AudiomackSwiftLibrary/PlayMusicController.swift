@@ -13,28 +13,29 @@ import AVKit
 
 class PlayMusicController: UIViewController {
 
-	var player: AVAudioPlayer!
+	@IBOutlet weak var idField: UITextField!
 	@IBOutlet weak var textView: UITextView!
 	var id = "2077853"
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
 
-		
+		idField.text = id
     }
 	
-	@IBAction func playStop(_ sender: Any) {
-		
+	@IBAction func getURL(_ sender: Any) {
+		if((idField.text?.isEmpty)!){
+			FTIndicator.showToastMessage("ID Field is empty")
+			return
+		}
 		FTIndicator.showProgress(withMessage: "Loading")
 		let parameter = PlayMusicParameter(id: id)
 		client.playMusic(parameter: parameter) { (result) in
 				switch result{
 				case let .success(response):
 					FTIndicator.dismissProgress()
-					//self.downloadFileFromURL(url: URL(string: response)!)
 					print(response)
-					let url: URL = URL(string: response)!
-					self.play(url: url)
+					self.textView.text = response
 				case let .failure(error):
 					FTIndicator.dismissProgress()
 					print("error \(error.localizedDescription)")
@@ -45,33 +46,5 @@ class PlayMusicController: UIViewController {
 				}
 			}
 		}
-	
-	/*func downloadFileFromURL(url:URL){
-		
-		var downloadTask:URLSessionDownloadTask
-		downloadTask = URLSession.shared.downloadTask(with: url, completionHandler: { [weak self](URL, response, error) -> Void in
-			self?.play(url: url)
-		})
-		
-		downloadTask.resume()
-		
-	}*/
-	
-	func play(url:URL) {
-		print("playing \(url)")
-		
-		do {
-			self.player = try AVAudioPlayer(contentsOf: url)
-			player.prepareToPlay()
-			player.volume = 1.0
-			player.play()
-		} catch let error as NSError {
-			//self.player = nil
-			print(error.localizedDescription)
-		} catch {
-			print("AVAudioPlayer init failed")
-		}
-		
-	}
 
 }
