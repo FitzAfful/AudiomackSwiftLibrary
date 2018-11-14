@@ -1,6 +1,6 @@
 # AudiomackSwiftLibrary
 
-[![CI Status](https://img.shields.io/travis/Fitzafful/AudiomackSwiftLibrary.svg?style=flat)](https://travis-ci.org/Fitzafful/AudiomackSwiftLibrary)
+
 [![Version](https://img.shields.io/cocoapods/v/AudiomackSwiftLibrary.svg?style=flat)](https://cocoapods.org/pods/AudiomackSwiftLibrary)
 [![License](https://img.shields.io/cocoapods/l/AudiomackSwiftLibrary.svg?style=flat)](https://cocoapods.org/pods/AudiomackSwiftLibrary)
 [![Platform](https://img.shields.io/cocoapods/p/AudiomackSwiftLibrary.svg?style=flat)](https://cocoapods.org/pods/AudiomackSwiftLibrary)
