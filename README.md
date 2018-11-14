@@ -64,8 +64,37 @@ client.getArtistDetails(slug: "eminem") { (result) in
 	}
 }
 
-```
+//TO GET MUSIC DETAILS
 
+client.getMusic(id: "2077853") { (result) in
+	switch result{
+	case let .success(response):
+		print(response)
+		//response - AudiomackMusic Object
+	case let .failure(error):
+		print("error \(error.localizedDescription)")
+		if (error.audiomackError != nil) {
+			print(error.audiomackError)
+		}
+	}
+}
+
+
+// TO GET ARTIST UPLOADS
+
+client.getArtistUploads(slug: "eminem") { (result) in
+	switch result{
+	case let .success(response):
+		print(response)
+	case let .failure(error):
+		print("error \(error.localizedDescription)")
+		if (error.audiomackError != nil) {
+			print(error.audiomackError!.message)
+		}
+	}
+}
+
+```
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
