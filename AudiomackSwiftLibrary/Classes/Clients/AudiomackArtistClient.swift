@@ -18,6 +18,7 @@ public typealias GetArtistFeedCompletionHandler = (_ response: Result<[Audiomack
 
 struct ArtistParameter {
 	var slug: String
+	var page: Int? = nil
 }
 
 
@@ -55,7 +56,11 @@ class ArtistClientImplementation: ArtistClientProtocol {
 	- Returns: If successful, returns Array of Audiomack Users who are followed by specified artist
 	*/
 	func getArtistFollowing(parameter: ArtistParameter, completionHandler: @escaping GetArtistFollowingCompletionHandler) {
-		_ = authClient.oauthGenerator.client.get(BASE_URL + "/artist/\(parameter.slug.trimmingCharacters(in: .whitespaces))/following", success: { (response) in
+		var url = BASE_URL + "/artist/\(parameter.slug.trimmingCharacters(in: .whitespaces))/following"
+		if(parameter.page != nil){
+			url = url + "/page/\(parameter.page!)"
+		}
+		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
 			let result_ = try! AudiomackUsersResponse(data: response.data)
 			completionHandler(.success(result_.results))
 		}) { (error) in
@@ -76,7 +81,11 @@ class ArtistClientImplementation: ArtistClientProtocol {
 	- Returns: If successful, returns Array of Audiomack Users who are followed by specified artist
 	*/
 	func getArtistFollowers(parameter: ArtistParameter, completionHandler: @escaping GetArtistFollowersCompletionHandler) {
-		_ = authClient.oauthGenerator.client.get(BASE_URL + "/artist/\(parameter.slug.trimmingCharacters(in: .whitespaces))/follows", success: { (response) in
+		var url = BASE_URL + "/artist/\(parameter.slug.trimmingCharacters(in: .whitespaces))/follows"
+		if(parameter.page != nil){
+			url = url + "/page/\(parameter.page!)"
+		}
+		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
 			let result_ = try! AudiomackUsersResponse(data: response.data)
 			completionHandler(.success(result_.results))
 		}) { (error) in

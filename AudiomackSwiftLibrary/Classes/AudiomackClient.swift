@@ -76,7 +76,7 @@ public class AudiomackClient {
 	- Returns: If successful, returns AudiomackUser Object of the Artist
 	*/
 	public func getArtistDetails(slug: String, completionHandler: @escaping GetArtistDetailsCompletionHandler) {
-		artistClient.getArtistDetails(parameter: ArtistParameter(slug: slug)) { (result) in
+		artistClient.getArtistDetails(parameter: ArtistParameter(slug: slug, page: nil)) { (result) in
 			completionHandler(result)
 		}
 	}
@@ -95,7 +95,7 @@ public class AudiomackClient {
 	- Returns: If successful, returns Array of AudiomackMusic objects
 	*/
 	public func getArtistUploads(slug: String, completionHandler: @escaping GetArtistUploadsCompletionHandler) {
-		artistClient.getArtistUploads(parameter: ArtistParameter(slug: slug)) { (result) in
+		artistClient.getArtistUploads(parameter: ArtistParameter(slug: slug, page: nil)) { (result) in
 			completionHandler(result)
 		}
 		
@@ -117,7 +117,7 @@ public class AudiomackClient {
 	*/
 	
 	public func getArtistFavorites(slug: String, filter: AudioFilter?, completionHandler: @escaping GetArtistFavoritesCompletionHandler){
-		artistClient.getArtistFavorites(parameter: ArtistParameter(slug:slug), filter: filter) { (result) in
+		artistClient.getArtistFavorites(parameter: ArtistParameter(slug:slug, page: nil), filter: filter) { (result) in
 			completionHandler(result)
 		}
 	}
@@ -136,7 +136,7 @@ public class AudiomackClient {
 	- Returns: If successful, returns Array of AudiomackMusic objects
 	*/
 	public func getArtistPlaylists(slug: String, genre: String?, completionHandler: @escaping GetArtistPlaylistsCompletionHandler){
-		artistClient.getArtistPlaylists(parameter: ArtistParameter(slug:slug), genre: genre) { (result) in
+		artistClient.getArtistPlaylists(parameter: ArtistParameter(slug:slug, page: nil), genre: genre) { (result) in
 			completionHandler(result)
 		}
 	}
@@ -156,7 +156,7 @@ public class AudiomackClient {
 	- Returns: If successful, returns Array of AudiomackMusic objects
 	*/
 	public func searchArtistFavorites(slug: String, searchText: String, completionHandler: @escaping GetArtistFavoritesCompletionHandler){
-		artistClient.searchArtistFavorites(parameter: ArtistParameter(slug:slug), searchText: searchText) { (result) in
+		artistClient.searchArtistFavorites(parameter: ArtistParameter(slug:slug, page: nil), searchText: searchText) { (result) in
 			completionHandler(result)
 		}
 	}
@@ -173,8 +173,8 @@ public class AudiomackClient {
 	
 	- Returns: If successful, returns Array of Audiomack Users who are followed by specified artist
 	*/
-	public func getArtistFollowing(slug: String, completionHandler: @escaping GetArtistFollowingCompletionHandler){
-		artistClient.getArtistFollowing(parameter: ArtistParameter(slug:slug)) { (result) in
+	public func getArtistFollowing(slug: String, page: Int? = nil, completionHandler: @escaping GetArtistFollowingCompletionHandler){
+		artistClient.getArtistFollowing(parameter: ArtistParameter(slug:slug, page: page)) { (result) in
 			completionHandler(result)
 		}
 	}
@@ -191,8 +191,8 @@ public class AudiomackClient {
 	
 	- Returns: If successful, returns Array of Audiomack Users who are followed by specified artist
 	*/
-	public func getArtistFollowers(slug: String, completionHandler: @escaping GetArtistFollowersCompletionHandler){
-		artistClient.getArtistFollowers(parameter: ArtistParameter(slug:slug)) { (result) in
+	public func getArtistFollowers(slug: String, page: Int? = nil, completionHandler: @escaping GetArtistFollowersCompletionHandler){
+		artistClient.getArtistFollowers(parameter: ArtistParameter(slug:slug, page: page)) { (result) in
 			completionHandler(result)
 		}
 	}
@@ -210,7 +210,7 @@ public class AudiomackClient {
 	- Returns: If successful, returns Array of AudiomackMusic objects
 	*/
 	public func getArtistFeed(slug: String, completionHandler: @escaping GetArtistFeedCompletionHandler){
-		artistClient.getArtistFeed(parameter: ArtistParameter(slug:slug)) { (result) in
+		artistClient.getArtistFeed(parameter: ArtistParameter(slug:slug, page: nil)) { (result) in
 			completionHandler(result)
 		}
 	}

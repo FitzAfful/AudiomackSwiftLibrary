@@ -15,21 +15,24 @@ public struct AudiomackError : Error, InitializableWithDataAndResponse, Initiali
 	public var description: String = ""
 	public var httpUrlResponse: HTTPURLResponse?
 	
-	init(data: Data?, response: HTTPURLResponse) throws {
+	init(data: Data?, response: HTTPURLResponse?) throws {
 		guard let data = data,
 			let jsonObject = try? JSONSerialization.jsonObject(with: data),
 			let json = jsonObject as? [String: Any] else {
+				print("yawa")
 				throw NSError.createParseError()
 		}
 		try self.init(json: json, response: response)
 		
 	}
 	
-	init(json: [String : Any], response: HTTPURLResponse) throws {
-		
+	init(json: [String : Any], response: HTTPURLResponse?) throws {
+		print(json)
 		self.code = json["errorcode"] as! Int
 		self.message = json["message"] as! String
-		self.description = json["description"] as! String
+		if let desc = json["description"] as? String {
+			self.description = desc
+		}
 		
 		self.httpUrlResponse = response
 		

@@ -33,11 +33,11 @@ protocol InitializableWithData {
 }
 
 protocol InitializableWithDataAndResponse {
-	init(data: Data?, response: HTTPURLResponse) throws
+	init(data: Data?, response: HTTPURLResponse?) throws
 }
 
 protocol InitializableWithJsonAndResponse {
-	init(json: [String: Any], response: HTTPURLResponse) throws
+	init(json: [String: Any], response: HTTPURLResponse?) throws
 }
 
 

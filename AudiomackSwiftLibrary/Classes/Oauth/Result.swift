@@ -35,12 +35,20 @@ public extension Error {
 	var audiomackError: AudiomackError? {
 		if let apiError = self as? ApiError {
 			if let resultError = try? AudiomackError(data: apiError.data, response: apiError.httpUrlResponse) {
-			return resultError
+				return resultError
 			} else{
 				return nil
 			}
 		}else if let apiError = self as? OAuthSwiftError{
-			return AudiomackError(code: apiError.errorCode, message: apiError.description, description: apiError.underlyingMessage ?? "", httpUrlResponse: nil)
+			let error1String = apiError.description.components(separatedBy: "Response-Body=")[1]
+			let errorString = error1String.components(separatedBy: ", ")[0]
+			let data = Data(errorString.utf8)
+			do {
+				let error = try AudiomackError(data: data, response: nil)
+				return error
+			}catch{
+				return nil
+			}
 		}else{
 			return nil
 		}
@@ -52,3 +60,15 @@ public enum FetchError: Error{
 	case AudiomackError(code:Int, message:String)
 }
 
+
+extension String {
+	
+	func slice(from: String, to: String) -> String? {
+		
+		return (range(of: from)?.upperBound).flatMap { substringFrom in
+			(range(of: to, range: substringFrom..<endIndex)?.lowerBound).map { substringTo in
+				String(self[substringFrom..<substringTo])
+			}
+		}
+	}
+}

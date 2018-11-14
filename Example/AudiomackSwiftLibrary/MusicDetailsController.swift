@@ -25,6 +25,7 @@ class MusicDetailsController: UIViewController {
 				FTIndicator.dismissProgress()
 				print("error \(error.localizedDescription)")
 				if (error.audiomackError != nil) {
+					print(error.audiomackError!.message)
 					FTIndicator.showError(withMessage: error.audiomackError!.message)
 				}
 			}
