@@ -48,8 +48,8 @@ class PlaylistClientImplementation: PlaylistClientProtocol {
 			}
 		}
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
-			let result_ = try! AudiomackMusic(data: response.data)
-			completionHandler(.success(result_))
+			let result_ = try! AudiomackSingleMusicResponse(data: response.data)
+			completionHandler(.success(result_.result))
 		}) { (error) in
 			completionHandler(.failure(error))
 		}
@@ -86,8 +86,8 @@ class PlaylistClientImplementation: PlaylistClientProtocol {
 			}
 		}
 		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
-			let result_ = try! AudiomackMusic(data: response.data)
-			completionHandler(.success(result_))
+			let result_ = try! AudiomackSingleMusicResponse(data: response.data)
+			completionHandler(.success(result_.result))
 		}) { (error) in
 			completionHandler(.failure(error))
 		}

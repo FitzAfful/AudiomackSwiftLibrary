@@ -53,6 +53,10 @@ public struct AudiomackUser: InitializableWithData, InitializableWithJson {
 			self.favorite_playlists = fav as! [String]
 		}
 		
+		if let fav = json["url_slug"] as? String {
+			self.url_slug = fav
+		}
+		
 		if let fav = json["favorite_music"] {
 			self.favorite_music = fav as! [String]
 		}
