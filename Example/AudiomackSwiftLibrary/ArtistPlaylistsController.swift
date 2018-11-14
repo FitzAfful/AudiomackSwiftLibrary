@@ -11,14 +11,13 @@ import FTIndicator
 import AudiomackSwiftLibrary
 
 
-class TrendingPlaylistsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ArtistPlaylistsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
 	var playlists:[AudiomackMusic] = []
 	@IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		self.title = "Trending Playlists"
 		self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 		self.tableView.delegate = self
 		self.tableView.dataSource = self
@@ -27,8 +26,8 @@ class TrendingPlaylistsController: UIViewController, UITableViewDelegate, UITabl
 	}
 	
 	func getData(){
-		FTIndicator.showProgress(withMessage: "Loading")
-		client.getTrendingPlaylists() { (result) in
+		FTIndicator.showProgress(withMessage: "Searching")
+		client.getArtistPlaylists(slug: "eminem", genre: nil) { (result) in
 			switch result{
 			case let .success(response):
 				FTIndicator.dismissProgress()
@@ -62,16 +61,6 @@ class TrendingPlaylistsController: UIViewController, UITableViewDelegate, UITabl
 		cell.textLabel?.text = playlists[indexPath.row].title
 		cell.detailTextLabel?.text = playlists[indexPath.row].uploader.name
 		return cell
-	}
-	
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let playlist = playlists[indexPath.row]
-		let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
-		let controller = myStoryboard.instantiateViewController(withIdentifier: "PlaylistDetailsController") as! PlaylistDetailsController
-		controller.playlistSlug = playlist.url_slug
-		controller.artistSlug = playlist.uploader.url_slug
-		controller.playlistId = playlist.id
-		self.navigationController?.pushViewController(controller, animated: true)
 	}
 	
 }

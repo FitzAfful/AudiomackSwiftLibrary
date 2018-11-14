@@ -9,8 +9,8 @@
 import UIKit
 import AudiomackSwiftLibrary
 
-
-let client = AudiomackClient(consumerKey: "live-919fm", consumerSecret: "99b372ca87246c2d33249fcab58db071")
+//ADD YOUR CONSUMERKEY AND CONSUMERSECRET HERE
+let client = AudiomackClient(consumerKey: "", consumerSecret: "")
 
 class ViewController: UITableViewController {
 	

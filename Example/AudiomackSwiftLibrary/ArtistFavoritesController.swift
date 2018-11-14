@@ -11,14 +11,13 @@ import FTIndicator
 import AudiomackSwiftLibrary
 
 
-class TrendingPlaylistsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ArtistFavoritesController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	
-	var playlists:[AudiomackMusic] = []
+	var favorites:[AudiomackMusic] = []
 	@IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		self.title = "Trending Playlists"
 		self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 		self.tableView.delegate = self
 		self.tableView.dataSource = self
@@ -27,13 +26,13 @@ class TrendingPlaylistsController: UIViewController, UITableViewDelegate, UITabl
 	}
 	
 	func getData(){
-		FTIndicator.showProgress(withMessage: "Loading")
-		client.getTrendingPlaylists() { (result) in
+		FTIndicator.showProgress(withMessage: "Searching")
+		client.getArtistFavorites(slug: "eminem", filter: AudioFilter.all) { (result) in
 			switch result{
 			case let .success(response):
 				FTIndicator.dismissProgress()
-				self.playlists.removeAll()
-				self.playlists.append(contentsOf: response)
+				self.favorites.removeAll()
+				self.favorites.append(contentsOf: response)
 				self.tableView.reloadData()
 			case let .failure(error):
 				print("error \(error.localizedDescription)")
@@ -54,24 +53,14 @@ class TrendingPlaylistsController: UIViewController, UITableViewDelegate, UITabl
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return playlists.count
+		return favorites.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-		cell.textLabel?.text = playlists[indexPath.row].title
-		cell.detailTextLabel?.text = playlists[indexPath.row].uploader.name
+		cell.textLabel?.text = favorites[indexPath.row].title
+		cell.detailTextLabel?.text = favorites[indexPath.row].uploader.name
 		return cell
-	}
-	
-	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-		let playlist = playlists[indexPath.row]
-		let myStoryboard = UIStoryboard(name: "Main", bundle: nil)
-		let controller = myStoryboard.instantiateViewController(withIdentifier: "PlaylistDetailsController") as! PlaylistDetailsController
-		controller.playlistSlug = playlist.url_slug
-		controller.artistSlug = playlist.uploader.url_slug
-		controller.playlistId = playlist.id
-		self.navigationController?.pushViewController(controller, animated: true)
 	}
 	
 }
