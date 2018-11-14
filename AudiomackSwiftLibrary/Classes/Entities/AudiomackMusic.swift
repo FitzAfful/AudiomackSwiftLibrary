@@ -275,10 +275,8 @@ public struct AudiomackMusic: InitializableWithData, InitializableWithJson {
 			self.uploader = try! AudiomackUser(json: uploader_)
 		}else if let uploader_ = json["artist"] as? [String: Any]{
 			self.uploader = try! AudiomackUser(json: uploader_)
-		}else if(uploader_ != nil){
+		}else {
 			self.uploader = uploader_
-		}else{
-			throw NSError.createParseError()
 		}
 		
 		if let stat_ = json["stats"] as? [String: Any]{
