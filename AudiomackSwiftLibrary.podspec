@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'AudiomackSwiftLibrary'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A wrapper library for Audiomacks API on iOS built in Swift
 '
 
@@ -28,7 +28,7 @@ s.description      = 'A wrapper library for Audiomack`s API on iOS built in Swif
   # s.social_media_url = 'https://twitter.com/<@Bra_Gerald>'
 
   s.swift_version = '4.0'
-  s.ios.deployment_target = '9.3'
+  s.ios.deployment_target = '8.0'
 
   s.source_files = 'AudiomackSwiftLibrary/Classes/**/*'
   
