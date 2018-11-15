@@ -101,6 +101,29 @@ public class AudiomackClient {
 		
 	}
 	
+	/** Get Artist Uploads
+	
+	For more info,
+	https://www.audiomack.com/data-api/docs#artist-uploads
+	
+	- Parameters:
+	-  slug: Artist's slug (can be found in artist object / url)
+	-  page: Page number for pagination
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
+	
+	- Returns: If successful, returns Array of AudiomackMusic objects
+	*/
+	public func getArtistUploads(slug: String, page: Int, completionHandler: @escaping GetArtistUploadsCompletionHandler) {
+		artistClient.getArtistUploads(parameter: ArtistParameter(slug: slug, page: page)) { (result) in
+			completionHandler(result)
+		}
+		
+	}
+	
+	
+	
 	/** Get Artist Favorites
 	
 	For more info,
@@ -167,13 +190,33 @@ public class AudiomackClient {
 	
 	- Parameters:
 	-  slug: Artist's slug (can be found in artist object / url)
+	-  page: Page number for pagination
 	-  completionHandler: The completion handler to call when the load request is complete.
 	`response` - A response object, or `nil` if the request failed.
 	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
 	
 	- Returns: If successful, returns Array of Audiomack Users who are followed by specified artist
 	*/
-	public func getArtistFollowing(slug: String, page: Int? = nil, completionHandler: @escaping GetArtistFollowingCompletionHandler){
+	public func getArtistFollowing(slug: String, completionHandler: @escaping GetArtistFollowingCompletionHandler){
+		artistClient.getArtistFollowing(parameter: ArtistParameter(slug:slug, page: nil)) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	/** Get Artist Following
+	
+	For more info,  https://www.audiomack.com/data-api/docs#artist-following
+	
+	- Parameters:
+	-  slug: Artist's slug (can be found in artist object / url)
+	-  page: Page number for pagination
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
+	
+	- Returns: If successful, returns Array of Audiomack Users who are followed by specified artist
+	*/
+	public func getArtistFollowing(slug: String, page: Int, completionHandler: @escaping GetArtistFollowingCompletionHandler){
 		artistClient.getArtistFollowing(parameter: ArtistParameter(slug:slug, page: page)) { (result) in
 			completionHandler(result)
 		}
@@ -185,13 +228,33 @@ public class AudiomackClient {
 	
 	- Parameters:
 	-  slug: Artist's slug (can be found in artist object / url)
+	-  page: Page number for pagination
 	-  completionHandler: The completion handler to call when the load request is complete.
 	`response` - A response object, or `nil` if the request failed.
 	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
 	
 	- Returns: If successful, returns Array of Audiomack Users who are followed by specified artist
 	*/
-	public func getArtistFollowers(slug: String, page: Int? = nil, completionHandler: @escaping GetArtistFollowersCompletionHandler){
+	public func getArtistFollowers(slug: String, completionHandler: @escaping GetArtistFollowersCompletionHandler){
+		artistClient.getArtistFollowers(parameter: ArtistParameter(slug:slug, page: nil)) { (result) in
+			completionHandler(result)
+		}
+	}
+	
+	/** Get Artist Followers
+	
+	For more info,  https://www.audiomack.com/data-api/docs#artist-followers
+	
+	- Parameters:
+	-  slug: Artist's slug (can be found in artist object / url)
+	-  page: Page number for pagination
+	-  completionHandler: The completion handler to call when the load request is complete.
+	`response` - A response object, or `nil` if the request failed.
+	`error` - An error object that indicates why the request failed, or `nil` if the request was successful. On failed execution, `error` may contain an `AudiomackError` with `errorcode` and `message`
+	
+	- Returns: If successful, returns Array of Audiomack Users who are followed by specified artist
+	*/
+	public func getArtistFollowers(slug: String, page: Int, completionHandler: @escaping GetArtistFollowersCompletionHandler){
 		artistClient.getArtistFollowers(parameter: ArtistParameter(slug:slug, page: page)) { (result) in
 			completionHandler(result)
 		}
