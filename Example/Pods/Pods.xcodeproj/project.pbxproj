@@ -99,17 +99,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03F34E8E379CE1DA87F1D098C0B0225E /* Pods_AudiomackSwiftLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AudiomackSwiftLibrary_Tests.framework; path = "Pods-AudiomackSwiftLibrary_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03F34E8E379CE1DA87F1D098C0B0225E /* Pods_AudiomackSwiftLibrary_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudiomackSwiftLibrary_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		08932C5ACE94581C49FDCD562594BB68 /* AudiomackSwiftLibrary.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AudiomackSwiftLibrary.xcconfig; sourceTree = "<group>"; };
 		0AB7B34FDF679D1799C340E6B87FDA07 /* Pods-AudiomackSwiftLibrary_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AudiomackSwiftLibrary_Example-frameworks.sh"; sourceTree = "<group>"; };
 		0B2F940F7BACD34F1F5BE73D8852EF2A /* Data+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Data+OAuthSwift.swift"; sourceTree = "<group>"; };
 		0D274389B55DA2C28C0880AF1AF9BE13 /* AudiomackClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AudiomackClient.swift; path = AudiomackSwiftLibrary/Classes/AudiomackClient.swift; sourceTree = "<group>"; };
 		113C511F330D9FAA97F0A17834BFF0ED /* Objc.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Objc.swift; sourceTree = "<group>"; };
-		169F037C4D58A1E054A60628AD198DCB /* FTIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FTIndicator.framework; path = FTIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		169F037C4D58A1E054A60628AD198DCB /* FTIndicator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FTIndicator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		216C45FD2A6D5A36273286F698367619 /* Pods-AudiomackSwiftLibrary_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudiomackSwiftLibrary_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		23C5C6724B67FDAB5907706E27148479 /* Pods-AudiomackSwiftLibrary_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AudiomackSwiftLibrary_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		242830FC4B3E1C42C355072C979032BF /* Pods-AudiomackSwiftLibrary_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AudiomackSwiftLibrary_Tests-resources.sh"; sourceTree = "<group>"; };
-		25D5F8C516A0794D664BA4440B86E7F9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		25D5F8C516A0794D664BA4440B86E7F9 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		25F3DB943CA0B9CAA8F6AFB45681EFDC /* Pods-AudiomackSwiftLibrary_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AudiomackSwiftLibrary_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		29F4343D57054EAD2DEE149E11848BC7 /* FTProgressIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FTProgressIndicator.m; path = FTIndicator/FTProgressIndicator/FTProgressIndicator.m; sourceTree = "<group>"; };
 		2CF6F8EC2E6AE52E3865D61CC31196D7 /* URL+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "URL+OAuthSwift.swift"; sourceTree = "<group>"; };
@@ -143,11 +143,11 @@
 		6716270D5F6F1350ABA141F5A82A573E /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
 		68522D5651C6E6965F6E6D2C848151E0 /* AudiomackSwiftLibrary-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AudiomackSwiftLibrary-umbrella.h"; sourceTree = "<group>"; };
 		68C8597F72A3B3D7A3972ED126303F3A /* AudiomackChartClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudiomackChartClient.swift; sourceTree = "<group>"; };
-		6B12459FD6CF9EF8DA0911D1AA26761F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6B12459FD6CF9EF8DA0911D1AA26761F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		707E08F7A45FF2C76995CA868C45FD33 /* OAuthSwiftError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuthSwiftError.swift; sourceTree = "<group>"; };
 		782F528FB4AC215FF2CF2D876C4FF625 /* JSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		78E98768C09872B60BB27137405AEA3B /* OAuthSwiftMultipartData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuthSwiftMultipartData.swift; sourceTree = "<group>"; };
-		795064BFCFAC3E6E9399E8D29AF91C6F /* AudiomackSwiftLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = AudiomackSwiftLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		795064BFCFAC3E6E9399E8D29AF91C6F /* AudiomackSwiftLibrary.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = AudiomackSwiftLibrary.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		7A197F841462EB066441B2F60B4480F9 /* OAuthSwiftResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuthSwiftResponse.swift; sourceTree = "<group>"; };
 		7C5360D2382051826977BBEEB74A4E62 /* ApiResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApiResponse.swift; sourceTree = "<group>"; };
 		7F015EE2A21C57F39A5A064FDBA92A1F /* Pods-AudiomackSwiftLibrary_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AudiomackSwiftLibrary_Example-resources.sh"; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 		8374C2479BF86F29F9DAA743B1DD7BCA /* AudiomackRegisteredUser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudiomackRegisteredUser.swift; sourceTree = "<group>"; };
 		860DF7022257D6AF371281897B88F6EA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C21DD815F1849A81A70315ADBDE5B60 /* AudiomackError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudiomackError.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94260ADEB876B7AF842B5869845DE533 /* ApiClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		94B77F61BA1DDDA148A5289D52CC7E15 /* Int+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "Int+OAuthSwift.swift"; sourceTree = "<group>"; };
 		9806FA9F5B43C3AEBAEBEBE67AA4C163 /* OAuthSwiftHTTPRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuthSwiftHTTPRequest.swift; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 		A26F54B540E479950625AC8486FE25B2 /* NotificationCenter+OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+OAuthSwift.swift"; sourceTree = "<group>"; };
 		AB417EE2B8A94ADA0A851D911C5FB22E /* AudiomackSearchResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudiomackSearchResponse.swift; sourceTree = "<group>"; };
 		B386B58B814D29681A45A687CADC64C4 /* Pods-AudiomackSwiftLibrary_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AudiomackSwiftLibrary_Tests-dummy.m"; sourceTree = "<group>"; };
-		B408E9D9D2D13B3F836F9E9589B317B2 /* AudiomackSwiftLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AudiomackSwiftLibrary.framework; path = AudiomackSwiftLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B408E9D9D2D13B3F836F9E9589B317B2 /* AudiomackSwiftLibrary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AudiomackSwiftLibrary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAA9E2E6BD865BED84C7306B32082143 /* Pods-AudiomackSwiftLibrary_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AudiomackSwiftLibrary_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		BB9C24BE3B1E56AA02933080E18D6A9E /* FTNotificationIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTNotificationIndicator.h; path = FTIndicator/FTNotificationIndicator/FTNotificationIndicator.h; sourceTree = "<group>"; };
 		BD0B62853DA85FCD6B90C3846527887F /* FTToastIndicator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FTToastIndicator.h; path = FTIndicator/FTToastIndicator/FTToastIndicator.h; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 		D72F7CC80578FDC1B3A4A6B44F5D1AA8 /* OAuthSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuthSwift.swift; sourceTree = "<group>"; };
 		DDE680B9128B989598D346AF220A6BE5 /* FTIndicator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FTIndicator.xcconfig; sourceTree = "<group>"; };
 		DE29C29D90EEB8603447906553C42357 /* OAuthWebViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OAuthWebViewController.swift; sourceTree = "<group>"; };
-		DF204DECA3FAB04F00FCE0FA9EB62789 /* Pods_AudiomackSwiftLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AudiomackSwiftLibrary_Example.framework; path = "Pods-AudiomackSwiftLibrary_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF204DECA3FAB04F00FCE0FA9EB62789 /* Pods_AudiomackSwiftLibrary_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AudiomackSwiftLibrary_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9FB9E95F56524A6F4500710408910D /* AudiomackMusic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudiomackMusic.swift; sourceTree = "<group>"; };
 		E027BE5B7A32007F0A273574B31D5647 /* Pods-AudiomackSwiftLibrary_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AudiomackSwiftLibrary_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		E0366DB2A1F5913E5BF57858D991DC6E /* Pods-AudiomackSwiftLibrary_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AudiomackSwiftLibrary_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -401,7 +401,6 @@
 				FC8DECBFFBB13400C12AA952C6A9093B /* Resources */,
 				EC972134DBFFB745B967738A80031D66 /* Support Files */,
 			);
-			name = FTIndicator;
 			path = FTIndicator;
 			sourceTree = "<group>";
 		};
@@ -935,7 +934,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1099,7 +1098,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;

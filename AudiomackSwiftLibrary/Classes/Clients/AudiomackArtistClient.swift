@@ -106,7 +106,11 @@ class ArtistClientImplementation: ArtistClientProtocol {
 	- Returns: If successful, returns Array of AudiomackMusic objects
 	*/
 	func getArtistFeed(parameter: ArtistParameter, completionHandler: @escaping GetArtistFeedCompletionHandler) {
-		_ = authClient.oauthGenerator.client.get(BASE_URL + "/artist/\(parameter.slug.trimmingCharacters(in: .whitespaces))/feed", success: { (response) in
+		var url = BASE_URL + "/artist/\(parameter.slug.trimmingCharacters(in: .whitespaces))/feed"
+		if(parameter.page != nil){
+			url = url + "/page/\(parameter.page!)"
+		}
+		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
 			let result_ = try! AudiomackMusicResponse(data: response.data)
 			completionHandler(.success(result_.results))
 		}) { (error) in
@@ -224,7 +228,11 @@ class ArtistClientImplementation: ArtistClientProtocol {
 	- Returns: If successful, returns Array of AudiomackMusic objects
 	*/
 	func getArtistUploads(parameter: ArtistParameter, completionHandler: @escaping GetArtistUploadsCompletionHandler) {
-		_ = authClient.oauthGenerator.client.get(BASE_URL + "/artist/\(parameter.slug.trimmingCharacters(in: .whitespaces))/uploads", success: { (response) in
+		var url = BASE_URL + "/artist/\(parameter.slug.trimmingCharacters(in: .whitespaces))/uploads"
+		if(parameter.page != nil){
+			url = url + "/page/\(parameter.page!)"
+		}
+		_ = authClient.oauthGenerator.client.get(url, success: { (response) in
 			let result_ = try! AudiomackMusicResponse(data: response.data)
 			completionHandler(.success(result_.results))
 		}) { (error) in
