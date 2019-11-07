@@ -32,7 +32,7 @@ class SearchAutosuggestController: UIViewController, UITableViewDelegate, UITabl
 		self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 		self.tableView.delegate = self
 		self.tableView.dataSource = self
-		self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
+		self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.none
 		self.tableView.tableFooterView = UIView()
 	}
 	

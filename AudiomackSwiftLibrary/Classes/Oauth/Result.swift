@@ -56,7 +56,7 @@ public extension Error {
 }
 
 public enum FetchError: Error{
-	case NetworkFailed()
+	case NetworkFailed
 	case AudiomackError(code:Int, message:String)
 }
 
